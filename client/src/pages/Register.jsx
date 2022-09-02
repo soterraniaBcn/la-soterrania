@@ -1,11 +1,12 @@
 import React from 'react';
 import {Container, FormGroup, FormControlLabel, Box, Button, Checkbox} from '@mui/material';
-
+import HeaderRight from '../components/Header'
 
 export default function Register(){
 
     return (
    <>
+   <HeaderRight/>
          <Container maxWidth="sm"
             style={{ backgroundColor: '#cdcecf',
             height: '100vh',
