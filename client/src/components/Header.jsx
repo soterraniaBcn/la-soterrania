@@ -63,8 +63,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   backgroundColor: '#E2A0FF',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
- // ...theme.mixins.toolbar,
+   //necessary for content to be below app bar
+  //...theme.mixins.toolbar,
   justifyContent: 'flex-start',
 }));
 
@@ -83,8 +83,8 @@ export default function HeaderRight() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
-        <Toolbar style={{backgroundColor: '#cdcecf', justifyContent:'space-between'}}>
+      <AppBar className="navbar" position="fixed" open={open}>
+        <Toolbar style={{ justifyContent:'space-between'}}>
         <img src={logo} alt=""
         style={{width:"80px",
          height:"80px"}} ></img>

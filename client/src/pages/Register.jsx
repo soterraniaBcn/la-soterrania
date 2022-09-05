@@ -7,7 +7,7 @@ export default function Register(){
     return (
    <>
    <HeaderRight/>
-         <Container maxWidth="sm"
+         <Container maxWidth="xl"
             style={{ backgroundColor: '#cdcecf',
             height: '100vh',
             display: 'flex',
@@ -22,10 +22,10 @@ export default function Register(){
               alignItems: 'center', 
               justifyContent: 'center',
               backgroundColor:'white',
-              width:'16rem',
-              height:'25rem',
+              width:'17rem',
+              height:'30rem',
               borderRadius:"0.5rem",
-             marginTop:'5rem'}}>
+             marginTop:'3rem'}}>
 
             <Box>
                <p>Sóc:</p>
@@ -53,7 +53,7 @@ export default function Register(){
               <p>Nom del grup/sala:</p>
               <input type="text"
               style={{
-                    color: "#2e5137",
+                    color: "#0000",
                     width: "13rem",
                     height: "1em",
                     fontSize: "1rem",
@@ -88,6 +88,32 @@ export default function Register(){
                     
                 }} />
               </Box> 
+
+              <Box style={{lineHeight:"1px"}}>
+              <p>Descripció:</p>
+              <input type="text"
+                style={{
+                    width: "13rem",
+                    height: "4em",
+                    fontSize: "1rem",
+                    borderRadius: "10px",
+                    border:"1px solid grey"
+                    
+                }} />
+            </Box> 
+
+            <Box style={{lineHeight:"1px"}}>
+              <p>Links vídeos:</p>
+              <input type="text"
+                style={{
+                    width: "13rem",
+                    height: "2em",
+                    fontSize: "1rem",
+                    borderRadius: "10px",
+                    border:"1px solid grey"
+                    
+                }} />
+            </Box> 
           </FormGroup>
 
               
