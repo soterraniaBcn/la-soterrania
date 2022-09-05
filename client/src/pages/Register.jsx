@@ -6,14 +6,15 @@ export default function Register(){
 
     return (
    <>
-   <HeaderRight/>
-         <Container maxWidth="xl"
+         <Container maxWidth="xl" position="fixed"
             style={{ backgroundColor: '#cdcecf',
             height: '100vh',
             display: 'flex',
             justifyContent:'center', 
             alignItems: 'center', 
             flexDirection: 'column'}}>
+              
+              <HeaderRight/>
         
          
 
@@ -53,7 +54,7 @@ export default function Register(){
               <p>Nom del grup/sala:</p>
               <input type="text"
               style={{
-                    color: "#0000",
+                    color: "#000000",
                     width: "13rem",
                     height: "1em",
                     fontSize: "1rem",
@@ -66,7 +67,7 @@ export default function Register(){
               <p>Correu electrònic:</p>
               <input type="text"
               style={{
-                    color: "#2e5137",
+                    color: "#000000",
                     width: "13rem",
                     height: "1em",
                     fontSize: "1rem",

@@ -4,6 +4,7 @@ p{
 
 .navbar {
   background-color: transparent !important;
- 
+  border:0;
+  box-shadow: none;
 
 }
