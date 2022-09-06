@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, FormGroup, FormControlLabel, Box, Button, Checkbox} from '@mui/material';
-import HeaderRight from '../components/Header'
+import HeaderRight from '../components/Header';
 
 export default function Register(){
 
