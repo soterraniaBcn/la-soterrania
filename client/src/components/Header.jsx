@@ -83,7 +83,7 @@ export default function HeaderRight() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar className="navbar" position="fixed" open={open}>
+      <AppBar className="navbar" position="fixed" elevation={0} open={open}>
         <Toolbar style={{ justifyContent:'space-between'}}>
         <img src={logo} alt=""
         style={{width:"80px",
@@ -93,13 +93,14 @@ export default function HeaderRight() {
   </Typography>*/}
   
           <IconButton
+          
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
-            sx={{ ...(open && { display:'none' }) }}
+            sx={{...(open && { display:'none' }) }}
           >
             <Box >
-            <MenuIcon />
+            <MenuIcon sx={{width:'4rem', height:'4rem'}}/>
             </Box> 
          </IconButton>
           
