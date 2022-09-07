@@ -4,6 +4,13 @@ p{
 
 .navbar {
   background-color: transparent !important;
+}
 
+/*FOOTER*/
 
+@media screen and (max-width:550){
+  .MuiGrid-item{
+     width:1vw;
+     padding:5px;
+  }
 }

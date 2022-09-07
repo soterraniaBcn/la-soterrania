@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderRight from './components/Header'
 import Register from './pages/Register'
+import Footer from './components/Footer'
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
    <Register/>
-  {/* <HeaderRight/>*/}
+   <Footer/>
     </>
   );
 }
