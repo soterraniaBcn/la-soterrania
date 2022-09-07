@@ -1,10 +1,10 @@
 import Router from 'express';
-//import loginController from '../controller/loginController';
-//import auth from '../middleware/auth';
-//import jwt from '../middleware/jwt';
+import loginController from '../controllers/loginController';
+import auth from '../middlewares/auth';
+import jwt from '../middlewares/jwt';
 
 const router = Router();
 
-router.post('/login', /*auth.validateUser, jwt.generateToken, loginController*/);
+router.post('/login', auth.validateUser, jwt.generateToken, loginController);
 
 export default router; 
