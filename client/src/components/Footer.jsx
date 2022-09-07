@@ -3,6 +3,8 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Link from "@material-ui/core/Link";
 import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 export default function Footer() {
   return (
@@ -14,44 +16,33 @@ export default function Footer() {
         color="white"
       >
         <Container maxWidth="lg">
-          <Grid container spacing={5}>
+          <Grid container spacing={5}  justifyContent="space-between">
+
             <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>Segueix-nos</Box>
+              <Box borderBottom={1} >Segueix-nos</Box>
             </Grid>
-            <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}></Box>
+
+            <Grid item xs={12} sm={4} container direction="row"   justifyContent="space-between" >
               <Box> 
-                <InstagramIcon/>
-                
-              </Box>
-              <Box>
-                <Link href="/" color="inherit">
-                  Register
+              <Link href="https://www.instagram.com/lasoterrania/" target="_blank" color="inherit">
+                  <InstagramIcon/>
                 </Link>
               </Box>
+
+              <Box>
+                <Link href="https://www.facebook.com/La-soterr%C3%A0nia-101259562713131" target="_blank" color="inherit">
+                  <FacebookIcon/>
+                </Link>
+              </Box>
+
+              <Box>
+                <Link href="https://www.youtube.com/c/lasoterr%C3%A0nia" target="_blank" color="inherit">
+                  <YouTubeIcon/>
+                </Link>
+              </Box>
+
             </Grid>
-            <Grid item xs={12} sm={4}>
-              <Box borderBottom={1}>Messages</Box>
-              <Box>
-                <Link href="/" color="inherit">
-                  Backup
-                </Link>
-              </Box>
-              <Box>
-                <Link href="/" color="inherit">
-                  History
-                </Link>
-              </Box>
-              <Box>
-                <Link href="/" color="inherit">
-                  Roll
-                </Link>
-              </Box>
             </Grid>
-          </Grid>
-          <Box textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
-            Material UI Workshop &reg; {new Date().getFullYear()}
-          </Box>
         </Container>
       </Box>
     </footer>

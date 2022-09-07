@@ -1,10 +1,9 @@
 import React from 'react';
-import Footer from './components/Footer';
-import Register from './pages/Register';
+import Register from './pages/Register'
+import Footer from './components/Footer'
 import './App.css';
 
 function App() {
- 
   return (
     <>
    <Register/>
