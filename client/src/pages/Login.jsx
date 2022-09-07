@@ -6,7 +6,7 @@ export default function Register(){
 
     return (
    <>
-         <Container maxWidth="xl" position="fixed"
+         <Container maxWidth="xxl" position="fixed"
             style={{ backgroundColor: '#cdcecf',
             height: '100vh',
             display: 'flex',
