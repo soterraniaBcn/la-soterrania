@@ -8,20 +8,19 @@ const userController = {
       const {
         email1,
         password,
-        "id-usuaria": number,
+        "id-usuaria": id_usuaria,
         estado,
-        rol,
-        ...usuarias
+        rol
       }: iUser = req.body;
 
       if (!email1 || !password) {
-        res.status(404).send("Falta el correo electrónico o contraseña");
+        res.status(400).send("Falta el correo electrónico o contraseña");
       }
 
       const result = await userModel.saveUser({
         email1,
         password,
-        "id-usuaria": number,
+        'id-usuaria': id_usuaria,
         estado,
         rol,
       });

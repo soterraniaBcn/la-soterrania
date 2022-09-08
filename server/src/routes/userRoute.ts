@@ -1,8 +1,8 @@
 import Router from 'express';
 import userController from '../controllers/userController';
-import admin from '../middlewares/admin';
+//import admin from '../middlewares/admin';
 import  {encryptPassword}  from '../middlewares/auth';
-import jwt from '../middlewares/jwt';
+//import jwt from '../middlewares/jwt';
 
 const router = Router();
 
