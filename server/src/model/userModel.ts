@@ -9,12 +9,24 @@ class User {
     return result.rows[0];
    
 }
-  async getUser(users: iUserLogin) {
-    const queryStr = "SELECT * FROM soterraniatestschema.usuarias WHERE email1= $1";
-    const values = [users.email1];
+  async getUserById(id_usuaria: any){
+    const queryStr = 'SELECT "id-usuaria", estado, email1, rol FROM soterraniatestschema.usuarias WHERE "id-usuaria"= $1'
+    const result:any = await connection.query(queryStr,[id_usuaria])
+    console.dir(result)
+    return result.rows[0];
+}
+  async getUserByEmail(email1: any) {
+    const queryStr = 'SELECT "id-usuaria", estado, email1, rol FROM soterraniatestschema.usuarias WHERE email1= $1';
+    const values = [email1];
     const result: any = await connection.query(queryStr, values);
     return result.rows[0];
-  }
+}
+  async getAllUsers (){
+    const queryStr = 'SELECT "id-usuaria", estado, email1, rol FROM soterraniatestschema.usuarias';
+    const result:any = await connection.query(queryStr, [])
+    console.dir(result)
+    return result.rows;
+}
 }
 
 export default new User();
