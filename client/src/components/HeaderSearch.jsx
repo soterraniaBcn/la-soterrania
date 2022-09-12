@@ -62,7 +62,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-start',
 }));
 
-export default function Header() {
+export default function HeaderSearch() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -123,10 +123,13 @@ export default function Header() {
         <List>
           
            <ListItemButton>
-            <a> Aviso Legal</a>
+            <a> Artistas</a>
            </ListItemButton>
            <ListItemButton>
-           <a>Sobre Nosotras</a>
+           <a>Salas</a>
+           </ListItemButton>
+           <ListItemButton>
+            <a>Eventos</a>
            </ListItemButton>
         
         </List>

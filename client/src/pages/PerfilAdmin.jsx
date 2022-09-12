@@ -1,6 +1,6 @@
 import React from 'react';
-import {Grid, FormGroup, Box, Button} from '@mui/material';
-import HeaderRight from '../components/Header'
+import {Grid, Box, Button} from '@mui/material';
+import SearchBar from '../components/SearchBar';
 
 export default function Login(){
 
@@ -23,7 +23,7 @@ export default function Login(){
             height:'20rem',
             
         }}>
-                  <HeaderRight/>
+                  <SearchBar/>
 
             
                   </Box>
