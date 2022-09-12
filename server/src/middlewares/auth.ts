@@ -25,7 +25,7 @@ const validateUser = async (req: Request,res: Response, next: NextFunction)=>{
            throw new Error(' email or password not exist');
         }
 
-        const result = await userModel.getUserByEmail({email1, password});
+        const result = await userModel.getUserByEmail(email1);
         const comparePassword = await bcrypt.compare(password, result.password);
 
         if(comparePassword){

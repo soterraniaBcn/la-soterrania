@@ -16,7 +16,7 @@ class User {
     return result.rows[0];
 }
   async getUserByEmail(email1: any) {
-    const queryStr = 'SELECT "id-usuaria", estado, email1, rol FROM soterraniatestschema.usuarias WHERE email1= $1';
+    const queryStr = 'SELECT * FROM soterraniatestschema.usuarias WHERE email1= $1';
     const values = [email1];
     const result: any = await connection.query(queryStr, values);
     return result.rows[0];
