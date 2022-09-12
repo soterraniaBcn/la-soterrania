@@ -1,137 +1,79 @@
 import React from 'react';
-import {Container, FormGroup, FormControlLabel, Box, Button, Checkbox} from '@mui/material';
+import {Grid, FormGroup, Box, Button} from '@mui/material';
 import HeaderRight from '../components/Header'
 
-export default function Register(){
+export default function Login(){
 
     return (
    <>
-         <Container maxWidth="xxl" position="fixed"
-            style={{ backgroundColor: '#cdcecf',
+         <Grid container
+            style={{ backgroundColor: '#E2A0FF',
             height: '100vh',
             display: 'flex',
             justifyContent:'center', 
             alignItems: 'center', 
-            flexDirection: 'column'}}>
+            flexDirection: 'column',
+           }}>
               
               <HeaderRight/>
         
-         
-
-        <FormGroup className='form' 
+         <Grid item xs={8}
+        
         style={{display:'flex', 
               alignItems: 'center', 
               justifyContent: 'center',
               backgroundColor:'white',
-              width:'17rem',
-              height:'30rem',
-              borderRadius:"0.5rem",
-             marginTop:'3rem'}}>
+              width:'24rem',
+              height:'26rem',
+              borderRadius:"1rem",
+              border: '5px solid #cdcecf',
+              marginTop:"2rem"}}>
 
-            <Box>
-               <p>Sóc:</p>
-               <FormGroup style={{display:"flex", flexDirection:'row'}}>
-                <FormControlLabel control={<Checkbox style={{color:'#E2A0FF',fontFamily:'Consolas'}}/>} label="Artista" />
-                <FormControlLabel control={<Checkbox style={{color:'#E2A0FF'}} />} label="Sala" />
-               </FormGroup>
-
-            </Box>
-              
-            <Box style={{lineHeight:"1px"}}>
-              <p>Nom i cognoms:</p>
-              <input type="text"
-                style={{
-                    width: "13rem",
-                    height: "1em",
-                    fontSize: "1rem",
-                    borderRadius: "10px",
-                    border:"1px solid grey"
-                    
-                }} />
-            </Box> 
-              
-            <Box style={{lineHeight:"1px"}}>
-              <p>Nom del grup/sala:</p>
-              <input type="text"
-              style={{
-                    color: "#000000",
-                    width: "13rem",
-                    height: "1em",
-                    fontSize: "1rem",
-                    borderRadius: "10px",
-                    border:"1px solid grey"
-                }} />
-            </Box> 
-              
+            <FormGroup className='form'xs={8}>
+            <p style={{fontSize:'2rem', display: 'flex', justifyContent: 'center'}}>LOGIN</p>  
             <Box style={{lineHeight:"1px"}}>
               <p>Correu electrònic:</p>
               <input type="text"
-              style={{
-                    color: "#000000",
-                    width: "13rem",
-                    height: "1em",
-                    fontSize: "1rem",
+                style={{ fontSize: "1.2rem",
                     borderRadius: "10px",
                     border:"1px solid grey"
                     
                 }} />
-            </Box> 
-            
-            <Box style={{lineHeight:"1px"}}>
+            </Box>
+              
+            <Box sx={{mt:'3rem'}} style={{lineHeight:"1px"}}>
               <p>Contrasenya:</p>
               <input type="text"
-              style={{
-                    width: "13rem",
-                    height: "1em",
-                    fontSize: "1rem",
-                    borderRadius: "10px",
-                    border: "1px solid grey"
+              style={{fontSize: "1.2rem",
+                      borderRadius: "10px",
+                      border: "1px solid grey"
                     
                 }} />
               </Box> 
-
-              <Box style={{lineHeight:"1px"}}>
-              <p>Descripció:</p>
-              <input type="text"
-                style={{
-                    width: "13rem",
-                    height: "4em",
-                    fontSize: "1rem",
-                    borderRadius: "10px",
-                    border:"1px solid grey"
-                    
-                }} />
-            </Box> 
-
-            <Box style={{lineHeight:"1px"}}>
-              <p>Links vídeos:</p>
-              <input type="text"
-                style={{
-                    width: "13rem",
-                    height: "2em",
-                    fontSize: "1rem",
-                    borderRadius: "10px",
-                    border:"1px solid grey"
-                    
-                }} />
-            </Box> 
-          </FormGroup>
-
-              
-               
-                
+              <Box style={{lineHeight:"1px", fontSize:'0.8rem'}}>
+              <p>Encara no tens compte? </p>
+            
+              <p>Pots enregistrar-te</p>
+              <a href="#register">aquí</a>
+      
     
+            </Box>
+
+
+          </FormGroup> 
+          </Grid>
+                
                 <Button
                   style={{
-                      backgroundColor: "#E2A0FF",
-                      width: "9rem",
+                      backgroundColor: "#cdcecf",
+                      width: "7rem",
                       height: "2rem",
                       borderRadius: "40px",
                       color: "black",
                       textTransform: "capitalize",
                       fontSize: "1rem",
                       fontWeight: "200",
-                      border: "2.5px solid black",
+                      border: "2.5px solid grey",
                       margin: "1.3em"
                     }}
                     >
@@ -143,7 +85,7 @@ export default function Register(){
 
          
     
-        </Container>
+        </Grid>
         </>
       
       

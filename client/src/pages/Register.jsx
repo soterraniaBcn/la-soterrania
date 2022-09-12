@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Item, Grid, FormGroup, FormControlLabel, TextareaAutosize, Box, Button, Checkbox} from '@mui/material';
+import {Grid, FormGroup, FormControlLabel, TextareaAutosize, Box, Button, Checkbox} from '@mui/material';
 import HeaderRight from '../components/Header'
 
 
@@ -8,25 +8,27 @@ export default function Register(){
 
     return (
           <>
-         <Grid container position="fixed"
+         <Grid container 
+         id="register"
             style={{ backgroundColor: '#cdcecf',
             height: '100vh',
             display: 'flex',
+            flexDirection: 'column',
             justifyContent:'center', 
             alignItems: 'center',
-            flexDirection:'column' 
+           
             }}>
               
               <HeaderRight/>
         
-                    <Grid container xs={8} style={{ display: 'flex',flexDirection:'column',
+                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'column',
                      alignItems: 'center', 
                      justifyContent: 'center',
                      backgroundColor:'white',
                      width:'28rem',
-                     height:'33rem',
-                     borderRadius:"0.5rem",
-                     marginTop:"2rem",
+                     height:'30rem',
+                     borderRadius:"1rem",
+                     marginTop:"1rem",
                      border: '2px solid #ea20ff'
                     
                       }}>

@@ -1,6 +1,7 @@
 import React from 'react';
-import HeaderRight from './components/Header'
-import Register from './pages/Register'
+import Login from './pages/Login';
+import Register from './pages/Register';
+import PerfilAdmin from './pages/PerfilAdmin';
 import './App.css';
 
 function App() {
@@ -8,8 +9,11 @@ function App() {
  
   return (
     <>
+   <Login/>
    <Register/>
-  {/* <HeaderRight/>*/}
+   <PerfilAdmin/>
+
+  
     </>
   );
 }
