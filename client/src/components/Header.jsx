@@ -16,7 +16,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import logo from '../pages/logo.png';
+import logo from '../assets/logo.png';
 
 
 
@@ -88,9 +88,6 @@ export default function HeaderRight() {
         <img src={logo} alt=""
         style={{width:"80px",
          height:"80px"}} ></img>
-         {/* <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
-            Persistent drawer
-  </Typography>*/}
   
           <IconButton
           
@@ -129,37 +126,13 @@ export default function HeaderRight() {
         </DrawerHeader>
 
         <List>
-          {/* {['Aviso Legal', 'Sobre nosotras'].map((text, index) => (
-           <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}*/}
            <ListItemButton>
             <a> Aviso Legal</a>
            </ListItemButton>
            <ListItemButton>
            <a>Sobre Nosotras</a>
            </ListItemButton>
-        
         </List>
-      {/*  <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-          </List>*/}
       </Drawer>
     </Box>
   );

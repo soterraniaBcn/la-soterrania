@@ -1,13 +1,23 @@
 import React from 'react';
-import Register from './pages/Register'
-import Footer from './components/Footer'
+import Register from './pages/Register';
+import Footer from './components/Footer';
+import Artistas from './pages/Artistas';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <>
-   <Register/>
-   <Footer/>
+    <Router>
+      <Switch>
+        <Route exact path="/register">
+          <Register/>
+        </Route> 
+        <Route exact path="/artistas">
+          <Artistas/>
+        </Route>
+      </Switch>
+   </Router>
     </>
   );
 }
