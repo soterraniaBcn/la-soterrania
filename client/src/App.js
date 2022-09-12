@@ -1,12 +1,16 @@
 import React from 'react';
 import Register from './pages/Register';
 import Artistas from './pages/Artistas';
-import {Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Router, Route, Switch} from 'react-router-dom';
+import HeaderSearch from './components/HeaderSearch'
 import './App.css';
+import PerfilAdmin from './pages/PerfilAdmin';
+import Login from './pages/Login'
 
 function App() {
   return (
     <>
+    {/*<BrowserRouter> 
     <Router>
       <Switch>
         <Route exact path="/register">
@@ -17,6 +21,9 @@ function App() {
         </Route>
       </Switch>
    </Router>
+  </BrowserRouter>*/}
+  <Login/>
+  <PerfilAdmin/>
     </>
   );
 }
