@@ -83,7 +83,7 @@ export default function Header() {
         <img src={logo} alt=""
         style={{width:"80px",
          height:"auto"}} ></img>
-          
+
   
           <IconButton
           
@@ -122,16 +122,13 @@ export default function Header() {
         </DrawerHeader>
 
         <List>
-          
            <ListItemButton>
-            <a> Aviso Legal</a>
+            <a href=""> Aviso Legal</a>
            </ListItemButton>
            <ListItemButton>
-           <a>Sobre Nosotras</a>
+           <a href="">Sobre Nosotras</a>
            </ListItemButton>
-        
         </List>
-      
       </Drawer>
     </Box>
   );

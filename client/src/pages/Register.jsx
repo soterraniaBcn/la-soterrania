@@ -4,7 +4,6 @@ import Header from '../components/Header'
 
 
 
-
 export default function Register(){
 
     return (
@@ -147,10 +146,10 @@ export default function Register(){
                   >
                   Enviar
                 </Button>
-                    
-                      
-        
-        </Grid>
+           </Grid>
+ 
+    
         </>
     )
-}
+  }
+

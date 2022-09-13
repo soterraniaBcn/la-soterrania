@@ -1,11 +1,14 @@
 import React from 'react';
 import {Grid, FormGroup, Box, Button} from '@mui/material';
-import Header from '../components/Header'
+import Header from '../components/Header';
+
+
+
 
 export default function Login(){
 
     return (
-   <>
+            <>
          <Grid container
             style={{ backgroundColor: '#E2A0FF',
             height: '100vh',
@@ -77,11 +80,13 @@ export default function Login(){
                       margin: "1.3em"
                     }}
                     >
-                  Enviar
-                </Button>
+                  Enviar </Button>
 
         
         </Grid>
+    
+    
         </>
+       
     )
 }
