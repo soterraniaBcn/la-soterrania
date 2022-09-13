@@ -6,7 +6,7 @@ import React from 'react'
 import imagen from '../imagen/imagen_nuria.PNG'
 import { Container, Box, Grid } from '@mui/material'
 
-export default function Detail() {
+export default function DetailArtista() {
   return (
     <Container ClassName="vh=100">
       <Card sx={{ display: 'flex', mt: 3 }}>

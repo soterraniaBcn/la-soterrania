@@ -4,16 +4,18 @@ import Footer from './components/Footer'
 import Login from './pages/Login';
 import PerfilAdmin from './pages/PerfilAdmin';
 import './App.css';
-import Detail from './pages/Detail'
+import DetailArtista from './pages/DetailArtista'
+import DetailSpace from './pages/DetailSpace'
 
 function App() {
   return (
     <>
-   <Login/>
+    <DetailArtista/>
+    <DetailSpace/>
+   {/* <Login/>
    <Register/>
-   <Detail/>
    <Footer/>
-   <PerfilAdmin/>
+   <PerfilAdmin/> */}
     </>
   );
 }
