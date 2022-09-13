@@ -68,10 +68,10 @@ const userController = {
                 res.status(400).send(error.message);
         }
     },
-
+    */
     deleteUser: async (req:Request,res:Response)=>{
             try{
-                const param = req.params.user_id;
+                const param = req.params.id_usuaria;
                 console.log(param, "llegas al param")
                 const result = await userModel.deleteUser(param);
                 console.log(result, "llega al result")
@@ -82,6 +82,6 @@ const userController = {
                 res.status(400).send(error.message);
             }
     }
-    */
+
 };
 export default userController;

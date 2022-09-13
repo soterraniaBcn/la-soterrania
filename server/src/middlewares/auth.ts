@@ -27,7 +27,7 @@ const validateUser = async (req: Request,res: Response, next: NextFunction)=>{
 
         const result = await userModel.getUserByEmail(email1);
         const comparePassword = await bcrypt.compare(password, result.password);
-
+        req.body.id_usuaria = result['id-usuaria']
         if(comparePassword){
             next();
         } else {

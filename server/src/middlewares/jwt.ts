@@ -10,7 +10,7 @@ const generateToken = async (
   next: NextFunction
 ) => {
   try {
-    const token = await jwt.sign({ email1: req.body.email1 }, secret, {
+    const token = await jwt.sign({ email1: req.body.email1, id_usuaria : req.body.id_usuaria }, secret, {
       expiresIn: "1h",
       algorithm: "HS256",
     });
