@@ -1,6 +1,6 @@
 import React from 'react';
-import {Grid, FormGroup, Box, Button} from '@mui/material';
-import HeaderRight from '../components/Header'
+import {Grid, Box, Button} from '@mui/material';
+import SearchBar from '../components/SearchBar';
 
 export default function Login(){
 
@@ -20,10 +20,10 @@ export default function Login(){
         style={{
             backgroundColor:'#E2A0FF',
             marginTop:0,
-            height:'20rem',
+            height:'10rem',
             
         }}>
-                  <HeaderRight/>
+                  <SearchBar/>
 
             
                   </Box>

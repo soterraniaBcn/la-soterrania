@@ -1,6 +1,7 @@
 import React from 'react';
-import HeaderRight from '../components/Header';
 import {Grid, FormGroup, FormControlLabel, TextareaAutosize, Box, Button, Checkbox} from '@mui/material';
+import Header from '../components/Header'
+
 
 
 
@@ -19,37 +20,37 @@ export default function Register(){
            
             }}>
               
-              <HeaderRight/>
+      <Header/>
         
-                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'column',
+                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
                      alignItems: 'center', 
                      justifyContent: 'center',
                      backgroundColor:'white',
-                     width:'28rem',
-                     height:'30rem',
+                     width:'25rem',
+                     height:'28rem',
                      borderRadius:"1rem",
-                     marginTop:"1rem",
+                     marginTop:"3rem",
                      border: '2px solid #ea20ff'
                     
                       }}>
                     
                 
     
-                    <FormGroup sx={{py:'1.8rem'}} className='checkbox'style={{lineHeight:"1px"}}>
-                         <p>Sóc:</p>
-                         <FormGroup style={{display:"flex", flexDirection:'row'}}>
+                    <FormGroup sx={{paddingY:'10px'}} className='checkbox'style={{lineHeight:"1px"}}>
+              
+                         <FormGroup style={{display:"flex", flexDirection:'row', justifyContent: 'center'}}>
                          <FormControlLabel control={<Checkbox style={{color:'#E2A0FF'}}/>} label="Artista" style={{fontFamily:'Consolas'}} />
                          <FormControlLabel control={<Checkbox style={{color:'#E2A0FF'}} />} label ="Espai" style={{fontFamily:'Consolas'}} />
                           </FormGroup>
-
-          
+                  
+                    <Grid item>
               
                     <Box style={{lineHeight:"1px"}}>
                         <p>Nom i cognoms:</p>
                         <input type="text"
                          style={{
                          width:'auto',
-                         fontSize: "1.2rem",
+                         fontSize: "1.1rem",
                          borderRadius: "1rem",
                          border:"0.1rem solid grey"
                     
@@ -62,7 +63,7 @@ export default function Register(){
                           style={{
                           color: "#000000",
                           width: "auto",
-                          fontSize: "1.2rem",
+                          fontSize: "1.1rem",
                           borderRadius: "10px",
                           border:"1px solid grey"
                           }} />
@@ -74,7 +75,7 @@ export default function Register(){
                            style={{
                            color: "#000000",
                            width: "auto",
-                           fontSize: "1.2rem",
+                           fontSize: "1.1rem",
                            borderRadius: "10px",
                            border:"1px solid grey"
                     
@@ -85,15 +86,16 @@ export default function Register(){
                            <p>Contrasenya:</p>
                            <input type="text"
                            style={{
-                            display: 'block',
-                           width: "autofix",
-                           fontSize: "1.2rem",
+                           fontSize: "1.1rem",
                            borderRadius: "10px",
                            border: "1px solid grey"
                     
                           }} />
                      </Box> 
-              
+                    </Grid>
+                    
+
+                    <Grid item xl={4}>
                      <Box style={{lineHeight:"1px"}}>
                            <p>Descripció:</p>
                           <TextareaAutosize
@@ -101,7 +103,11 @@ export default function Register(){
                                aria-label="maximum height"
                                placeholder="Escriu una breu descripció..."
                                defaultValue=""
-                               style={{ fontFamily:'Consolas',fontSize:'1rem', marginTop:0, width:'13.3rem', borderRadius: '10px', border:"1px solid grey" }}
+                               style={{ fontFamily:'Consolas',
+                               fontSize:'1.1rem',
+                               marginTop:0, 
+                               borderRadius: '10px', 
+                               border:"1px solid grey" }}
                                />
                       </Box>
                    
@@ -114,13 +120,13 @@ export default function Register(){
                                placeholder="Els teus links"
                                defaultValue=""
                                style={{ fontFamily: 'Consolas',
-                                fontSize: '1rem',
-                                marginTop:0, 
-                                width:'13.3rem', 
+                                fontSize: '1.1rem',
+                                marginTop:0,  
                                 borderRadius: '10px',
                                 border:"1px solid grey" }}
                                />
                       </Box> 
+                      </Grid>
                      </FormGroup>
                   
                      </Grid>
@@ -129,14 +135,14 @@ export default function Register(){
                   style={{
                     backgroundColor: "#E2A0FF",
                     width: "7rem",
-                    height: "2rem",
+                    height: "1.8rem",
                     borderRadius: "40px",
                     color: "black",
                     textTransform: "capitalize",
                     fontSize: "1rem",
                     fontWeight: "200",
                     border: "2.5px solid grey",
-                    margin: "1.2em"
+                    margin: "0.8rem"
                   }}
                   >
                   Enviar

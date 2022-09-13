@@ -1,6 +1,6 @@
 import React from 'react';
 import {Grid, FormGroup, Box, Button} from '@mui/material';
-import HeaderRight from '../components/Header'
+import Header from '../components/Header'
 
 export default function Login(){
 
@@ -15,7 +15,7 @@ export default function Login(){
             flexDirection: 'column',
            }}>
               
-              <HeaderRight/>
+              <Header/>
         
          <Grid item xs={8}
         
@@ -80,16 +80,8 @@ export default function Login(){
                   Enviar
                 </Button>
 
-            
-    
-
-         
-    
+        
         </Grid>
         </>
-      
-      
-      
-
     )
 }
