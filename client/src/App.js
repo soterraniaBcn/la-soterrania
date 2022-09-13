@@ -1,17 +1,19 @@
 import React from 'react';
-import HeaderRight from './components/Header'
 import Register from './pages/Register'
+import Footer from './components/Footer'
+import Login from './pages/Login';
+import PerfilAdmin from './pages/PerfilAdmin';
 import './App.css';
 import Detail from './pages/Detail'
 
 function App() {
- 
- 
   return (
     <>
-   {/* <Register/> */}
+   <Login/>
+   <Register/>
    <Detail/>
-  {/* <HeaderRight/>*/}
+   <Footer/>
+   <PerfilAdmin/>
     </>
   );
 }

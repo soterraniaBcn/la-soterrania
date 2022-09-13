@@ -10,13 +10,9 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import logo from '../pages/logo.png'
+import logo from '../images/logo.png';
+
 
 
 
@@ -87,7 +83,7 @@ export default function HeaderRight() {
         <Toolbar style={{ justifyContent:'space-between'}}>
         <img src={logo} alt=""
         style={{width:"80px",
-         height:"80px"}} ></img>
+         height:"auto"}} ></img>
          {/* <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
             Persistent drawer
   </Typography>*/}
