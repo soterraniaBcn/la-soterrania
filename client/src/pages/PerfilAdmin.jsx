@@ -20,7 +20,7 @@ export default function Login(){
         style={{
             backgroundColor:'#E2A0FF',
             marginTop:0,
-            height:'20rem',
+            height:'10rem',
             
         }}>
                   <SearchBar/>
