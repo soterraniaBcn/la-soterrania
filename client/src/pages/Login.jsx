@@ -33,7 +33,8 @@ export default function Login(){
               marginTop:"2rem"}}>
 
             <FormGroup className='form'xs={8}>
-            <p style={{fontSize:'2rem', display: 'flex', justifyContent: 'center'}}>LOGIN</p>  
+            <p style={{fontSize:'2rem', display: 'flex',
+             justifyContent: 'center'}}>LOGIN</p>  
             <Box style={{lineHeight:"1px"}}>
               <p>Correu electrònic:</p>
               <input type="text"

@@ -8,7 +8,7 @@ import { Container, Box, Grid } from '@mui/material'
 
 export default function Detail() {
   return (
-    <Container ClassName="vh=100">
+    <Container ClassName="vh-100">
       <Card sx={{ display: 'flex', mt: 3 }}>
         <CardMedia
           component="img"
