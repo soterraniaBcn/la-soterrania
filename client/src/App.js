@@ -6,10 +6,15 @@ import PerfilAdmin from './pages/PerfilAdmin';
 import './App.css';
 import DetailArtista from './pages/DetailArtista'
 import DetailSpace from './pages/DetailSpace'
+import Home from './components/Home'
+import HomePage from './components/HomePage'
+
 
 function App() {
   return (
     <>
+    <Home/>
+    <HomePage/>
     <DetailArtista/>
     <DetailSpace/>
    {/* <Login/>
