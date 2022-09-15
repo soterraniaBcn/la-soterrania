@@ -8,11 +8,13 @@ import { Container, Box, Grid } from '@mui/material'
 
 export default function DetailSpace() {
   return (
+    <div style={{backgroundColor:'pink'}} >
+
     <Container ClassName="vh=100">
-      <Card sx={{ display: 'flex', mt: 3 }}>
+      <Card sx={{ display: 'flex'}}>
         <CardMedia
           component="img"
-          sx={{ width: 151, ml: 7, mr: 2, mt: 5, mb: 3 }}
+          sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 2 }}
           src={imagen}
           alt="Live from space album cover"
         />
@@ -38,7 +40,7 @@ export default function DetailSpace() {
           </CardContent>
         </Box>
       </Card>
-      <Card sx={{ display: 'flex' }}>
+      <Card sx={{ display: 'flex', padding:0 }}>
         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
           <CardContent sx={{ flex: '1 0 auto' }}>
             <Typography component="div" variant="h5" sx={{ ml: 2 }}>
@@ -62,11 +64,10 @@ export default function DetailSpace() {
             <Grid
               container
               sx={{
-                mt: 2,
                 display: 'flex',
                 justifyContent: 'space-around',
                 alignItems: 'center',
-              }}
+            }}
             >
               <Grid item md={6}>
                 <CardContent sx={{ flex: '1 0 auto' }}>
@@ -74,14 +75,14 @@ export default function DetailSpace() {
                     component="div"
                     variant="p"
                     style={{ marginRight: '1%' }}
-                  >
+                    >
                     Dias y horarios:
                     <Typography
                       variant="p"
                       color="text.secondary"
                       style={{ marginLeft: '0.3rem' }}
                     >
-                      lunes a viernes de las 7.00 a las 7.15
+                      lunes a viernes de las 7:00 a las 7:15
                     </Typography>
                   </Typography>
                   <Typography component="div" variant="p">
@@ -130,7 +131,7 @@ export default function DetailSpace() {
                       variant="p"
                       color="text.secondary"
                       style={{ marginLeft: '0.3rem' }}
-                    >
+                      >
                       Si
                     </Typography>
                   </Typography>
@@ -140,7 +141,7 @@ export default function DetailSpace() {
                       variant="p"
                       color="text.secondary"
                       style={{ marginLeft: '0.3rem' }}
-                    >
+                      >
                       Recibimos comida como parte de pago
                     </Typography>
                   </Typography>
@@ -155,19 +156,19 @@ export default function DetailSpace() {
                   flexDirection: 'column', 
                   alignItems: 'center'
                 }}
-              >
+                >
                 <CardContent
                   sx={{
-                    flex: '1 0 auto',
+                      flex: '1 0 auto',
                   }}
-                >
+                  >
                   <Typography variant="p" style={{ marginRight: '1%' }}>
                     Número telefónico:
                     <Typography
                       variant="p"
                       color="text.secondary"
                       style={{ marginLeft: '0.3rem' }}
-                    >
+                      >
                       663344557
                     </Typography>
                   </Typography>
@@ -175,13 +176,13 @@ export default function DetailSpace() {
                     component="div"
                     variant="p"
                     style={{ marginRight: '1%' }}
-                  >
+                    >
                     E-mail:
                     <Typography
                       variant="p"
                       color="text.secondary"
                       style={{ marginLeft: '0.3rem' }}
-                    >
+                      >
                       hola@gmail.com
                     </Typography>
                   </Typography>
@@ -203,7 +204,7 @@ export default function DetailSpace() {
                     component="div"
                     variant="p"
                     style={{ marginRight: '1%' }}
-                  >
+                    >
                     Facebook:
                     <Typography
                       variant="p"
@@ -217,13 +218,13 @@ export default function DetailSpace() {
                     component="div"
                     variant="p"
                     style={{ marginRight: '1%' }}
-                  >
+                    >
                     Ubicacion:
                     <Typography
                       variant="p"
                       color="text.secondary"
                       style={{ marginLeft: '0.3rem' }}
-                    >
+                      >
                       Carrer florecillas
                     </Typography>
                   </Typography>
@@ -231,14 +232,14 @@ export default function DetailSpace() {
                     component="div"
                     variant="p"
                     style={{ marginRight: '1%' }}
-                  >
+                    >
                     Facil acceso a traves de
                     <Typography
                       variant="p"
                       color="text.secondary"
                       style={{ marginLeft: '0.3rem' }}
-                    >
-                      L3, L1, bicying
+                      >
+                          L3, L1, bicying
                     </Typography>
                   </Typography>
                 </CardContent>
@@ -248,5 +249,6 @@ export default function DetailSpace() {
         </Box>
       </Card>
     </Container>
+  </div>
   )
 }
