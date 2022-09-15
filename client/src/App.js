@@ -7,6 +7,8 @@ import './App.css';
 import DetailArtista from './pages/DetailArtista'
 import DetailSpace from './pages/DetailSpace'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './components/Home'
+import HomePage from './components/HomePage'
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
     <>
     <Login/>
     <Register/>
+    <Home/>
+    <HomePage/>
     <DetailArtista/>
     <DetailSpace/>
     <Footer/>

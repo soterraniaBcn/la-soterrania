@@ -3,7 +3,7 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Card from '@mui/material/Card'
 import React from 'react'
-import imagen from '../imagen/imagen_nuria.PNG'
+import imagen from '../imagenes/imagen_nuria.PNG'
 import { Container, Box, Grid } from '@mui/material'
 
 export default function DetailSpace() {
