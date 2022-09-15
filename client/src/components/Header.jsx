@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-=======
-// import React from 'react'
-
-// export default function Header() {
-//   return (
-//     <div>Header</div>
-//   )
-// }
->>>>>>> d5050147f45735273a97448c7dbcd8bf4b0d9a72
 import * as React from 'react';
 import { styled, useTheme, withStyles } from '@mui/material/styles';
 import {Grid, Box,Drawer,Link, Toolbar,List,IconButton} from '@mui/material';
@@ -17,14 +7,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemButton from '@mui/material/ListItemButton';
-<<<<<<< HEAD
 import logo from '../images/logosote.png';
 import AccountMenu from './Menu';
 
-=======
-import logo from '../imagenes/logo.png';
-import { useState } from 'react';
->>>>>>> d5050147f45735273a97448c7dbcd8bf4b0d9a72
+
 
 
 
