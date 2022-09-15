@@ -4,12 +4,14 @@ import CardMedia from '@mui/material/CardMedia'
 import Card from '@mui/material/Card'
 import React from 'react'
 import imagen from '../imagenes/imagen_nuria.PNG'
+import Header from '../components/Header'
 import { Container, Box, Grid } from '@mui/material'
 
 
 export default function DetailArtista() {
   return (
-    <div style={{backgroundColor:"pink"}}>    
+    <div style={{backgroundColor:"pink"}}>  
+    <Header/>  
     <Box style={{backgroundColor:"pink", height:'90px' }}>
       .
       </Box>  

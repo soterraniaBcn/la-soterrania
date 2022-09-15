@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -20,10 +21,15 @@ import Home from './components/Home'
 import HomePage from './components/HomePage'
 >>>>>>> 4e1b0364db9fccf21e3793cc178e7bc2b215c28d
 
+=======
+import React from 'react'
+import Router from './Router'
+>>>>>>> d5050147f45735273a97448c7dbcd8bf4b0d9a72
 
 function App() {
   return (
     <>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Login />
       <Register />
@@ -53,18 +59,11 @@ function App() {
     <DetailSpace/>
     <Footer/>
 >>>>>>> 4e1b0364db9fccf21e3793cc178e7bc2b215c28d
+=======
+    <Router/>
+>>>>>>> d5050147f45735273a97448c7dbcd8bf4b0d9a72
     </>
-  );
+  )
 }
 
-export default App;
-
-{/* <BrowserRouter>
-   <Routes>
-     <Route path="/" element={<Login />} />
-     <Route path="/artist/detail" element={<DetailArtista />} />
-     <Route path="/space/detail" element={<DetailSpace />} />
-     <Route path="/register" element={<Register />} />
-     <Route path="/perfiladmi" element={<PerfilAdmin />} />
-   </Routes>
-</BrowserRouter> */}
+export default App
