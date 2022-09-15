@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import PerfilAdmin from "./pages/PerfilAdmin";
 import "./App.css";
 import Detail from "./pages/Detail";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Register />
       <PerfilAdmin />
       <Detail />
+      <Footer/>
+    
 
       {/*<BrowserRouter> 
     <Router>

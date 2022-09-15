@@ -6,12 +6,28 @@ p{
   background-color: transparent !important;
 }
 
+a{text-decoration: none;}
+
+
+
 /*FOOTER*/
 
-@media screen and (max-width:550){
+@media screen and (max-width:624){
   .MuiGrid-item{
      width:1vw;
      padding:5px;
   }
+ .menu {
+  display: 'none';
+ }
 }
 
+
+@media screen and (min-width: 624px){ 
+
+.menuhamburger{
+  display: none;
+}
+
+
+}

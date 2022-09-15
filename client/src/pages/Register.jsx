@@ -19,7 +19,7 @@ export default function Register(){
            
             }}>
               
-      <Header/>
+      {/*<Header/>*/}
         
                     <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
                      alignItems: 'center', 

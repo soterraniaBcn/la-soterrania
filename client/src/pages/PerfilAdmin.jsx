@@ -8,7 +8,7 @@ import {
   CardMedia,
   Typography,
   Card,
-  cardClasses,
+
 } from "@mui/material";
 import SearchBar from "../components/SearchBar";
 import imagenperfil from "../images/imageperfil.jpeg";
