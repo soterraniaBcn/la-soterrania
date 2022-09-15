@@ -1,3 +1,10 @@
+// import React from 'react'
+
+// export default function Header() {
+//   return (
+//     <div>Header</div>
+//   )
+// }
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -12,6 +19,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemButton from '@mui/material/ListItemButton';
 import logo from '../imagenes/logo.png';
+import { useState } from 'react';
 
 
 
