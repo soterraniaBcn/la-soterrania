@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Grid, FormGroup, Box, Button} from '@mui/material';
 import Header from '../components/Header';
-
+import { Link, useNavigate } from "react-router-dom";
+import { authService } from "../services/authService";
 
 
 
 export default function Login(){
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [user, setUser] = useState({ email, password });
+  const navigation = useNavigate();
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = { email: email, password: password };
+    console.log(user)
+    authService
+      .login(user)
+      .then((res) => {
+        console.log(res.data.token)
+        setUser(res.data.token);
+        localStorage.setItem("user", res.data.token);
+        if (res.data.token) {
+          navigation("/myprofile", { replace: true })
+        }
+      })
+      .catch(() => setError("Hubo un error"));
+  };
+
 
     return (
             <>
@@ -42,7 +66,8 @@ export default function Login(){
                     borderRadius: "10px",
                     border:"1px solid grey"
                     
-                }} />
+                }}
+                onChange={(e) => setEmail(e.target.value)} />
             </Box>
               
             <Box sx={{mt:'3rem'}} style={{lineHeight:"1px"}}>
@@ -51,8 +76,9 @@ export default function Login(){
               style={{fontSize: "1.2rem",
                       borderRadius: "10px",
                       border: "1px solid grey"
-                    
-                }} />
+                }} 
+                onChange={(e) => setPassword(e.target.value)}
+                />
               </Box> 
               <Box style={{lineHeight:"1px", fontSize:'0.8rem'}}>
               <p>Encara no tens compte? </p>
@@ -80,6 +106,7 @@ export default function Login(){
                       border: "2.5px solid grey",
                       margin: "1.3em"
                     }}
+                    onClick={handleSubmit}
                     >
                   Enviar </Button>
 

@@ -8,12 +8,9 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemButton from '@mui/material/ListItemButton';
 import logo from '../imagenes/logosote.png';
-<<<<<<< HEAD
-=======
 import AccountMenu from './Menu';
 
 
->>>>>>> dbcb7ad4c0c26198525665155e752b8dfc20232d
 
 
 

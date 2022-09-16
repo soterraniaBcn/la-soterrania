@@ -1,14 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import {Grid, FormGroup, FormControlLabel, TextareaAutosize, Box, Button, Checkbox} from '@mui/material';
-
-
-
-=======
-import {Container, FormGroup, FormControlLabel, Box, Button, Checkbox} from '@mui/material';
-import HeaderRight from '../components/Header';
-import Footer from '../components/FooterMui';
->>>>>>> artistas
+import Header from '../components/Header';
 
 export default function Register(){
 
@@ -25,7 +17,7 @@ export default function Register(){
            
             }}>
               
-      {/*<Header/>*/}
+      {<Header/>}
         
                     <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
                      alignItems: 'center', 
