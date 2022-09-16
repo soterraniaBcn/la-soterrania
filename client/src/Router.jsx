@@ -9,6 +9,7 @@ import DetailSpace from './pages/DetailSpace'
 import PerfilAdmin from './pages/PerfilAdmin'
 import DetailEvent from './pages/DetailEvent'
 import WaitingRoom from './pages/WaitingRoom'
+import LegalWarning from './pages/LegalWarning'
 
 
 export default function Router() {
@@ -25,6 +26,7 @@ export default function Router() {
         <Route exact path="/space/detail" element={<DetailSpace />} />
         <Route exact path="/events" element={<DetailEvent />} />
         <Route exact path="/perfiladmi" element={<PerfilAdmin />} />
+        <Route exact path="/legalwarning" element={<LegalWarning />} />
       </Routes>
     </div>
   )

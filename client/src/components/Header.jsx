@@ -134,7 +134,7 @@ export default function Header() {
         <List>
           
            <ListItemButton>
-            <a> Aviso Legal</a>
+            <a href='/legalwarning'> Aviso Legal</a>
            </ListItemButton>
            <ListItemButton>
            <a>Sobre Nosotras</a>
