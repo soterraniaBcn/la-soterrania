@@ -1,5 +1,7 @@
+
 import React from 'react'
-import Routes from './Router'
+import Router from './Router'
+import "./App.css";
 
 
 function App() {
@@ -8,7 +10,7 @@ function App() {
 
  
 
-    <Routes/>
+    <Router/>
 
     </>
   )
