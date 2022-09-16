@@ -1,3 +1,15 @@
+body{
+  margin:0;
+  padding:0;
+}
+
+.css-11lq3yg-MuiGrid-root{
+  margin:0;
+  padding:0;
+}
+
+
+
 p{
   font-family: Consolas;
 }
@@ -9,9 +21,9 @@ p{
 
 @media screen and (max-width:624){
 
-  .MuiGrid-item{
+  .MuiGrid-item {
      width:1vw;
-     padding:5px;
+    
   }
  .menu {
   display: 'none';
@@ -35,8 +47,8 @@ p{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
   /* Set a specific height */
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -56,14 +68,6 @@ p{
   color: white;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  max-width: 55rem;
-  padding: 2rem 1.5rem;
-  margin: 0 auto;
-  color: #241623;
-  background: #eef2f4;
-}
 
 h1 {
   font-weight: 900;
@@ -78,7 +82,9 @@ p {
 a {
   color: currentcolor;
 }
-     /* button     */
+    
+/* button     */
+
 .btn-grad {
   background-image: linear-gradient(to right, #1446A0 0%, #FFFF  51%, #E2A0FF  100%);
   margin: 10px;

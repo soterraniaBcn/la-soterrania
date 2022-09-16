@@ -1,20 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD
 import {Grid, FormGroup, FormControlLabel, TextareaAutosize, Box, Button, Checkbox} from '@mui/material';
+import Header from '../components/Header';
 
 
-
-=======
-import {Container, FormGroup, FormControlLabel, Box, Button, Checkbox} from '@mui/material';
-import HeaderRight from '../components/Header';
-import Footer from '../components/FooterMui';
->>>>>>> artistas
 
 export default function Register(){
 
     return (
           <>
-         <Grid container 
+      
+        
+        
+         <Grid container
          id="register"
             style={{ backgroundColor: '#cdcecf',
             height: '100vh',
@@ -22,26 +19,28 @@ export default function Register(){
             flexDirection: 'column',
             justifyContent:'center', 
             alignItems: 'center',
+            position: 'absolute',
+            paddingTop:'0'
+      
            
             }}>
+                   <Header/>
               
-      {/*<Header/>*/}
-        
-                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
+                    <Grid item xs={10} style={{ display: 'flex',flexDirection:'row',
                      alignItems: 'center', 
                      justifyContent: 'center',
                      backgroundColor:'white',
                      width:'25rem',
-                     height:'28rem',
+                     maxHeight:'30rem',
                      borderRadius:"1rem",
-                     marginTop:"3rem",
+                     marginTop:"6rem",
                      border: '2px solid #ea20ff'
                     
                       }}>
                     
                 
     
-                    <FormGroup sx={{paddingY:'10px'}} className='checkbox'style={{lineHeight:"1px"}}>
+                    <FormGroup className='checkbox'style={{lineHeight:"1px"}}>
               
                          <FormGroup style={{display:"flex", flexDirection:'row', justifyContent: 'center'}}>
                          <FormControlLabel control={<Checkbox style={{color:'#E2A0FF'}}/>} label="Artista" style={{fontFamily:'Consolas'}} />
@@ -154,7 +153,6 @@ export default function Register(){
                 </Button>
            </Grid>
  
-    
         </>
     )
   }

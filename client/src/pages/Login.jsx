@@ -16,21 +16,21 @@ export default function Login(){
             justifyContent:'center', 
             alignItems: 'center', 
             flexDirection: 'column',
+            marginTop: 0
            }}>
-              
-        <Header/>
-        
+           <Header/>    
+
          <Grid item xs={8}
         
         style={{display:'flex', 
               alignItems: 'center', 
               justifyContent: 'center',
               backgroundColor:'white',
-              width:'24rem',
-              height:'26rem',
+              width:'25rem',
+              maxHeight:'30rem',
               borderRadius:"1rem",
               border: '5px solid #cdcecf',
-              marginTop:"2rem"}}>
+              marginTop:"6rem"}}>
 
             <FormGroup className='form'xs={8}>
             <p style={{fontSize:'2rem', display: 'flex',

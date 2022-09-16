@@ -12,8 +12,11 @@ import {
 } from "@mui/material";
 import SearchBar from "../components/SearchBar";
 import imagenperfil from "../imagenes/imageperfil.jpeg";
+import Menu from "../components/Menu";
 
-export default function Login() {
+
+
+export default function PerfilAdmin() {
   return (
     <Grid
       container
@@ -46,7 +49,7 @@ export default function Login() {
             justifyContent: "center",
           }}
         >
-          EL MEU PERFIL (admin)
+          Panell d' administració
         </p>
 
         <Card sx={{ display: "flex", flexDirection: "row" }}>
@@ -60,16 +63,18 @@ export default function Login() {
           <Box sx={{}}>
             <CardContent sx={{ flex: "1 0 auto", mt: 5 }}>
               <Typography component="div" variant="h5">
-                Nom i cognoms:
+                Mar Montobbio
               </Typography>
               <Typography variant="p" style={{ marginRight: "1%" }}>
-                Web:
+              lasoterrania@gmail.com
                 <Typography
                   variant="p"
                   color="text.secondary"
-                  style={{ marginLeft: "0.3rem" }}
+                  style={{ marginLeft: "0.3rem",
+                   display: "flex",
+                   flexDirection:"column"}}
                 >
-                  Xarxes socials:
+                  Admin
                 </Typography>
               </Typography>
             </CardContent>

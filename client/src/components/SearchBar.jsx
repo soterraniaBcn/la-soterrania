@@ -1,5 +1,3 @@
-
-
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -7,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { Grid } from '@mui/material';
+import Header from '../components/Header';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -20,7 +19,7 @@ const Search = styled('div')(({ theme }) => ({
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(1),
-    width: '30rem',
+    width: '25rem',
   },
 }));
 
@@ -53,9 +52,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchBar() {
   return (
-   <Grid container sx={{}}>
+   <Grid container>
+    <Header/>
       <AppBar position="static"sx={{backgroundColor:"#E2A0FF"}} elevation={0}>
-        <Toolbar style={{display: 'flex', justifyContent: 'center',marginTop: '6rem'}} >
+        <Toolbar style={{display: 'flex', justifyContent: 'center',marginTop: '2rem'}} >
          <Search >
             <SearchIconWrapper>
               <SearchIcon />
