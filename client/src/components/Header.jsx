@@ -9,13 +9,6 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemButton from '@mui/material/ListItemButton';
 import logo from '../imagenes/logosote.png';
 import AccountMenu from './Menu';
-
-
-
-
-
-
-
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
