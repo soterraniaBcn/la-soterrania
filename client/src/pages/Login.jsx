@@ -84,7 +84,7 @@ export default function Login(){
               <p>Encara no tens compte? </p>
             
               <p>Pots enregistrar-te</p>
-              <a href="#register">aquí</a>
+              <a href="/register">aquí</a>
       
     
             </Box>
@@ -93,7 +93,7 @@ export default function Login(){
           </FormGroup> 
           </Grid>
                 
-                <Button
+                <Button href="/homepage" 
                   style={{
                       backgroundColor: "#cdcecf",
                       width: "7rem",
