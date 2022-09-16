@@ -6,15 +6,28 @@ p{
   background-color: transparent !important;
 }
 
-/*FOOTER*/
 
-@media screen and (min-width:550){
+@media screen and (max-width:624){
+
   .MuiGrid-item{
      width:1vw;
      padding:5px;
   }
+ .menu {
+  display: 'none';
+ }
 }
 
+
+
+@media screen and (min-width: 624px){ 
+
+.menuhamburger{
+  display: none;
+}
+
+
+}
 
 /* home */
 .hero-image {

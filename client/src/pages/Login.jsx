@@ -1,11 +1,14 @@
 import React from 'react';
 import {Grid, FormGroup, Box, Button} from '@mui/material';
-import Header from '../components/Header'
+import Header from '../components/Header';
+
+
+
 
 export default function Login(){
 
     return (
-   <>
+            <>
          <Grid container
             style={{ backgroundColor: '#E2A0FF',
             height: '100vh',
@@ -15,7 +18,7 @@ export default function Login(){
             flexDirection: 'column',
            }}>
               
-              <Header/>
+        <Header/>
         
          <Grid item xs={8}
         
@@ -30,7 +33,8 @@ export default function Login(){
               marginTop:"2rem"}}>
 
             <FormGroup className='form'xs={8}>
-            <p style={{fontSize:'2rem', display: 'flex', justifyContent: 'center'}}>LOGIN</p>  
+            <p style={{fontSize:'2rem', display: 'flex',
+             justifyContent: 'center'}}>LOGIN</p>  
             <Box style={{lineHeight:"1px"}}>
               <p>Correu electrònic:</p>
               <input type="text"
@@ -77,11 +81,13 @@ export default function Login(){
                       margin: "1.3em"
                     }}
                     >
-                  Enviar
-                </Button>
+                  Enviar </Button>
 
         
         </Grid>
+    
+    
         </>
+       
     )
 }

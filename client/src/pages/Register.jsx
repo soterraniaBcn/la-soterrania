@@ -1,6 +1,5 @@
 import React from 'react';
 import {Grid, FormGroup, FormControlLabel, TextareaAutosize, Box, Button, Checkbox} from '@mui/material';
-import Header from '../components/Header'
 
 
 
@@ -20,7 +19,7 @@ export default function Register(){
            
             }}>
               
-      <Header/>
+      {/*<Header/>*/}
         
                     <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
                      alignItems: 'center', 
@@ -147,10 +146,10 @@ export default function Register(){
                   >
                   Enviar
                 </Button>
-                    
-                      
-        
-        </Grid>
+           </Grid>
+ 
+    
         </>
     )
-}
+  }
+
