@@ -21,15 +21,9 @@ export default function Router() {
         <Route exact path="/homepage" element={<HomePage />} />
         <Route exact path="/artist/detail" element={<DetailArtista />} />
         <Route exact path="/space/detail" element={<DetailSpace />} />
-<<<<<<< HEAD
-        <Route exact path="/perfiladmin" element={<PerfilAdmin />} />
-        </Routes>
-    
-=======
         <Route exact path="/events" element={<DetailEvent />} />
         <Route exact path="/perfiladmi" element={<PerfilAdmin />} />
       </Routes>
->>>>>>> detailevent
     </div>
   )
 }
