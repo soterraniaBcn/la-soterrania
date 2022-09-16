@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grid, FormGroup, Box, Button} from '@mui/material';
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 
 
 
@@ -66,13 +67,14 @@ export default function Login(){
 
           </FormGroup> 
           </Grid>
-                
+                <Link to="/homepage">
+
                 <Button
                   style={{
-                      backgroundColor: "#cdcecf",
-                      width: "7rem",
-                      height: "2rem",
-                      borderRadius: "40px",
+                    backgroundColor: "#cdcecf",
+                    width: "7rem",
+                    height: "2rem",
+                    borderRadius: "40px",
                       color: "black",
                       textTransform: "capitalize",
                       fontSize: "1rem",
@@ -84,6 +86,7 @@ export default function Login(){
                   Enviar </Button>
 
         
+                      </Link>
         </Grid>
     
     

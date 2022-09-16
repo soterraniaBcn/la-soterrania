@@ -1,14 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import {Grid, FormGroup, FormControlLabel, TextareaAutosize, Box, Button, Checkbox} from '@mui/material';
-
-
-
-=======
-import {Container, FormGroup, FormControlLabel, Box, Button, Checkbox} from '@mui/material';
+import {Container } from '@mui/material';
 import HeaderRight from '../components/Header';
-import Footer from '../components/FooterMui';
->>>>>>> artistas
 
 export default function Register(){
 
