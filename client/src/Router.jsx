@@ -18,18 +18,13 @@ export default function Router() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
-        <Route exact path="/homepage" element={<HomePage />} />
+        <Route exact path="/homepage" elemen
+        t={<HomePage />} />
         <Route exact path="/artist/detail" element={<DetailArtista />} />
         <Route exact path="/space/detail" element={<DetailSpace />} />
-<<<<<<< HEAD
         <Route exact path="/perfiladmin" element={<PerfilAdmin />} />
-        </Routes>
-    
-=======
         <Route exact path="/events" element={<DetailEvent />} />
-        <Route exact path="/perfiladmi" element={<PerfilAdmin />} />
       </Routes>
->>>>>>> detailevent
     </div>
   )
 }

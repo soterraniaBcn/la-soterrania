@@ -92,7 +92,6 @@ export default function Login(){
 
           </FormGroup> 
           </Grid>
-                
                 <Button
                   style={{
                       backgroundColor: "#cdcecf",
@@ -109,11 +108,8 @@ export default function Login(){
                     onClick={handleSubmit}
                     >
                   Enviar </Button>
-
-        
         </Grid>
-    
-    
+        {error}
         </>
        
     )
