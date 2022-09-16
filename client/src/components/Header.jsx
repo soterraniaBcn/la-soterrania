@@ -1,16 +1,13 @@
 
 import * as React from 'react';
-import { styled, useTheme, withStyles } from '@mui/material/styles';
-import {Grid, Box,Drawer,Link, Toolbar,List,IconButton} from '@mui/material';
+import { styled, useTheme } from '@mui/material/styles';
+import {Grid, Box,Drawer, Toolbar, List, IconButton} from '@mui/material';
 import MuiAppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemButton from '@mui/material/ListItemButton';
-import logo from '../images/logosote.png';
-import AccountMenu from './Menu';
-
-
+import logo from '../imagenes/logosote.png';
 
 
 

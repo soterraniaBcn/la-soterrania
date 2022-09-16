@@ -11,7 +11,7 @@ import {
 
 } from "@mui/material";
 import SearchBar from "../components/SearchBar";
-import imagenperfil from "../images/imageperfil.jpeg";
+import imagenperfil from "../imagenes/imageperfil.jpeg";
 
 export default function Login() {
   return (

@@ -1,5 +1,5 @@
-import HeaderRight from "./Header";
-import { Grid, Container, Button, Box } from "@mui/material";
+
+import { Grid, Box } from "@mui/material";
 import React from 'react';
 // import { flexbox } from "@mui/system";
 // import escenario from '../imagenes/escenario.png';
@@ -12,7 +12,7 @@ import persona2 from '../imagenes/persona2.png';
 import señor from '../imagenes/señor.png';
 // import tambor from '../imagenes/tambor.png';
 // import trompeta from '../imagenes/trompeta.png';
-import usuario1 from '../imagenes/usuario1.png';
+
 // import violin from '../imagenes/violin.png';
 
 export default function HomePage() {
