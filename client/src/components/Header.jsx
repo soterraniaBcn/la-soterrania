@@ -1,24 +1,14 @@
-// import React from 'react'
-
-// export default function Header() {
-//   return (
-//     <div>Header</div>
-//   )
-// }
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
-import {Box, Grid,Toolbar, List} from '@mui/material';
-import Drawer from '@mui/material/Drawer';
+import {Box, Drawer, Grid,Toolbar, CssBaseline, List, IconButton, ListItemButton} from '@mui/material';
 import MuiAppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItemButton from '@mui/material/ListItemButton';
 import { useState } from 'react';
 import logo from '../imagenes/logosoteblanco.png';
 import { Link } from 'react-router-dom';
+import Menu from './Menu';
 
 
 
@@ -94,7 +84,7 @@ export default function Header() {
         style={{width:"80px",
         height:"auto"}} ></img>
         </Link>
-          
+        <Menu />  
   
           <IconButton
             color="inherit"
@@ -102,7 +92,7 @@ export default function Header() {
             onClick={handleDrawerOpen}
             sx={{...(open && { display:'none' }) }}
           >
-            <Box >
+            <Box className="menuhamburger">
             <MenuIcon sx={{width:'4rem', height:'4rem'}}/>
             </Box> 
          </IconButton>
@@ -134,15 +124,16 @@ export default function Header() {
         <List>
           
            <ListItemButton>
-            <a href='/legalwarning'> Aviso Legal</a>
+            <a href='/avíslegal'> Aviso Legal</a>
            </ListItemButton>
            <ListItemButton>
-           <a>Sobre Nosotras</a>
+           <a href='/sobrenosaltres'>Sobre Nosotras</a>
            </ListItemButton>
         
         </List>
       
       </Drawer>
+     
       </Grid>
   );
 }

@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import SearchBar from "../components/SearchBar";
 import imagenperfil from "../imagenes/imageperfil.jpeg";
-import Menu from "../components/Menu";
+
 
 
 
@@ -21,7 +21,8 @@ export default function PerfilAdmin() {
     <Grid
       container
       sx={{
-        height: "calc (100vh-10rem)",
+        height: "100vh",
+      
       }}
     >
       <Grid
@@ -39,7 +40,7 @@ export default function PerfilAdmin() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          flexDirection: "column",
+          flexDirection: "column", mt:5
         }}
       >
         <p

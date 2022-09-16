@@ -7,7 +7,7 @@ import HomePage from './components/HomePage'
 import DetailArtista from './pages/DetailArtista'
 import DetailSpace from './pages/DetailSpace'
 import PerfilAdmin from './pages/PerfilAdmin'
-import Header from './components/Header';
+import About from './pages/About'
 
 
 export default function Router() {
@@ -22,6 +22,9 @@ export default function Router() {
         <Route exact path="/artistes/detall" element={<DetailArtista />} />
         <Route exact path="/espais/detall" element={<DetailSpace />} />
         <Route exact path="/perfiladmin" element={<PerfilAdmin />} />
+        <Route exact path="/sobrenosaltres" element={<About />} 
+
+        />
         </Routes>
     
     </div>

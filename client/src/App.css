@@ -1,36 +1,27 @@
+/*--------- CSS Sara---------*/
+
 body{
   margin:0;
   padding:0;
 }
 
-.css-11lq3yg-MuiGrid-root{
-  margin:0;
-  padding:0;
+.menu-container, .menu-links-container, .navbar{
+  background-color: transparent !important;
+
 }
-
-
 
 p{
   font-family: Consolas;
 }
 
-.navbar {
-  background-color: transparent !important;
-}
 
 
-@media screen and (max-width:624){
-
-  .MuiGrid-item {
-     width:1vw;
-    
+@media screen and (max-width: 624px){ 
+  
+.MuiGrid-container .menu-container{
+      display: none;
+    }
   }
- .menu {
-  display: 'none';
- }
-}
-
-
 
 @media screen and (min-width: 624px){ 
 
@@ -40,6 +31,12 @@ p{
 
 
 }
+
+/*------------ CSS SARA -----------------------*/
+
+
+
+/*------------ CSS Hillary --------------------*/
 
 /* home */
 .hero-image {
@@ -81,6 +78,7 @@ p {
 
 a {
   color: currentcolor;
+  text-decoration: none;
 }
     
 /* button     */

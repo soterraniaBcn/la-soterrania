@@ -41,7 +41,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       width: '12ch',
       '&:focus': {
         width: '20ch',
@@ -54,8 +54,9 @@ export default function SearchBar() {
   return (
    <Grid container>
     <Header/>
-      <AppBar position="static"sx={{backgroundColor:"#E2A0FF"}} elevation={0}>
-        <Toolbar style={{display: 'flex', justifyContent: 'center',marginTop: '2rem'}} >
+      <AppBar sx={{backgroundColor:"transparent"}} elevation={0}>
+        <Toolbar style={{position: 'static', display: 'flex', justifyContent: 'center', alignItems:"center", marginTop:"6rem"}} >
+         <Grid item className="search-bar">
          <Search >
             <SearchIconWrapper>
               <SearchIcon />
@@ -63,9 +64,10 @@ export default function SearchBar() {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
-              sx={{width: '300px',borderRadius:"50%"}}
+              sx={{width: '20rem', height:'auto', borderRadius:"50%"}}
             />
           </Search>
+          </Grid>
         </Toolbar>
       </AppBar>
       </Grid>
