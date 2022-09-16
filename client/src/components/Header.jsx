@@ -12,8 +12,6 @@ import Menu from './Menu';
 
 
 
-
-
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -73,18 +71,20 @@ export default function Header() {
   };
 
   return (
-  
 
     <Grid container>
       <CssBaseline />
       <AppBar className="navbar" position="fixed" elevation={0} open={open}>
+
         <Toolbar style={{ justifyContent:'space-between'}}>
         <Link to="/homepage">
         <img  src={logo} alt=""
         style={{width:"80px",
         height:"auto"}} ></img>
         </Link>
+
         <Menu />  
+
   
           <IconButton
             color="inherit"
@@ -92,7 +92,9 @@ export default function Header() {
             onClick={handleDrawerOpen}
             sx={{...(open && { display:'none' }) }}
           >
+
             <Box className="menuhamburger">
+
             <MenuIcon sx={{width:'4rem', height:'4rem'}}/>
             </Box> 
          </IconButton>
@@ -128,6 +130,7 @@ export default function Header() {
            </ListItemButton>
            <ListItemButton>
            <a href='/sobrenosaltres'>Sobre Nosotras</a>
+
            </ListItemButton>
         
         </List>
@@ -137,6 +140,7 @@ export default function Header() {
       </Grid>
   );
 }
+
 
 
 

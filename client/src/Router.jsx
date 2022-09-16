@@ -8,6 +8,11 @@ import DetailArtista from './pages/DetailArtista'
 import DetailSpace from './pages/DetailSpace'
 import PerfilAdmin from './pages/PerfilAdmin'
 import About from './pages/About'
+import DetailEvent from './pages/DetailEvent'
+import WaitingRoom from './pages/WaitingRoom'
+import LegalWarning from './pages/LegalWarning'
+import NewPost from './pages/NewPost'
+
 
 
 export default function Router() {
@@ -18,15 +23,17 @@ export default function Router() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
+        <Route exact path="/espera" element={<WaitingRoom/>} />
         <Route exact path="/homepage" element={<HomePage />} />
         <Route exact path="/artistes/detall" element={<DetailArtista />} />
         <Route exact path="/espais/detall" element={<DetailSpace />} />
         <Route exact path="/perfiladmin" element={<PerfilAdmin />} />
-        <Route exact path="/sobrenosaltres" element={<About />} 
+        <Route exact path="/sobrenosaltres" element={<About />} />
+        <Route exact path="/events" element={<DetailEvent />} />
+        <Route exact path="/newpost" element={<NewPost />} />
+        <Route exact path="/avíslegal" element={<LegalWarning />} />
+      </Routes>
 
-        />
-        </Routes>
-    
     </div>
   )
 }

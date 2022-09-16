@@ -32,7 +32,7 @@ p{
 
 }
 
-/*------------ CSS SARA -----------------------*/
+/*------------ CSS Sara hasta aquí -----------------------*/
 
 
 
@@ -44,26 +44,33 @@ p{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
   /* Set a specific height */
+
   height: 100vh;
   width: 100vw;
+min-width:150px;
+min-height: 140px;
+
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  position: absolute;
 
 }
 
 /* Place text in the middle of the image */
 .hero-text {
-  text-align: center;
-  position: absolute;
+
+  position:relative;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  flex-direction: row;
   color: white;
+ text-justify: distribute;
+  width: 10rem;
 }
+
+
 
 
 h1 {
@@ -80,8 +87,10 @@ a {
   color: currentcolor;
   text-decoration: none;
 }
+
     
 /* button     */
+
 
 .btn-grad {
   background-image: linear-gradient(to right, #1446A0 0%, #FFFF  51%, #E2A0FF  100%);
@@ -95,15 +104,44 @@ a {
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   display: block;
+  z-index: 1;
+  left: 80rem;
 }
 
 .btn-grad:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
+  z-index: 1;
+  left: 80rem;
 }
 
 /* homepage */
+
+.flow {
+  font-family: "Inter", sans-serif;
+  max-width: 50rem;
+  max-height: 30rem;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  color: #241623;
+  background: #eef2f4;
+  margin-top: 30rem;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 2.7rem;
+  max-width: 20ch;
+}
+
+p {
+  max-width: 60ch;
+}
+
+a {
+  color: currentcolor;
+}
 
 /* Utilities */
 .auto-grid {
@@ -132,11 +170,13 @@ a {
   justify-content: flex-end;
   aspect-ratio: 1/1;
   position: relative;
-  padding: 2.5rem;
+  padding: 1.5rem;
   color: #ffffff;
   backface-visibility: hidden;
   text-decoration: none;
   overflow: hidden;
+  margin-top: 0rem;
+ z-index: 1;
 }
 
 .profile::before,
@@ -185,6 +225,7 @@ a {
 
 .profile > * {
   z-index: 1;
+  
 }
 
 .profile img {
@@ -251,8 +292,8 @@ a {
   filter: grayscale(0);
   transform: scale(1.05) rotate(1deg);
 }
-
-
          
-
-
+.artista{
+  color: black;
+  align-items: flex-start;
+}

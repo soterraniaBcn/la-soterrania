@@ -10,7 +10,7 @@ import { Container, Box, Grid } from '@mui/material'
 export default function DetailArtista() {
   return (
     <div style={{backgroundColor:"pink"}}>  
-    
+
     <Box style={{backgroundColor:"pink", height:'90px' }}>
       
       </Box>  
