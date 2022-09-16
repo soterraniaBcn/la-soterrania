@@ -18,8 +18,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemButton from '@mui/material/ListItemButton';
-import logo from '../imagenes/logo.png';
+import logo from '../imagenes/logosoteblanco.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -88,9 +89,11 @@ export default function Header() {
       <CssBaseline />
       <AppBar className="navbar" elevation={0} open={open}>
         <Toolbar style={{ justifyContent:'space-between'}}>
-        <img src={logo} alt=""
+        <Link to="/homepage">
+        <img  src={logo} alt=""
         style={{width:"80px",
-         height:"auto"}} ></img>
+        height:"auto"}} ></img>
+        </Link>
           
   
           <IconButton
