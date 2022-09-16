@@ -1,50 +1,31 @@
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
-import Link from "@material-ui/core/Link";
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import React from 'react';
+import '../css/Footer.css'
+import {AiFillInstagram} from 'react-icons/ai'
+import {AiFillFacebook} from 'react-icons/ai'
+import {AiFillYoutube} from 'react-icons/ai'
 
-export default function Footer() {
-  return (
-    <footer>
-      <Box
-        px={{ xs: 3, sm: 10 }}
-        py={{ xs: 5, sm: 10 }}
-        bgcolor="text.secondary"
-        color="white"
-      >
-        <Container maxWidth="lg">
-          <Grid container spacing={5} container justifyContent="space-between">
 
-            <Grid item xs={12} sm={4}>
-              <Box borderBottom={1} >Segueix-nos</Box>
-            </Grid>
+export default function Footer(){
+    return(
+        <div className="divContainer">
+            <div className="div1">
+              <h3>Sigueix-nos</h3>
+            <div className="div2">
+              <a href="https://www.instagram.com/lasoterrania/" rel="noreferrer" target="_blank" >
+                  <AiFillInstagram/>
+              </a> 
+              <a href="https://www.facebook.com/La-soterr%C3%A0nia-101259562713131" rel="noreferrer" target="_blank" >
+                  <AiFillFacebook/>
+              </a>
+              <a href="https://www.youtube.com/c/lasoterr%C3%A0nia" rel="noreferrer" target="_blank" >
+                  <AiFillYoutube/>
+              </a>
+            </div>
+            </div>
+            <div className="div3">
+                <h3>Avisos legals</h3>
+            </div>
+        </div>
+    )
 
-            <Grid item xs={12} sm={4} container direction="row"   justifyContent="space-between" >
-              <Box> 
-              <Link href="https://www.instagram.com/lasoterrania/" target="_blank" color="inherit">
-                  <InstagramIcon/>
-                </Link>
-              </Box>
-
-              <Box>
-                <Link href="https://www.facebook.com/La-soterr%C3%A0nia-101259562713131" target="_blank" color="inherit">
-                  <FacebookIcon/>
-                </Link>
-              </Box>
-
-              <Box>
-                <Link href="https://www.youtube.com/c/lasoterr%C3%A0nia" target="_blank" color="inherit">
-                  <YouTubeIcon/>
-                </Link>
-              </Box>
-
-            </Grid>
-            </Grid>
-        </Container>
-      </Box>
-    </footer>
-  );
 }
