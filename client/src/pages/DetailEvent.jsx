@@ -4,11 +4,15 @@ import CardMedia from '@mui/material/CardMedia'
 import Card from '@mui/material/Card'
 import React from 'react'
 import imagen from '../imagenes/imagen_nuria.PNG'
-import { Container, Box, Grid } from '@mui/material'
+import { Container, Box, Grid, Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 export default function DetailEvent() {
   return (
     <div style={{ backgroundColor: 'pink' }}>
+      <Link to='/newpost'>
+      <Button variant="contained" style={{displayflex:"center"}}>Crear Nuevo Evento</Button>
+      </Link>
       <Box style={{ backgroundColor: 'pink', height: '90px' }}>.</Box>
       <Container ClassName="vh=100">
         <Card sx={{ display: 'flex' }}>
