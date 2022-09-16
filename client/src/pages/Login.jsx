@@ -92,11 +92,12 @@ export default function Login(){
 
           </FormGroup> 
           </Grid>
-                <Link to="/homepage">
+              
+<Link to="/homepage">
 
-                <Button 
+                <Button
                   style={{
-                      backgroundColor: "#cdcecf",
+                    backgroundColor: "#cdcecf",
                       width: "7rem",
                       height: "2rem",
                       borderRadius: "40px",
@@ -112,6 +113,7 @@ export default function Login(){
                   Enviar </Button>
 
                       </Link>
+             
         
         </Grid>
     
