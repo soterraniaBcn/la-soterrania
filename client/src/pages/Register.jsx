@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grid, FormGroup, FormControlLabel, TextareaAutosize, Box, Button, Checkbox} from '@mui/material';
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 
 export default function Register(){
 
@@ -127,23 +128,24 @@ export default function Register(){
                      </FormGroup>
                   
                      </Grid>
-      
+            <Link to="/espera">
                 <Button
                   style={{
-                    backgroundColor: "#E2A0FF",
-                    width: "7rem",
-                    height: "1.8rem",
-                    borderRadius: "40px",
-                    color: "black",
-                    textTransform: "capitalize",
-                    fontSize: "1rem",
-                    fontWeight: "200",
-                    border: "2.5px solid grey",
-                    margin: "0.8rem"
+                        backgroundColor: "#E2A0FF",
+                        width: "7rem",
+                        height: "1.8rem",
+                        borderRadius: "40px",
+                        color: "black",
+                        textTransform: "capitalize",
+                        fontSize: "1rem",
+                        fontWeight: "200",
+                        border: "2.5px solid grey",
+                        margin: "0.8rem"
                   }}
                   >
                   Enviar
                 </Button>
+            </Link>
            </Grid>
  
     
