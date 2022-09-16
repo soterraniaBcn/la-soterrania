@@ -6,23 +6,15 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
-export default function Footer() {
+export default function FooterMui() {
   return (
-    <footer>
-      <Box
-        px={{ xs: 3, sm: 10 }}
-        py={{ xs: 5, sm: 10 }}
-        bgcolor="text.secondary"
-        color="white"
-      >
-        <Container maxWidth="lg">
-          <Grid container spacing={5}  justifyContent="space-between">
+    <footer classname="footer">
+      <Box sx={{ justifyContent: 'space-between' }}>
+        <Container maxWidth="lg" >  
 
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={4}  >
               <Box borderBottom={1} >Segueix-nos</Box>
-            </Grid>
-
-            <Grid item xs={12} sm={4} container direction="row"   justifyContent="space-between" >
+           
               <Box> 
               <Link href="https://www.instagram.com/lasoterrania/" target="_blank" color="inherit">
                   <InstagramIcon/>
@@ -42,9 +34,8 @@ export default function Footer() {
               </Box>
 
             </Grid>
-            </Grid>
         </Container>
-      </Box>
+        </Box>
     </footer>
   );
 }

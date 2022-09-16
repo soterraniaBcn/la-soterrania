@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, FormGroup, FormControlLabel, Box, Button, Checkbox} from '@mui/material';
 import HeaderRight from '../components/Header';
-import Footer from '../components/Footer';
+import Footer from '../components/FooterMui';
 
 export default function Register(){
 

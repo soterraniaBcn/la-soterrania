@@ -1,12 +1,12 @@
 import HeaderSearch from "../components/HeaderSearch";
-import Footer from "../components/Footer";
+import MediaCard from "../components/MediaCard"
+import Footer from "../components/FooterMui"
 
 export default function Artistas (){
     return(
         <>
         <HeaderSearch/>
-
-      
+        <MediaCard/>
         <Footer/>
         </>
     )
