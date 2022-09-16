@@ -8,6 +8,7 @@ import { Container, Box, Grid } from '@mui/material'
 
 export default function DetailSpace() {
   return (
+
     <div style={{backgroundColor:'pink'}} >
 
     <Container ClassName="vh=100">

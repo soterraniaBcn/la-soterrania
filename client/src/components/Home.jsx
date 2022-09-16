@@ -1,6 +1,6 @@
 import HeaderRight from "./Header";
 import background from '../imagenes/background.png';
-import {Grid,Container,Button,} from "@mui/material";
+import { Grid, Container, Button, Box } from "@mui/material";
 import React from 'react';
 import { Link } from "react-router-dom";
 
@@ -25,9 +25,10 @@ export default function Home(){
                
 
             </Grid>
+
         </Container>
 
-    
+
 
     )
 }
