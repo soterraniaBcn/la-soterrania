@@ -1,5 +1,5 @@
 import React from 'react'
-import {Switch, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Home from './components/Home'
@@ -13,7 +13,7 @@ export default function Router() {
   return (
     <div>
       
-          <Switch>
+          <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
@@ -21,7 +21,7 @@ export default function Router() {
         <Route exact path="/artist/detail" element={<DetailArtista />} />
         <Route exact path="/space/detail" element={<DetailSpace />} />
         <Route exact path="/perfiladmin" element={<PerfilAdmin />} />
-        </Switch>
+        </Routes>
     
     </div>
   )
