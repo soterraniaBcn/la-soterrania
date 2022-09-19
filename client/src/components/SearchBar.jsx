@@ -55,9 +55,14 @@ export default function SearchBar() {
    <Grid container>
     <Header/>
       <AppBar sx={{backgroundColor:"transparent"}} elevation={0}>
-        <Toolbar style={{position: 'static', display: 'flex', justifyContent: 'center', alignItems:"center", marginTop:"6rem"}} >
+        <Toolbar style={{
+         display: 'flex', 
+         justifyContent: 'center', 
+         alignItems:"center", 
+         marginTop:"6rem"
+         }} >
          <Grid item className="search-bar">
-         <Search >
+         <Search style={{position:'sticky'}} >
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
