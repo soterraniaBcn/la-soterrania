@@ -1,28 +1,10 @@
-import * as React from 'react';
-import '../Css/MediaCard.css'
-//import {Card, CardContent, CardMedia, Typography } from '@mui/material';7
-//import bandaMusical from '../assets/bandaMusical.jpg';
+import React, { useState, useEffect } from "react";
+//import axios from 'axios';
+//import { useSearchParams, Link } from 'react-router-dom';
+import '../css/MediaCard.css'
 
 export default function MediaCard() {
   return (
-    
-    /*<Card sx={{ maxWidth: 345, m: 3 }} className="card2">
-      <CardMedia
-        component="img"
-        height="140"
-        img={bandaMusical}
-        alt="banda musical"
-      />
-     
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Genero
-        </Typography>
-      </CardContent>
-    </Card>*/ 
 
   <article className="flow">
      <div className="team">

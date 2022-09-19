@@ -7,6 +7,7 @@ import HomePage from './components/HomePage'
 import DetailArtista from './pages/DetailArtista'
 import DetailSpace from './pages/DetailSpace'
 import PerfilAdmin from './pages/PerfilAdmin'
+import Artistas from './pages/Artistas'
 
 
 export default function Router() {
@@ -16,6 +17,7 @@ export default function Router() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
+        <Route exact path="/artistas" element={<Artistas />} />
         <Route exact path="/homepage" element={<HomePage />} />
         <Route exact path="/artist/detail" element={<DetailArtista />} />
         <Route exact path="/space/detail" element={<DetailSpace />} />
