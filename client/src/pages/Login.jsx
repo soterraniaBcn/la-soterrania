@@ -1,7 +1,9 @@
+
 import React from "react";
 import { Grid, FormGroup, Box, Button } from "@mui/material";
 import Header from "../components/Header";
 import {Link} from 'react-router-dom'
+
 
 
 export default function Login() {
@@ -10,12 +12,12 @@ export default function Login() {
       <Grid
         container
         style={{
-          backgroundColor: "#E2A0FF",
-          height: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
+          backgroundColor: '#E2A0FF',
+          height: '100vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
           marginTop: 0,
         }}
       >
@@ -25,63 +27,62 @@ export default function Login() {
           item
           xs={8}
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "white",
-            width: "25rem",
-            maxHeight: "30rem",
-            borderRadius: "1rem",
-            border: "5px solid #cdcecf",
-            marginTop: "6rem",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'white',
+            width: '25rem',
+            maxHeight: '30rem',
+            borderRadius: '1rem',
+            border: '5px solid #cdcecf',
+            marginTop: '6rem',
           }}
         >
           <FormGroup className="form" xs={8}>
             <p
               style={{
-                fontSize: "2rem",
-                display: "flex",
-                justifyContent: "center",
+                fontSize: '2rem',
+                display: 'flex',
+                justifyContent: 'center',
               }}
             >
               LOGIN
             </p>
-            <Box style={{ lineHeight: "1px" }}>
+            <Box style={{ lineHeight: '1px' }}>
               <p>Correu electrònic:</p>
               <input
                 type="text"
                 style={{
-                  fontSize: "1.2rem",
-                  borderRadius: "10px",
-                  border: "1px solid grey",
+                  fontSize: '1.2rem',
+                  borderRadius: '10px',
+                  border: '1px solid grey',
                 }}
               />
+            </Box>
 
-             </Box>
 
 
             <Box sx={{ mt: "3rem" }} style={{ lineHeight: "1px" }}>
+
               <p>Contrasenya:</p>
               <input
-             type="text"
+                type="text"
                 style={{
-                  fontSize: "1.2rem",
-                  borderRadius: "10px",
-                  border: "1px solid grey",
+                  fontSize: '1.2rem',
+                  borderRadius: '10px',
+                  border: '1px solid grey',
                 }}
               />
             </Box>
-            <Box style={{ lineHeight: "1px", fontSize: "0.8rem" }}>
-
+            <Box style={{ lineHeight: '1px', fontSize: '0.8rem' }}>
               <p>Encara no tens compte? </p>
 
               <p>Pots enregistrar-te</p>
-              <a href="#register">aquí</a>
+              <a href="/register">aquí</a>
             </Box>
           </FormGroup>
-              
-
         </Grid>
+
    <Link to='/homepage'>
         <Button
           style={{
@@ -99,8 +100,9 @@ export default function Login() {
         >
           Enviar{" "}
         </Button>
+
         </Link>
       </Grid>
     </>
-  );
+  )
 }
