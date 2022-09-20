@@ -16,7 +16,7 @@ class User {
   }
   async getUserById(id_usuaria: any) {
     const queryStr =
-      'SELECT "id-usuaria", estado, email1, rol FROM public.usuaria WHERE "id-usuaria"= $1';
+      'SELECT "id_usuaria", estado, email1, rol FROM public.usuaria WHERE "id_usuaria"= $1';
     const result: any = await connection.query(queryStr, [id_usuaria]);
     console.dir(result);
     return result.rows[0];
@@ -29,14 +29,14 @@ class User {
   }
   async getAllUsers() {
     const queryStr =
-      'SELECT "id-usuaria", estado, email1, rol FROM public.usuaria';
+      'SELECT "id_usuaria", estado, email1, rol FROM public.usuaria';
     const result: any = await connection.query(queryStr, []);
     console.dir(result);
     return result.rows;
   }
   async deleteUser(id_usuaria: any) {
     const queryStr =
-      "DELETE FROM public.usuaria WHERE 'id-usuaria'=$1 RETURNING *";
+      "DELETE FROM public.usuaria WHERE 'id_usuaria'=$1 RETURNING *";
     const result: any = await connection.query(queryStr, [id_usuaria]);
     return result.rows;
   }
