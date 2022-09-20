@@ -1,15 +1,13 @@
 import React from 'react';
-import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button} from '@mui/material';
+import {Grid, FormGroup, TextareaAutosize, Box, Button} from '@mui/material';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 
-
-export default function Register(){
+export default function NewPost(){
 
     return (
           <>
-
-         <Grid container
+         <Grid container 
          id="register"
             style={{ backgroundColor: '#cdcecf',
             height: '100vh',
@@ -17,41 +15,34 @@ export default function Register(){
             flexDirection: 'column',
             justifyContent:'center', 
             alignItems: 'center',
-            position: 'absolute',
-            paddingTop:'0'
-      
            
             }}>
-                   <Header/>
               
-                    <Grid item xs={10} style={{ display: 'flex',flexDirection:'row',
-
+      {<Header/>}
+        
+                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
                      alignItems: 'center', 
                      justifyContent: 'center',
                      backgroundColor:'white',
                      width:'25rem',
-                     maxHeight:'30rem',
+                     height:'28rem',
                      borderRadius:"1rem",
-                     marginTop:"6rem",
+                     marginTop:"2rem",
                      border: '2px solid #ea20ff'
                     
                       }}>
-                       
                     
                 
     
-                   <FormGroup className='checkbox'style={{lineHeight:"1px"}}>
-             
-                    <RadioGroup className="use-radio-group" defaultValue="disabled" style={{display:"flex", flexDirection:'row', fontFamily:'Consolas'}} >
-                    <FormControlLabel  value="artista" label="Artista"  control={<Radio />} />
-                    <FormControlLabel  value="espai" label="Espai"  control={<Radio />} />
-                    </RadioGroup>
-
-                  
+                    <FormGroup sx={{paddingY:'10px'}} className='checkbox'style={{lineHeight:"1px"}}>
+                 
                     <Grid item>
+                        <Box style={{display: 'flex', justifyContent: 'center', alignItems: "center" }}>
+                              <h2>Nuevo Evento</h2>
+                        </Box>
               
                     <Box style={{lineHeight:"1px"}}>
-                        <p>Nom i cognoms:</p>
+                        <p>Nombre del evento:</p>
                         <input type="text"
                          style={{
                          width:'auto',
@@ -63,7 +54,7 @@ export default function Register(){
                     </Box> 
               
                     <Box style={{lineHeight:"1px"}}>
-                         <p>Nom del grup/espai:</p>
+                         <p>Artista/Banda:</p>
                          <input type="text"
                           style={{
                           color: "#000000",
@@ -86,27 +77,14 @@ export default function Register(){
                     
                           }} />
                     </Box> 
-            
-                    <Box style={{lineHeight:"1px"}}>
-                           <p>Contrasenya:</p>
-                           <input type="text"
-                           style={{
-                           fontSize: "1.1rem",
-                           borderRadius: "10px",
-                           border: "1px solid grey"
-                    
-                          }} />
-                     </Box> 
-                    </Grid>
-                    
-
+                    </Grid>                  
                     <Grid item xl={4}>
                      <Box style={{lineHeight:"1px"}}>
                            <p>Descripció:</p>
                           <TextareaAutosize
                                maxRows={6}
                                aria-label="maximum height"
-                               placeholder="Escriu una breu descripció..."
+                               placeholder="Escriu una breu descripció...          0/80"
                                defaultValue=""
                                style={{ fontFamily:'Consolas',
                                fontSize:'1.1rem',
@@ -115,28 +93,24 @@ export default function Register(){
                                border:"1px solid grey" }}
                                />
                       </Box>
-                   
-                    
                       <Box style={{lineHeight:"1px"}}>
-                              <p>Links vídeos:</p>
-                              <TextareaAutosize
-                               maxRows={2}
-                               aria-label="maximum height"
-                               placeholder="Els teus links"
-                               defaultValue=""
-                               style={{ fontFamily: 'Consolas',
-                                fontSize: '1.1rem',
-                                marginTop:0,  
-                                borderRadius: '10px',
-                                border:"1px solid grey" }}
-                               />
+                          <p>Notas:</p>
+                          <input type="text"
+                           style={{
+                           color: "#000000",
+                           width: "auto",
+                           fontSize: "1.1rem",
+                           borderRadius: "10px",
+                           border:"1px solid grey"
+                    
+                          }} />
                       </Box> 
                       </Grid>
                      </FormGroup>
                   
                      </Grid>
-                <Link to='/espera'>
-                <Button 
+            <Link to="/espera">
+                <Button
                   style={{
                         backgroundColor: "#E2A0FF",
                         width: "7rem",
@@ -152,9 +126,10 @@ export default function Register(){
                   >
                   Enviar
                 </Button>
-                </Link>
+            </Link>
            </Grid>
  
+    
         </>
     )
   }

@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { Grid } from '@mui/material';
+import Header from '../components/Header';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -18,7 +19,7 @@ const Search = styled('div')(({ theme }) => ({
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(1),
-    width: '30rem',
+    width: '25rem',
   },
 }));
 
@@ -40,7 +41,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       width: '12ch',
       '&:focus': {
         width: '20ch',
@@ -51,19 +52,27 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchBar() {
   return (
-   <Grid container sx={{}}>
-      <AppBar position="static"sx={{backgroundColor:"#E2A0FF"}} elevation={0}>
-        <Toolbar style={{display: 'flex', justifyContent: 'center',marginTop: '6rem'}} >
-         <Search >
+   <Grid container>
+    <Header/>
+      <AppBar sx={{backgroundColor:"transparent"}} elevation={0}>
+        <Toolbar style={{
+         display: 'flex', 
+         justifyContent: 'center', 
+         alignItems:"center", 
+         marginTop:"6rem"
+         }} >
+         <Grid item className="search-bar">
+         <Search style={{position:'sticky'}} >
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
-              sx={{width: '300px',borderRadius:"50%"}}
+              sx={{width: '20rem', height:'auto', borderRadius:"50%"}}
             />
           </Search>
+          </Grid>
         </Toolbar>
       </AppBar>
       </Grid>
