@@ -10,6 +10,7 @@ const checkState = async (req: Request, res: Response, next: NextFunction) => {
     }
 
     const result = await userModel.getUserByEmail(email);
+    console.dir(result)
     if (result && result.estado === true) {
       next();
     } else {

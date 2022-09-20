@@ -16,11 +16,9 @@ export default function Login(){
   const handleSubmit = (e) => {
     e.preventDefault();
     const user = { email: email, password: password };
-    console.log(user)
     authService
       .login(user)
       .then((res) => {
-        console.log(res.data.token)
         setUser(res.data.token);
         localStorage.setItem("user", res.data.token);
         if (res.data.token) {
