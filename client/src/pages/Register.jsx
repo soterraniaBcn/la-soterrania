@@ -1,6 +1,7 @@
 import React from 'react';
-import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button, Link} from '@mui/material';
+import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button} from '@mui/material';
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 
 
 export default function Register(){
@@ -134,8 +135,8 @@ export default function Register(){
                      </FormGroup>
                   
                      </Grid>
-            <Link to="/espera">
-                <Button
+                <Link to='/espera'>
+                <Button 
                   style={{
                         backgroundColor: "#E2A0FF",
                         width: "7rem",
@@ -151,7 +152,7 @@ export default function Register(){
                   >
                   Enviar
                 </Button>
-            </Link>
+                </Link>
            </Grid>
  
         </>
