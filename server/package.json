@@ -12,7 +12,7 @@
   },
   "name": "server",
   "version": "1.0.0",
-  "main": "./server",
+  "main": "./build/server.js",
   
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
