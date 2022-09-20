@@ -10,7 +10,7 @@ const checkState = async (req: Request, res: Response, next: NextFunction) => {
     }
 
     const result = await userModel.getUserByEmail(email);
-    if (result && result.estado === true) {
+    if (result && result.estado === 1) {
       next();
     } else {
       res.status(403).send("No autorizado");
