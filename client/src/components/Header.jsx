@@ -74,7 +74,7 @@ export default function Header() {
 
     <Grid container>
       <CssBaseline />
-      <AppBar className="navbar" position="fixed" elevation={0} open={open}>
+      <AppBar className="navbar" elevation={0} open={open}>
 
         <Toolbar style={{ justifyContent:'space-between'}}>
         <Link to="/homepage">
@@ -126,11 +126,22 @@ export default function Header() {
         <List>
           
            <ListItemButton>
-            <a href='/avíslegal'> Aviso Legal</a>
+            <a href='/avíslegal'> Avís Legal</a>
            </ListItemButton>
            <ListItemButton>
-           <a href='/sobrenosaltres'>Sobre Nosotras</a>
-
+           <a href='/sobrenosaltres'>Sobre Nosaltres</a>
+           </ListItemButton>
+           <ListItemButton>
+            <a href='/elmeuperfil'> El meu perfil</a>
+           </ListItemButton>
+           <ListItemButton>
+            <a href='/artistes'> Artistes</a>
+           </ListItemButton>
+           <ListItemButton>
+            <a href='/espais'> Espais</a>
+           </ListItemButton>
+           <ListItemButton>
+            <a href='/esdeveniments'> Esdeveniments</a>
            </ListItemButton>
         
         </List>

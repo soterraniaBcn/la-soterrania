@@ -15,7 +15,7 @@ export default function Menu() {
     >
       <Grid
         item
-        class="menu-links-container"
+        className="menu-links-container"
         sm={10}
         md={10}
         style={{

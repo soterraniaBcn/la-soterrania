@@ -1,16 +1,13 @@
 import React from 'react';
-import {Grid, FormGroup, FormControlLabel, TextareaAutosize, Box, Button, Checkbox, Link} from '@mui/material';
+import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button, Link} from '@mui/material';
 import Header from '../components/Header';
-
 
 
 export default function Register(){
 
     return (
           <>
-      
-        
-        
+
          <Grid container
          id="register"
             style={{ backgroundColor: '#cdcecf',
@@ -38,15 +35,17 @@ export default function Register(){
                      border: '2px solid #ea20ff'
                     
                       }}>
+                       
                     
                 
     
-                    <FormGroup className='checkbox'style={{lineHeight:"1px"}}>
-              
-                         <FormGroup style={{display:"flex", flexDirection:'row', justifyContent: 'center'}}>
-                         <FormControlLabel control={<Checkbox style={{color:'#E2A0FF'}}/>} label="Artista" style={{fontFamily:'Consolas'}} />
-                         <FormControlLabel control={<Checkbox style={{color:'#E2A0FF'}} />} label ="Espai" style={{fontFamily:'Consolas'}} />
-                          </FormGroup>
+                   <FormGroup className='checkbox'style={{lineHeight:"1px"}}>
+             
+                    <RadioGroup className="use-radio-group" defaultValue="disabled" style={{display:"flex", flexDirection:'row', fontFamily:'Consolas'}} >
+                    <FormControlLabel  value="artista" label="Artista"  control={<Radio />} />
+                    <FormControlLabel  value="espai" label="Espai"  control={<Radio />} />
+                    </RadioGroup>
+
                   
                     <Grid item>
               
