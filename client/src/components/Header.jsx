@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import { styled, useTheme, withStyles } from '@mui/material/styles';
 import {Grid, Box,Drawer,Link, Toolbar,List,IconButton} from '@mui/material';
@@ -159,49 +158,3 @@ export default function Header() {
 
 
 
-{/*import {Grid} from "@mui/material";
-import {useState} from "react";
-import MenuButton from "./MenuButton";
-
-
-function Header() {
-  const [open, setOpen] = useState(false);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
-  return (
-
-    
-    <Grid container sx={{marginTop: "-1.25rem",
-      height: "15vh",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center"
-    }}>
-      <h2>Logo</h2>
-      <Grid container className="Navbar" open={open} 
-      style={{ maxWidth:" 600px",display: 'flex', justifyContent: 'space-around'}}>
-      <a href="#">Artistes</a>
-      <a href="#">Espais</a>
-      <a href="#">Events</a>
-      <a href="#">Sobre nosaltres</a>
-      </Grid>
-    
-      <MenuButton open={open} handleClick={handleClick} />
-     
-    </Grid>
-
-
-     
-     
-    
-     
-  
-  );
-}
-
-export default Header;
-
-*/}
