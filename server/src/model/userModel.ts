@@ -4,40 +4,38 @@ import { iUser, iUserLogin } from "./interface/iUser";
 class User {
   async saveUser(users: iUser) {
     const queryStr =
-      "INSERT INTO public.usuaria (estado, email1, password, rol) VALUES ($1, $2, $3, $4) RETURNING *";
+      "INSERT INTO public.usuarias (estado, email, password, rol) VALUES ($1, $2, $3, $4) RETURNING *";
     const values = [
       users.estado,
-      users.email1,
+      users.email,
       users.password,
       users.rol,
     ] as string[];
     const result: any = await connection.query(queryStr, values);
     return result.rows[0];
   }
-  async getUserById(id_usuaria: any) {
+  async getUserById(id: any) {
     const queryStr =
-      'SELECT "id_usuaria", estado, email1, rol FROM public.usuaria WHERE "id_usuaria"= $1';
-    const result: any = await connection.query(queryStr, [id_usuaria]);
+      'SELECT "id", estado, email, rol FROM public.usuaria WHERE "id"= $1';
+    const result: any = await connection.query(queryStr, [id]);
     console.dir(result);
     return result.rows[0];
   }
-  async getUserByEmail(email1: any) {
-    const queryStr = "SELECT * FROM public.usuaria WHERE email1= $1";
-    const values = [email1];
+  async getUserByEmail(email: any) {
+    const queryStr = "SELECT * FROM public.usuaria WHERE email= $1";
+    const values = [email];
     const result: any = await connection.query(queryStr, values);
     return result.rows[0];
   }
   async getAllUsers() {
-    const queryStr =
-      'SELECT "id_usuaria", estado, email1, rol FROM public.usuaria';
+    const queryStr = 'SELECT "id", estado, email, rol FROM public.usuaria';
     const result: any = await connection.query(queryStr, []);
     console.dir(result);
     return result.rows;
   }
-  async deleteUser(id_usuaria: any) {
-    const queryStr =
-      "DELETE FROM public.usuaria WHERE 'id_usuaria'=$1 RETURNING *";
-    const result: any = await connection.query(queryStr, [id_usuaria]);
+  async deleteUser(id: any) {
+    const queryStr = "DELETE FROM public.usuaria WHERE 'id'=$1 RETURNING *";
+    const result: any = await connection.query(queryStr, [id]);
     return result.rows;
   }
 }

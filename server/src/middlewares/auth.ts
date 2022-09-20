@@ -27,15 +27,15 @@ const validateUser = async (
   next: NextFunction
 ) => {
   try {
-    const { email1, password } = req.body;
+    const { email, password } = req.body;
 
-    if (!email1 || !password) {
+    if (!email || !password) {
       throw new Error(" email or password not exist");
     }
 
-    const result = await userModel.getUserByEmail(email1);
+    const result = await userModel.getUserByEmail(email);
     const comparePassword = await bcrypt.compare(password, result.password);
-    req.body.id_usuaria = result["id_usuaria"];
+    req.body.id = result["id"];
     if (comparePassword) {
       next();
     } else {

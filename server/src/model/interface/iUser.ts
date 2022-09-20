@@ -1,10 +1,10 @@
 export interface iUserLogin {
-  email1: string;
+  email: string;
   password: string;
 }
 
 export interface iUser extends iUserLogin {
-  id_usuaria?: number;
+  id?: number;
   estado: boolean;
   rol: string;
 }

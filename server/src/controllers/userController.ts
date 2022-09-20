@@ -5,22 +5,16 @@ import userModel from "../model/userModel";
 const userController = {
   saveUser: async (req: Request, res: Response) => {
     try {
-      const {
-        email1,
-        password,
-        id_usuaria: id_usuaria,
-        estado,
-        rol,
-      }: iUser = req.body;
+      const { email, password, id: id, estado, rol }: iUser = req.body;
 
-      if (!email1 || !password) {
+      if (!email || !password) {
         res.status(400).send("Falta el correo electrónico o contraseña");
       }
 
       const result = await userModel.saveUser({
-        email1,
+        email,
         password,
-        id_usuaria: id_usuaria,
+        id,
         estado,
         rol,
       });
@@ -34,7 +28,7 @@ const userController = {
 
   getUserById: async (req: Request, res: Response) => {
     try {
-      const param = req.params.id_usuaria;
+      const param = req.params.id;
       const user: any = await userModel.getUserById(param);
       res.json(user);
     } catch (error: any) {
@@ -70,7 +64,7 @@ const userController = {
     */
   deleteUser: async (req: Request, res: Response) => {
     try {
-      const param = req.params.id_usuaria;
+      const param = req.params.id;
       console.log(param, "llegas al param");
       const result = await userModel.deleteUser(param);
       console.log(result, "llega al result");
