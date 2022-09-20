@@ -27,7 +27,7 @@ export default function NewPost(){
                      width:'25rem',
                      height:'28rem',
                      borderRadius:"1rem",
-                     marginTop:"3rem",
+                     marginTop:"2rem",
                      border: '2px solid #ea20ff'
                     
                       }}>
@@ -37,6 +37,9 @@ export default function NewPost(){
                     <FormGroup sx={{paddingY:'10px'}} className='checkbox'style={{lineHeight:"1px"}}>
                  
                     <Grid item>
+                        <Box style={{display: 'flex', justifyContent: 'center', alignItems: "center" }}>
+                              <h2>Nuevo Evento</h2>
+                        </Box>
               
                     <Box style={{lineHeight:"1px"}}>
                         <p>Nombre del evento:</p>

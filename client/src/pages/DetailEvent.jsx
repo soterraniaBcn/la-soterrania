@@ -10,10 +10,15 @@ import { Link } from 'react-router-dom'
 export default function DetailEvent() {
   return (
     <div style={{ backgroundColor: 'pink' }}>
-      <Link to='/newpost'>
-      <Button variant="contained" style={{displayflex:"center"}}>Crear Nuevo Evento</Button>
-      </Link>
-      <Box style={{ backgroundColor: 'pink', height: '90px' }}>.</Box>
+      <Box style={{ backgroundColor: 'pink', height: '90px', display: 'flex', justifyContent: 'center', alignItems: "center" }}>
+        <Link to="/newpost">
+          <Button
+            variant="contained"
+          >
+            Crear Nuevo Evento
+          </Button>
+        </Link>
+      </Box>
       <Container ClassName="vh=100">
         <Card sx={{ display: 'flex' }}>
           <CardMedia
@@ -94,6 +99,17 @@ export default function DetailEvent() {
                   </Typography>
                 </CardContent>
               </Grid>
+              <Box
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'end',
+                  gap: '4%',
+                }}
+              >
+                <Button>editar</Button>
+                <Button style={{ color: 'red' }}>eliminar</Button>
+              </Box>
             </CardContent>
           </Box>
         </Card>
@@ -180,6 +196,17 @@ export default function DetailEvent() {
                   </Typography>
                 </CardContent>
               </Grid>
+              <Box
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'end',
+                  gap: '4%',
+                }}
+              >
+                <Button>editar</Button>
+                <Button style={{ color: 'red' }}>eliminar</Button>
+              </Box>
             </CardContent>
           </Box>
         </Card>

@@ -4,7 +4,7 @@ import CardMedia from '@mui/material/CardMedia'
 import Card from '@mui/material/Card'
 import React from 'react'
 import imagen from '../imagenes/imagen_nuria.PNG'
-import { Container, Box, Grid } from '@mui/material'
+import { Container, Box, Grid, Button } from '@mui/material'
 
 
 export default function DetailArtista() {
@@ -200,6 +200,10 @@ export default function DetailArtista() {
                     </Typography>
                   </CardContent>
                 </Grid>
+                    <Box style={{width: "100%", display:"flex", justifyContent: "end", gap:"4%"}}>
+                      <Button>editar</Button>
+                      <Button style={{color: "red"}}>eliminar</Button>
+                    </Box>
               </Grid>
             </CardContent>
           </Box>
