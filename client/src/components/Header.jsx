@@ -126,7 +126,7 @@ export default function Header() {
         <List>
           
            <ListItemButton>
-            <a href='/avíslegal'> Avís Legal</a>
+            <a href='/avislegal'> Avís Legal</a>
            </ListItemButton>
            <ListItemButton>
            <a href='/sobrenosaltres'>Sobre Nosaltres</a>

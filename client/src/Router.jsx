@@ -31,7 +31,7 @@ export default function Router() {
         <Route exact path="/sobrenosaltres" element={<About />} />
         <Route exact path="/events" element={<DetailEvent />} />
         <Route exact path="/newpost" element={<NewPost />} />
-        <Route exact path="/avíslegal" element={<LegalWarning />} />
+        <Route exact path="/avislegal" element={<LegalWarning />} />
       </Routes>
 
     </div>
