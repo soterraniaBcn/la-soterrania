@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button, Checkbox, Link} from '@mui/material';
+import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button, Link} from '@mui/material';
 import Header from '../components/Header';
 
 
@@ -7,9 +7,7 @@ export default function Register(){
 
     return (
           <>
-      
-        
-        
+
          <Grid container
          id="register"
             style={{ backgroundColor: '#cdcecf',

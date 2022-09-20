@@ -107,7 +107,7 @@ export default function PerfilAdmin() {
           
           <Box  style={{paddingLeft:"3rem", display:'flex', flexDirection:'column'}}>
           <p>Nom i cognoms</p>
-          <p>Nom del grup/espai</p>
+          <p>Nom del artista/grup</p>
           <p>Correu electrònic</p>
           <p>Gènere musical</p>
           <p>Descripció</p>
@@ -149,6 +149,72 @@ export default function PerfilAdmin() {
          </Grid>
          </Grid>
 
+         <Grid container 
+          className="Backstage-artists vw-100"
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            
+            
+          }}
+        >
+          
+          <Box style={{display:'flex',justifyContent:'center'}}>
+          <p >Espais al Backstage</p>
+       </Box>
+          <Grid item className="artist-list" style={{display:'flex', justifyContent:'space-between'}}>
+          
+          <Box  style={{paddingLeft:"3rem", display:'flex', flexDirection:'column'}}>
+          <p>Nom del espai</p>
+          <p>Ubicació</p>
+          <p>Correu electrònic</p>
+          <p>Descripció</p>
+          <p>Horari</p>
+          <p>Aforament</p>
+
+           </Box>
+          
+          <Grid item className= "Buttons-accept-reject">
+          <Button
+            style={{
+              backgroundColor: "#1446A0",
+              width: "6rem",
+              height: "2rem",
+              borderRadius: "40px",
+              color: "white",
+              textTransform: "capitalize",
+              fontSize: "1rem",
+              fontWeight: "200",
+              border: "2.5px solid grey",
+              margin: "1.3em",
+            }}
+          >
+            Acceptar
+         </Button>
+         <Button
+            style={{
+              backgroundColor: "#1446A0",
+              width: "6rem",
+              height: "2rem",
+              borderRadius: "40px",
+              color: "white",
+              textTransform: "capitalize",
+              fontSize: "1rem",
+              fontWeight: "200",
+              border: "2.5px solid grey",
+              margin: "1.3em",
+            }}
+          >
+            Rebutjar
+         </Button>
+         </Grid>
+         </Grid>
+
+
+            
+         </Grid>
+      
 
             
          </Grid>
