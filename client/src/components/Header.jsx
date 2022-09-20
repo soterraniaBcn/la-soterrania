@@ -1,14 +1,16 @@
-
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
-import {Grid, Box,Drawer, Toolbar, List, IconButton} from '@mui/material';
+import {Box, Drawer, Grid,Toolbar, CssBaseline, List, IconButton, ListItemButton} from '@mui/material';
 import MuiAppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItemButton from '@mui/material/ListItemButton';
-import logo from '../imagenes/logosote.png';
 import { useState } from 'react';
+import logo from '../imagenes/logosoteblanco.png';
+import { Link } from 'react-router-dom';
+import Menu from './Menu';
+
+
 
 const drawerWidth = 240;
 
@@ -46,11 +48,7 @@ const AppBar = styled(MuiAppBar, {
     }),
     marginRight: drawerWidth,
   }),
-  
-  
-}
-
-));
+}));
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -59,10 +57,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 1),
   justifyContent: 'flex-start',
 }));
-
-
-
-  
 
 export default function Header() {
   const theme = useTheme();
@@ -75,29 +69,33 @@ export default function Header() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  
- 
 
   return (
-    
-    <Grid container sx={{ display: 'flex' }}>
-     
-      <AppBar className="navbar" elevation={0} open={open}>
+
+    <Grid container>
+      <CssBaseline />
+      <AppBar className="navbar" position="fixed" elevation={0} open={open}>
+
         <Toolbar style={{ justifyContent:'space-between'}}>
-        <img src={logo} alt=""
+        <Link to="/homepage">
+        <img  src={logo} alt=""
         style={{width:"80px",
-         height:"auto"}} ></img>
-   
-     
-          <IconButton 
-          
+        height:"auto"}} ></img>
+        </Link>
+
+        <Menu />  
+
+  
+          <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             sx={{...(open && { display:'none' }) }}
           >
-            <Box className="menuhamburger" >
-            <MenuIcon  sx={{width:'2.8rem', height:'auto'}}/>
+
+            <Box className="menuhamburger">
+
+            <MenuIcon sx={{width:'4rem', height:'4rem'}}/>
             </Box> 
          </IconButton>
           
@@ -107,7 +105,7 @@ export default function Header() {
         <DrawerHeader />
         
       </Main>
-      <Drawer 
+      <Drawer
         sx={{
           width: drawerWidth,
           flexShrink: 0,
@@ -126,76 +124,25 @@ export default function Header() {
         </DrawerHeader>
 
         <List>
-           <ListItemButton>
-            <a href=""> Aviso Legal</a>
-           </ListItemButton>
-           <ListItemButton>
-           <a href="">Sobre Nosotras</a>
-           </ListItemButton>
-        </List>
-      </Drawer>
           
-         <Box className="menu" style={{ width:"50vw", display:"flex", justifyContent: 'space-around',alignItems:"end", backgroundColor:'red'}}>
-       <a href="#">Sobre nosaltres</a>
-       <a href="#">Artistes</a>
-       <a href="#">Espais</a>
-       <a href="#">Events</a>
-       </Box>
-  
-  
-    
-    </Grid>
-  );
-}
+           <ListItemButton>
+            <a href='/avíslegal'> Aviso Legal</a>
+           </ListItemButton>
+           <ListItemButton>
+           <a href='/sobrenosaltres'>Sobre Nosotras</a>
 
-
-
-
-
-
-{/*import {Grid} from "@mui/material";
-import {useState} from "react";
-import MenuButton from "./MenuButton";
-
-
-function Header() {
-  const [open, setOpen] = useState(false);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
-  return (
-
-    
-    <Grid container sx={{marginTop: "-1.25rem",
-      height: "15vh",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center"
-    }}>
-      <h2>Logo</h2>
-      <Grid container className="Navbar" open={open} 
-      style={{ maxWidth:" 600px",display: 'flex', justifyContent: 'space-around'}}>
-      <a href="#">Artistes</a>
-      <a href="#">Espais</a>
-      <a href="#">Events</a>
-      <a href="#">Sobre nosaltres</a>
+           </ListItemButton>
+        
+        </List>
+      
+      </Drawer>
+     
       </Grid>
-    
-      <MenuButton open={open} handleClick={handleClick} />
-     
-    </Grid>
-
-
-     
-     
-    
-     
-  
   );
 }
 
-export default Header;
 
-*/}
+
+
+
+

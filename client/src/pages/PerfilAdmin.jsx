@@ -10,15 +10,21 @@ import {
   Card,
 
 } from "@mui/material";
-import SearchBar from "../components/SearchBar";
+import Header from "../components/Header";
 import imagenperfil from "../imagenes/imageperfil.jpeg";
 
-export default function Login() {
+
+
+
+export default function PerfilAdmin() {
   return (
+    
+    
     <Grid
       container
       sx={{
-        height: "calc (100vh-10rem)",
+        height: "100vh",
+      
       }}
     >
       <Grid
@@ -27,16 +33,17 @@ export default function Login() {
           backgroundColor: "#E2A0FF",
           height: "10rem",
           width: "100%",
+        
         }}
       >
-        <SearchBar />
+        <Header />
       </Grid>
       <Container
         sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          flexDirection: "column",
+          flexDirection: "column", mt:5
         }}
       >
         <p
@@ -46,7 +53,7 @@ export default function Login() {
             justifyContent: "center",
           }}
         >
-          EL MEU PERFIL (admin)
+          Panell d' administració
         </p>
 
         <Card sx={{ display: "flex", flexDirection: "row" }}>
@@ -60,35 +67,57 @@ export default function Login() {
           <Box sx={{}}>
             <CardContent sx={{ flex: "1 0 auto", mt: 5 }}>
               <Typography component="div" variant="h5">
-                Nom i cognoms:
+                Mar Montobbio
               </Typography>
               <Typography variant="p" style={{ marginRight: "1%" }}>
-                Web:
+              lasoterrania@gmail.com
                 <Typography
                   variant="p"
                   color="text.secondary"
-                  style={{ marginLeft: "0.3rem" }}
+                  style={{ marginLeft: "0.3rem",
+                   display: "flex",
+                   flexDirection:"column"}}
                 >
-                  Xarxes socials:
+                  Admin
                 </Typography>
               </Typography>
             </CardContent>
           </Box>
         </Card>
 
-        <Grid
-          item
+       </Container>  
+       
+    
+      
+       <Grid container 
+          className="Backstage-artists vw-100"
           sx={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            justifyContent: "space-between",
+            
+            
           }}
         >
+          
+          <Box style={{display:'flex',justifyContent:'center'}}>
+          <p >Artistes al Backstage</p>
+       </Box>
+          <Grid item className="artist-list" style={{display:'flex', justifyContent:'space-between'}}>
+          
+          <Box  style={{paddingLeft:"3rem", display:'flex', flexDirection:'column'}}>
+          <p>Nom i cognoms</p>
+          <p>Nom del grup/espai</p>
+          <p>Correu electrònic</p>
+          <p>Gènere musical</p>
+          <p>Descripció</p>
+           </Box>
+          
+          <Grid item className= "Buttons-accept-reject">
           <Button
             style={{
               backgroundColor: "#1446A0",
-              width: "12rem",
+              width: "6rem",
               height: "2rem",
               borderRadius: "40px",
               color: "white",
@@ -99,12 +128,12 @@ export default function Login() {
               margin: "1.3em",
             }}
           >
-            Gestionar Artistes
-          </Button>
-          <Button
+            Acceptar
+         </Button>
+         <Button
             style={{
               backgroundColor: "#1446A0",
-              width: "12rem",
+              width: "6rem",
               height: "2rem",
               borderRadius: "40px",
               color: "white",
@@ -115,26 +144,17 @@ export default function Login() {
               margin: "1.3em",
             }}
           >
-            Gestionar Espais
-          </Button>
-          <Button
-            style={{
-              backgroundColor: "#1446A0",
-              width: "12rem",
-              height: "2rem",
-              borderRadius: "40px",
-              color: "white",
-              textTransform: "capitalize",
-              fontSize: "1rem",
-              fontWeight: "200",
-              border: "2.5px solid grey",
-              margin: "1.3em",
-            }}
-          >
-            Gestionar Events
-          </Button>
-        </Grid>
-      </Container>
+            Rebutjar
+         </Button>
+         </Grid>
+         </Grid>
+
+
+            
+         </Grid>
+      
+  
     </Grid>
+
   );
 }

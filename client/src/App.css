@@ -1,24 +1,27 @@
+/*--------- CSS Sara---------*/
+
+body{
+  margin:0;
+  padding:0;
+}
+
+.menu-container, .menu-links-container, .navbar{
+  background-color: transparent !important;
+
+}
+
 p{
   font-family: Consolas;
 }
 
-.navbar {
-  background-color: transparent !important;
-}
 
 
-@media screen and (max-width:624){
-
-  .MuiGrid-item{
-     width:1vw;
-     padding:5px;
+@media screen and (max-width: 624px){ 
+  
+.MuiGrid-container .menu-container{
+      display: none;
+    }
   }
- .menu {
-  display: 'none';
- }
-}
-
-
 
 @media screen and (min-width: 624px){ 
 
@@ -29,12 +32,21 @@ p{
 
 }
 
+/*------------ CSS Sara hasta aquí -----------------------*/
+
+
+
+/*------------ CSS Hillary --------------------*/
+
 /* home */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
   /* Set a specific height */
+
+  height: 100vh;
+  width: 100vw;
 min-width:150px;
 min-height: 140px;
 
@@ -58,14 +70,8 @@ min-height: 140px;
   width: 10rem;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  max-width: 60rem;
-  padding: 2rem 1.5rem;
-  margin: 0 auto;
-  color: #241623;
-  background: #eef2f4;
-}
+
+
 
 h1 {
   font-weight: 900;
@@ -79,10 +85,13 @@ p {
 
 a {
   color: currentcolor;
+  text-decoration: none;
 }
 
+    
+/* button     */
 
-     /* button     */
+
 .btn-grad {
   background-image: linear-gradient(to right, #1446A0 0%, #FFFF  51%, #E2A0FF  100%);
   margin: 10px;

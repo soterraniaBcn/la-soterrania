@@ -1,30 +1,28 @@
-import HeaderRight from "./Header";
 import background from '../imagenes/background.png';
-import { Grid, Container, Button, Box } from "@mui/material";
+import { Grid, Container, Button } from "@mui/material";
 import React from 'react';
+import { Link } from "react-router-dom";
 
 
 
 
-export default function Home() {
-    return (
+export default function Home(){
+    return(
+     
+       <Container fluid >
+       <Grid container xl={12} >
+     
+        
+                <img className="hero-image" src={background} alt=""/>
+    
+                <h1 className ="hero-text">La soterrània</h1>
+                <h6 className ="hero-text">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h6>
+                
+                <Link to="/login" style={{textUnderline: "none"}}> 
+                <Button className="btn-grad">Enviar</Button>
+                </Link>
+               
 
-        <Container style={{}}>
-
-            <Grid container className="home" >
-
-
-                <img className="hero-image" src={background} alt="" />
-                <HeaderRight />
-                <Box className="hero-text">
-                    <h4>La Soterrania </h4>
-                    <p>Plataforma de difusió cultural que promou vincles entre artistes i</p>
-                    <p> espais socials/culturals alternatius.</p>
-
-                </Box>
-                <Box>  
-                    <Button class Name="btn-grad">Enviar</Button>
-                 </Box>
             </Grid>
 
         </Container>
