@@ -42,15 +42,8 @@ p{
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-
-  /* Set a specific height */
-
   height: 100vh;
   width: 100vw;
-min-width:150px;
-min-height: 140px;
-
-
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
@@ -60,32 +53,36 @@ min-height: 140px;
 }
 
 /* Place text in the middle of the image */
-.hero-text {
+.hero-text  {
 
-  position:relative;
-  top: 50%;
+text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   flex-direction: row;
   color: white;
  text-justify: distribute;
   width: 10rem;
-}
-
-
-
-
-h1 {
-  font-weight: 900;
   font-size: 2.7rem;
-  max-width: 20ch;
+  z-index: 2;
+  margin: 10%  auto 0 auto;
+  text-align: center;
 }
+  
 
-p {
-  max-width: 60ch;
+
+.hero-texts {
+  font-size: 2rem !important;
+  color: #eef2f4!important;
+  z-index: 2;
+  margin: 5%  auto 5% auto;
+  text-align: center;
 }
+ 
 
-a {
+
+.button1 {
   color: currentcolor;
   text-decoration: none;
+  position: relative;
+  margin: 50px 0 0 50%;
 }
 
     
@@ -93,53 +90,79 @@ a {
 
 
 .btn-grad {
-  background-image: linear-gradient(to right, #1446A0 0%, #FFFF  51%, #E2A0FF  100%);
-  margin: 10px;
-  padding: 15px 45px;
+ 
+  background-image: linear-gradient(
+    to right,
+    #e2a0ff  0%,
+    #ffff 21%,
+    #e2a0ff 30%
+  );
+  display:flex;
+  font-size: 1.2rem !important;
   text-align: center;
-  text-transform: uppercase;
+  height: 6.90vh;
+  width: 6.90vw;
+
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-  z-index: 1;
-  left: 80rem;
+  color: black !important ;
+  box-shadow: 0 0 20px rgb(10, 9, 9);
+  z-index: 2;
+  border-radius: 15px !important;
+ 
+
 }
 
 .btn-grad:hover {
+
   background-position: right center; /* change the direction of the change here */
-  color: #fff;
+  color: black ;
   text-decoration: none;
-  z-index: 1;
-  left: 80rem;
+
+ 
 }
 
 /* homepage */
+.team{
+  top:40px;
+  margin:20px;
+}
+.artista{
+  font-weight: bold;
+  color: #1446a0;
+  align-items: flex-start;
+ 
 
-.flow {
-  font-family: "Inter", sans-serif;
-  max-width: 50rem;
-  max-height: 30rem;
-  padding: 2rem 1.5rem;
-  margin: 0 auto;
-  color: #241623;
-  background: #eef2f4;
-  margin-top: 30rem;
 }
 
-h1 {
+.flow{
+  font-family: "Inter", sans-serif;
+ width: 100vw;
+ height: 100vh;
+  padding: 2rem 1.5rem;
+  background-color:#e2a0ff ;
+  background-repeat: no-repeat;
+  display:flex;
+  justify-content: center;
+
+ 
+}
+
+.profile__name{
   font-weight: 900;
   font-size: 2.7rem;
   max-width: 20ch;
 }
 
-p {
+.genero{
+  display: flex;
+  font-weight: 300;
+  font-size: 1.6rem;
   max-width: 60ch;
+  left: 50rem;
 }
 
-a {
+profile {
   color: currentcolor;
 }
 
@@ -293,7 +316,4 @@ a {
   transform: scale(1.05) rotate(1deg);
 }
          
-.artista{
-  color: black;
-  align-items: flex-start;
-}
+
