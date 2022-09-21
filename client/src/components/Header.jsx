@@ -1,19 +1,14 @@
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
+import {Box, Drawer, Grid,Toolbar, CssBaseline, List, IconButton, ListItemButton} from '@mui/material';
 import MuiAppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import CssBaseline from '@mui/material/CssBaseline';
-import List from '@mui/material/List';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItemButton from '@mui/material/ListItemButton';
-import logo from '../images/logo.png';
-
-
+import { useState } from 'react';
+import logo from '../imagenes/logosoteblanco.png';
+import { Link } from 'react-router-dom';
+import Menu from './Menu';
 
 
 
@@ -65,7 +60,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 
 export default function Header() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -76,23 +71,30 @@ export default function Header() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+
+    <Grid container>
       <CssBaseline />
       <AppBar className="navbar" elevation={0} open={open}>
+
         <Toolbar style={{ justifyContent:'space-between'}}>
-        <img src={logo} alt=""
+        <Link to="/homepage">
+        <img  src={logo} alt=""
         style={{width:"80px",
-         height:"auto"}} ></img>
-          
+        height:"auto"}} ></img>
+        </Link>
+
+        <Menu />  
+
   
           <IconButton
-          
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             sx={{...(open && { display:'none' }) }}
           >
-            <Box >
+
+            <Box className="menuhamburger">
+
             <MenuIcon sx={{width:'4rem', height:'4rem'}}/>
             </Box> 
          </IconButton>
@@ -124,15 +126,34 @@ export default function Header() {
         <List>
           
            <ListItemButton>
-            <a> Aviso Legal</a>
+            <a href='/avislegal'> Avís Legal</a>
            </ListItemButton>
            <ListItemButton>
-           <a>Sobre Nosotras</a>
+           <a href='/sobrenosaltres'>Sobre Nosaltres</a>
+           </ListItemButton>
+           <ListItemButton>
+            <a href='/elmeuperfil'> El meu perfil</a>
+           </ListItemButton>
+           <ListItemButton>
+            <a href='/artistes'> Artistes</a>
+           </ListItemButton>
+           <ListItemButton>
+            <a href='/espais'> Espais</a>
+           </ListItemButton>
+           <ListItemButton>
+            <a href='/esdeveniments'> Esdeveniments</a>
            </ListItemButton>
         
         </List>
       
       </Drawer>
-    </Box>
+     
+      </Grid>
   );
 }
+
+
+
+
+
+
