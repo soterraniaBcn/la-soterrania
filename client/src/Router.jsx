@@ -25,6 +25,7 @@ export default function Router() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
+<<<<<<< HEAD
         <Route exact path="/espera" element={<WaitingRoom/>} />
         <Route exact path="/homepage" element={<HomePage />} />
         <Route exact path="/artistes/detall" element={<DetailArtista />} />
@@ -40,6 +41,15 @@ export default function Router() {
 
       </Routes>
 
+=======
+        <Route exact path="/homepage" elemen
+        t={<HomePage />} />
+        <Route exact path="/artist/detail" element={<DetailArtista />} />
+        <Route exact path="/space/detail" element={<DetailSpace />} />
+        <Route exact path="/perfiladmin" element={<PerfilAdmin />} />
+        <Route exact path="/events" element={<DetailEvent />} />
+      </Routes>
+>>>>>>> login
     </div>
   )
 }

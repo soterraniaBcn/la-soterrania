@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 
 
 
+<<<<<<< HEAD
 export default function Login() {
   return (
     <>
@@ -22,6 +23,29 @@ export default function Login() {
         }}
       >
         <Header />
+=======
+export default function Login(){
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [user, setUser] = useState({ email, password });
+  const navigation = useNavigate();
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = { email: email, password: password };
+    authService
+      .login(user)
+      .then((res) => {
+        setUser(res.data.token);
+        localStorage.setItem("user", res.data.token);
+        if (res.data.token) {
+          navigation("/myprofile", { replace: true })
+        }
+      })
+      .catch(() => setError("Hubo un error"));
+  };
+>>>>>>> login
 
         <Grid
           item
@@ -77,6 +101,7 @@ export default function Login() {
             <Box style={{ lineHeight: '1px', fontSize: '0.8rem' }}>
               <p>Encara no tens compte? </p>
 
+<<<<<<< HEAD
               <p>Pots enregistrar-te</p>
               <a href="/register">aquí</a>
             </Box>
@@ -105,4 +130,30 @@ export default function Login() {
       </Grid>
     </>
   )
+=======
+
+          </FormGroup> 
+          </Grid>
+                <Button
+                  style={{
+                      backgroundColor: "#cdcecf",
+                      width: "7rem",
+                      height: "2rem",
+                      borderRadius: "40px",
+                      color: "black",
+                      textTransform: "capitalize",
+                      fontSize: "1rem",
+                      fontWeight: "200",
+                      border: "2.5px solid grey",
+                      margin: "1.3em"
+                    }}
+                    onClick={handleSubmit}
+                    >
+                  Enviar </Button>
+        </Grid>
+        {error}
+        </>
+       
+    )
+>>>>>>> login
 }
