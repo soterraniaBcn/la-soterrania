@@ -1,3 +1,7 @@
+.div-cards{
+  flex-wrap: wrap;
+}
+
 .profile{
     width: 15%;
   }
@@ -29,6 +33,7 @@
   
   .flow  {
     margin:2%;
+    flex-wrap: wrap;
   }
   
   /* Composition */
