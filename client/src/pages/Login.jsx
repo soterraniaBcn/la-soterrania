@@ -20,7 +20,7 @@ export default function Login() {
         setUser(res.data.token);
         localStorage.setItem("user", res.data.token);
         if (res.data.token) {
-          navigation("/myprofile", { replace: true });
+          navigation("/homepage", { replace: true });
         }
       })
       .catch(() => setError("Hubo un error"));
