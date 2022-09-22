@@ -12,7 +12,9 @@ import DetailEvent from './pages/DetailEvent'
 import WaitingRoom from './pages/WaitingRoom'
 import LegalWarning from './pages/LegalWarning'
 import NewPost from './pages/NewPost'
-
+import EditArtist from './pages/EditArtist'
+import EditSpaces from './pages/EditSpaces'
+import EditEvents from './pages/EditEvent'
 
 
 export default function Router() {
@@ -31,7 +33,11 @@ export default function Router() {
         <Route exact path="/sobrenosaltres" element={<About />} />
         <Route exact path="/events" element={<DetailEvent />} />
         <Route exact path="/newpost" element={<NewPost />} />
-        <Route exact path="/avislegal" element={<LegalWarning />} />
+        <Route exact path="/avíslegal" element={<LegalWarning />} />
+        <Route exact path="/admin/editarartistes" element={<EditArtist />} />
+        <Route exact path="/admin/editarespais" element={<EditSpaces />} />
+        <Route exact path="/admin/editaresdeveniments" element={<EditEvents />} />
+
       </Routes>
 
     </div>
