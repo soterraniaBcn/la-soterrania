@@ -8,7 +8,6 @@ export default function Menu() {
       style={{
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "red",
         height: "5vh",
         width: "100%",
       }}
