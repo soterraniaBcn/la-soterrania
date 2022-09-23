@@ -2,7 +2,7 @@ import background from '../imagenes/background.png';
 import { Grid, Container, Button } from "@mui/material";
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import Header from './Header';
 
 
 
@@ -12,7 +12,7 @@ export default function Home(){
        <Container fluid >
        <Grid container xl={12} >
      
-        
+        <Header/>
                 <img className="hero-image" src={background} alt=""/>
     
                 <h1 className ="hero-text">La soterrània</h1>

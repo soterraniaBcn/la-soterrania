@@ -32,7 +32,7 @@ export default function Login() {
             justifyContent: 'center',
             backgroundColor: 'white',
             width: '25rem',
-            maxHeight: '30rem',
+            maxHeight: '25rem',
             borderRadius: '1rem',
             border: '5px solid #cdcecf',
             marginTop: '6rem',
@@ -60,9 +60,7 @@ export default function Login() {
               />
             </Box>
 
-
-
-            <Box sx={{ mt: "3rem" }} style={{ lineHeight: "1px" }}>
+           <Box sx={{ mt: "3rem" }} style={{ lineHeight: "1px" }}>
 
               <p>Contrasenya:</p>
               <input

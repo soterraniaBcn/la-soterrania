@@ -24,7 +24,7 @@ export default function Register(){
             }}>
                    <Header/>
               
-                    <Grid item xs={10} style={{ display: 'flex',flexDirection:'row',
+                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
 
                      alignItems: 'center', 
                      justifyContent: 'center',
