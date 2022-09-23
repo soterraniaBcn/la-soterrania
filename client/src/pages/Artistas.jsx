@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import MediaCard from "../components/MediaCard"
-import Footer from "../components/Footer"
+import FooterRosa from "../components/FooterRosa"
 
 export default function Artistas (){
    
@@ -9,7 +9,7 @@ export default function Artistas (){
         <>
         <Header/>
         <MediaCard/>
-        <Footer/>
+        <FooterRosa/>
         </>
     )
 }
