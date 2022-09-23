@@ -10,10 +10,14 @@ const generateToken = async (
   next: NextFunction
 ) => {
   try {
-    const token = await jwt.sign({ email1: req.body.email1, id_usuaria : req.body.id_usuaria }, secret, {
-      expiresIn: "1h",
-      algorithm: "HS256",
-    });
+    const token = await jwt.sign(
+      { email: req.body.email, id: req.body.id },
+      secret,
+      {
+        expiresIn: "1h",
+        algorithm: "HS256",
+      }
+    );
     console.log(token);
     req.body.token = token;
 
@@ -36,7 +40,7 @@ const validateToken = (req: any, res: Response, next: NextFunction) => {
       if (err) {
         res.status(403).send("token no válido");
       } else {
-        req.body.email1 = decoded.email1;
+        req.body.email = decoded.email;
         next();
       }
     });
