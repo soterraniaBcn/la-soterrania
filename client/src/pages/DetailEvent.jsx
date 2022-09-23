@@ -2,12 +2,27 @@ import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Card from '@mui/material/Card'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import imagen from '../imagenes/imagen_nuria.PNG'
 import { Container, Box, Grid, Button } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import GetEvent from '../services/getInfo'
 
 export default function DetailEvent() {
+
+  const [singleDetail, setSingleDetail]= useState([id])
+  const {id} = useParams();
+
+
+  useEffect(()=>{
+    GetEvent.getAll()
+    .then(res =>{ 
+      setSingleDetail(res[id])
+    })
+         
+  }, [])
+
+
   return (
     <div style={{ backgroundColor: 'pink' }}>
       <Box style={{ backgroundColor: 'pink', height: '90px', display: 'flex', justifyContent: 'center', alignItems: "center" }}>
@@ -32,7 +47,7 @@ export default function DetailEvent() {
           >
             <CardContent sx={{ mt: 5 }}>
               <Typography sx={{}} component="div" variant="h5">
-                Nombre del Evento
+                {singleDetail.nombre}
               </Typography>
               <Typography
                 component="div"
