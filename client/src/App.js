@@ -1,6 +1,6 @@
 import React from 'react';
 import Register from './pages/Register'
-import Footer from './components/Footer.jsx'
+import FooterRosa from './components/FooterRosa.jsx'
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
    <Register/>
-   <Footer/>
+   <FooterRosa/>
     </>
   );
 }
