@@ -135,7 +135,7 @@ export default function Register(){
                      </FormGroup>
                   
                      </Grid>
-                <Link to='/espera'>
+                <Link to='/espera' style={{textDecoration:"none"}}>
                 <Button 
                   style={{
                         backgroundColor: "#E2A0FF",
@@ -147,7 +147,7 @@ export default function Register(){
                         fontSize: "1rem",
                         fontWeight: "200",
                         border: "2.5px solid grey",
-                        margin: "0.8rem"
+                        margin: "0.8rem",
                   }}
                   >
                   Enviar
