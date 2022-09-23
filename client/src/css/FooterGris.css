@@ -29,20 +29,20 @@
    align-items: center;
 }
 
-.div3 a{
+.link-div{
     width:2em;
     width: 40%;
     color: #1446A0;
 }
 
-.divContainer1 h3{
+#h3{
     padding-left: 5%;
     color: #1446A0;
 }
 
 
 @media screen and (max-width: 600px){
-    .divContainer1 h3{
+    #h3{
         font-size: 80%;
     }
     .div1{

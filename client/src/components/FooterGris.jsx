@@ -10,16 +10,16 @@ export default function Footer(){
         <div className="divContainer1">
               <h3 id="h3">Avís legal</h3>
               <div className="div2">
-                <h3>Segueix-nos</h3>
+                <h3 id="h3">Segueix-nos</h3>
             
             <div className="div3">
-              <a href="https://www.instagram.com/lasoterrania/" rel="noreferrer" target="_blank">
+              <a href="https://www.instagram.com/lasoterrania/" rel="noreferrer" target="_blank" className="link-div">
                   <AiFillInstagram />    
               </a> 
-              <a href="https://www.facebook.com/La-soterr%C3%A0nia-101259562713131" rel="noreferrer" target="_blank" >
+              <a href="https://www.facebook.com/La-soterr%C3%A0nia-101259562713131" rel="noreferrer" target="_blank" className="link-div" >
                   <AiFillFacebook/>
               </a>
-              <a href="https://www.youtube.com/c/lasoterr%C3%A0nia" rel="noreferrer" target="_blank" >
+              <a href="https://www.youtube.com/c/lasoterr%C3%A0nia" rel="noreferrer" target="_blank" className="link-div">
                   <AiFillYoutube/>
               </a>
             </div>

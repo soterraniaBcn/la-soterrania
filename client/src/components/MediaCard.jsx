@@ -30,7 +30,7 @@ export default function MediaCard() {
      <div className="teams">
         <a href={item.link} className="profiles">
           <h2 className="profile__names">{item.nombre}</h2>
-          <p>{item.genero}</p>
+          <p id="genero">{item.genero}</p>
           <img alt="Imagen de artista" src={item.img} />
         </a>
     </div>

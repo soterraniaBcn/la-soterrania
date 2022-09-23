@@ -10,7 +10,7 @@
   width:20%;
 }
 
-.profiles h2, p{
+.profile__names, #genero{
   color:white;
 }
 
@@ -20,17 +20,17 @@
   flex-wrap: wrap;
   }
   
-  .teams h2 {
+  .profile__names{
     font-weight: 900;
     font-size: 2.7rem;
     max-width: 20ch;
   }
   
- .teams p {
+  #genero {
     max-width: 60ch;
   }
   
-  .teams a {
+  .profiles {
     color: currentcolor;
   }
   
@@ -126,12 +126,12 @@
     transition: filter 200ms ease, transform 250ms linear;
   }
   
-  .profiles h2,
-  .profiles p {
+  .profile__names,
+   #genero {
     transform: translateY(2ex);
   }
   
-  .profiles h2 {
+  .profile__names {
     font-size: 1.7rem;
     line-height: 1.2;
     font-weight: 900;
@@ -139,12 +139,12 @@
     transition: 300ms transform ease;
   }
   
-  .profiles p {
+  #genero {
     font-size: 1.2rem;
     font-weight: 500;
   }
   
-  .profiles p {
+  #genero{
     opacity: 0;
     transition: 300ms opacity linear, 300ms transform ease-in-out;
   }
@@ -154,8 +154,8 @@
     outline-offset: -0.5rem;
   }
   
-  .profiles:hover :is(h2, p),
-  .profiles:focus :is(h2, p) {
+  .profiles:hover :is(.profile__names, #genero),
+  .profiles:focus :is(.profile__names, #genero) {
     transform: none;
   }
   
@@ -166,8 +166,8 @@
     opacity: 0.7;
   }
   
-  .profiles:hover p,
-  .profiles:focus p {
+  .profiles:hover #genero,
+  .profiles:focus #genero {
     opacity: 1;
     transition-delay: 200ms;
   }
@@ -179,10 +179,10 @@
   }
 
   @media screen and (max-width: 600px) {
-    .profiles h2{
+    .profile__names{
         font-size: 55%;
     }
-    .profiles p{
+    #genero{
         margin:0;
         font-size:50%;
         margin-right: 10%;
