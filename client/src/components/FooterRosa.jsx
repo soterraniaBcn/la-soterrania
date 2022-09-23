@@ -7,8 +7,8 @@ import {AiFillYoutube} from 'react-icons/ai'
 
 export default function Footer(){
     return(
-        <div className="divContainer">
-              <h3 id="h3">Avis legals</h3>
+        <div className="divContainer1">
+              <h3 id="h3">Avís legal</h3>
               <div className="div2">
                 <h3>Segueix-nos</h3>
             

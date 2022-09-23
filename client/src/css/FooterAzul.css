@@ -1,4 +1,4 @@
-.divContainer{
+.divContainer1{
     width:100%;
     display: flex;
     justify-content: space-between;
@@ -35,14 +35,14 @@
     width:2em;
 }
 
-.divContainer h3{
+.divContainer1 h3{
     padding-left: 5%;
     color:white;
 }
 
 
 @media screen and (max-width: 600px){
-    .divContainer h3{
+    .divContainer1 h3{
         font-size: 80%;
     }
     .div1{
