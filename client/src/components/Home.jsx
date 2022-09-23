@@ -2,7 +2,6 @@ import background5 from '../imagenes/background5.png';
 import { Grid, Container, Button,Box } from "@mui/material";
 import React from 'react';
 import { Link } from "react-router-dom";
-import Menu from "./Menu.jsx";
 import Header from "./Header.jsx";
 
 
@@ -14,7 +13,6 @@ export default function Home(){
    
        <Grid container className="padre2" style={{}}>
        <Header/>
-        <Menu/>
     
                 <img className="hero-image" src={background5} alt=""/>
     

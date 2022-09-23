@@ -23,7 +23,7 @@ import {Link} from 'react-router-dom'
             }}>
                    <Header/>
               
-                    <Grid item xs={10} style={{ display: 'flex',flexDirection:'row',
+                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
 
                      alignItems: 'center', 
                      justifyContent: 'center',
@@ -134,7 +134,7 @@ import {Link} from 'react-router-dom'
                      </FormGroup>
                   
                      </Grid>
-                <Link to='/espera'>
+                <Link to='/espera' style={{textDecoration:"none"}}>
                 <Button 
                   style={{
                         backgroundColor: "#E2A0FF",
@@ -146,7 +146,7 @@ import {Link} from 'react-router-dom'
                         fontSize: "1rem",
                         fontWeight: "200",
                         border: "2.5px solid grey",
-                        margin: "0.8rem"
+                        margin: "0.8rem",
                   }}
                   >
                   Enviar

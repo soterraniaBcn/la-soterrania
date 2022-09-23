@@ -20,7 +20,7 @@ export default function Login() {
         setUser(res.data.token);
         localStorage.setItem("user", res.data.token);
         if (res.data.token) {
-          navigation("/myprofile", { replace: true });
+          navigation("/homepage", { replace: true });
         }
       })
       .catch(() => setError("Hubo un error"));
@@ -44,6 +44,7 @@ export default function Login() {
           item
           xs={8}
           style={{
+
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -52,7 +53,7 @@ export default function Login() {
             maxHeight: "30rem",
             borderRadius: "1rem",
             border: "5px solid #cdcecf",
-            marginTop: "6rem",
+            marginTop: "6rem"
           }}
         >
           <FormGroup className="form" xs={8}>
@@ -77,7 +78,9 @@ export default function Login() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </Box>
-            <Box sx={{ mt: "3rem" }} style={{ lineHeight: "1px" }}>
+
+           <Box sx={{ mt: "3rem" }} style={{ lineHeight: "1px" }}>
+
               <p>Contrasenya:</p>
               <input
                 type="text"
@@ -96,7 +99,7 @@ export default function Login() {
             </Box>
           </FormGroup>
         </Grid>
-        <Link to="/homepage">
+        <Link to="/homepage" style={{textDecoration:"none"}}>
           <Button
             onClick={handleSubmit}
             style={{
@@ -110,6 +113,7 @@ export default function Login() {
               fontWeight: "200",
               border: "2.5px solid grey",
               margin: "1.3em",
+        
             }}
           >
             Enviar{" "}

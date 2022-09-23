@@ -125,23 +125,23 @@ export default function Header() {
 
         <List>
           
-           <ListItemButton>
-            <a href='/avislegal'> Avís Legal</a>
+           <ListItemButton >
+            <a className='links-menu-hamburger'  href='/avislegal'> Avís Legal</a>
            </ListItemButton>
            <ListItemButton>
-           <a href='/sobrenosaltres'>Sobre Nosaltres</a>
+           <a className='links-menu-hamburger'  href='/sobrenosaltres'>Sobre Nosaltres</a>
            </ListItemButton>
            <ListItemButton>
-            <a href='/elmeuperfil'> El meu perfil</a>
+            <a className='links-menu-hamburger'   href='/elmeuperfil'> El meu perfil</a>
            </ListItemButton>
            <ListItemButton>
-            <a href='/artistes'> Artistes</a>
+            <a className='links-menu-hamburger'  href='/artistes'> Artistes</a>
            </ListItemButton>
            <ListItemButton>
-            <a href='/espais'> Espais</a>
+            <a className='links-menu-hamburger'   href='/espais'> Espais</a>
            </ListItemButton>
            <ListItemButton>
-            <a href='/esdeveniments'> Esdeveniments</a>
+            <a className='links-menu-hamburger'  href='/esdeveniments'> Esdeveniments</a>
            </ListItemButton>
         
         </List>
