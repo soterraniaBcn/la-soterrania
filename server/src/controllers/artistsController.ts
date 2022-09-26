@@ -3,6 +3,27 @@ import artistsModel from "../model/artistsModel";
 import { iArtist } from "../model/interface/iArtist";
 
 const artistsController = {
+  getAllArtists: async (req: Request, res: Response) => {
+    try {
+      const result: any = await artistsModel.getAllArtists();
+      result
+        ? res.status(200).json(result)
+        : res.status(500).send("Hi ha hagut un error fent l'obtenció de dades");
+    } catch (error: any) {
+      res.status(400).send(error.message);
+    }
+  },
+
+  getOneArtist: async (req:Request,res:Response) =>{
+    try{
+            const param = req.params.id;
+            const artist: any = await artistsModel.getOneArtist(param);
+            res.json(artist);
+    }catch (error: any){
+            res.status(400).send(error.message);
+    }
+},
+
   saveArtist: async (req: Request, res: Response) => {
     try {
       const {
@@ -66,17 +87,6 @@ const artistsController = {
       result
         ? res.status(200).json({ result: result })
         : res.status(500).send("No s'ha pogut crear una nova usuària");
-    } catch (error: any) {
-      res.status(400).send(error.message);
-    }
-  },
-
-  getAllArtists: async (req: Request, res: Response) => {
-    try {
-      const result: any = await artistsModel.getAllArtists();
-      result
-        ? res.status(200).json(result)
-        : res.status(500).send("Hi ha hagut un error fent l'obtenció de dades");
     } catch (error: any) {
       res.status(400).send(error.message);
     }

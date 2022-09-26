@@ -9,6 +9,7 @@ import admin from '../middlewares/admin';
 const router = Router();
 
 router.get('/artistas', jwt.validateToken, artistsController.getAllArtists);
+router.get('/artistas/:id', jwt.validateToken, artistsController.getOneArtist);
 router.post("/artistas", jwt.validateToken, admin.checkRol, artistsController.saveArtist);
 
 export default router; 
