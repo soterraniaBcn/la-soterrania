@@ -24,7 +24,7 @@ const generateToken = async (
     next();
   } catch (error: any) {
     console.dir(error);
-    res.status(400).send("Error al generar el token");
+    res.status(400).send("Error en generar el token");
   }
 };
 
@@ -38,7 +38,7 @@ const validateToken = (req: any, res: Response, next: NextFunction) => {
 
     jwt.verify(req.token, secret, (err: any, decoded: any) => {
       if (err) {
-        res.status(403).send("token no válido");
+        res.status(403).send("El token no és vàlid");
       } else {
         req.email = decoded.email;
         next();
