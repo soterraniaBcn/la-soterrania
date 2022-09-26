@@ -4,22 +4,23 @@ import { iArtist } from "./interface/iArtist";
 class Artist {
   async saveArtist(artists: iArtist) {
     const queryStr =
-      "INSERT INTO public.artista (estado, nombre, foto, genero, descripcion, instrumentacion, telefono1, telefono2, email, web, redsocial1, redsocial2, redsocial3, notas, id_usuaria, id_ciudad) VALUES ($1, $2, $3, $4, $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15 $16 $17) RETURNING *";
+      "INSERT INTO public.artista (estado, nombre, foto, genero, descripcion, generomusical, instrumentacion, telefono1, telefono2, email, web, redsocial1, redsocial2, redsocial3, notas, id_usuaria, id_ciudad) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17) RETURNING *";
     const values = [
       artists.estado,
       artists.nombre,
-      artists.foto,
-      artists.genero,
+      artists.foto || null,
+      artists.genero || null,
       artists.descripcion,
-      artists.instrumentacion,
+      artists.generomusical, 
+      artists.instrumentacion || null,
       artists.telefono1,
-      artists.telefono2,
+      artists.telefono2 || null,
       artists.email,
       artists.web,
-      artists.redsocial1,
-      artists.redsocial2,
-      artists.redsocial3,
-      artists.notas,
+      artists.redsocial1 || null,
+      artists.redsocial2 || null,
+      artists.redsocial3 || null,
+      artists.notas || null,
       artists.id_usuaria,
       artists.id_ciudad,
     ] as string[];

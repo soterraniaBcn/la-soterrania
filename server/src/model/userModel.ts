@@ -4,7 +4,7 @@ import { iUser, iUserLogin } from "./interface/iUser";
 class User {
   async saveUser(users: iUser) {
     const queryStr =
-      "INSERT INTO public.usuarias (estado, email, password, rol) VALUES ($1, $2, $3, $4) RETURNING *";
+      "INSERT INTO public.usuaria (estado, email, password, rol) VALUES ($1, $2, $3, $4) RETURNING *";
     const values = [
       users.estado,
       users.email,
