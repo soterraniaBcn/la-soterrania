@@ -40,5 +40,10 @@ class Artist {
     const result: any = await connection.query(queryStr, values);
     return result.rows[0];
   }
+  async deleteArtist(id:any){
+    const queryStr = 'DELETE FROM public.artista WHERE id=$1 RETURNING *';
+    const result:any= await connection.query(queryStr, [id]);
+    return result.rows;
+}
 }
 export default new Artist();

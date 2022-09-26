@@ -11,5 +11,6 @@ const router = Router();
 router.get('/artistas', jwt.validateToken, artistsController.getAllArtists);
 router.get('/artistas/:id', jwt.validateToken, artistsController.getOneArtist);
 router.post("/artistas", jwt.validateToken, admin.checkRol, artistsController.saveArtist);
+router.delete('/artistas/:id', jwt.validateToken, admin.checkRol, artistsController.deleteArtist)
 
 export default router; 

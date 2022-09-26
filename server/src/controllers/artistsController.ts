@@ -91,5 +91,17 @@ const artistsController = {
       res.status(400).send(error.message);
     }
   },
+
+  deleteArtist: async (req:Request,res:Response)=>{
+    try{
+        const param = req.params.id;
+        const result = await artistsModel.deleteArtist(param);
+        result
+                ? res.status(201).json({ result: `L'artista amb ID: ${param} està eliminat`})
+                : res.status(500).send("No s'ha pogut borrar l'artista seleccionada");
+    }catch (error: any){
+        res.status(400).send(error.message);
+    }
+}
 };
 export default artistsController;
