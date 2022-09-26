@@ -7,7 +7,7 @@ import { encryptPassword } from "../middlewares/auth";
 
 const router = Router();
 
-router.get('/artistas', auth.validateUser, state.checkState, artistsController);
+router.get('/artistas', jwt.validateToken, artistsController.getAllArtists);
 router.post("/artistas", encryptPassword, artistsController.saveArtist);
 
 export default router; 

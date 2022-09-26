@@ -3,7 +3,7 @@ import userModel from "../model/userModel";
 
 const checkState = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const { email } = req.body;
+    const { email } = req as any;
 
     if (!email) {
       throw new Error(" email or password not exist");

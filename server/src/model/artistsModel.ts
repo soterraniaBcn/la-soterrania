@@ -4,9 +4,8 @@ import { iArtist } from "./interface/iArtist";
 class Artist {
   async saveArtist(artists: iArtist) {
     const queryStr =
-      "INSERT INTO public.artista (id, estado, nombre, foto, genero, descripcion, instrumentacion, telefono1, telefono2, email, web, redsocial1, redsocial2, redsocial3, notas, id_usuaria, id_ciudad) VALUES ($1, $2, $3, $4, $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15 $16 $17) RETURNING *";
+      "INSERT INTO public.artista (estado, nombre, foto, genero, descripcion, instrumentacion, telefono1, telefono2, email, web, redsocial1, redsocial2, redsocial3, notas, id_usuaria, id_ciudad) VALUES ($1, $2, $3, $4, $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15 $16 $17) RETURNING *";
     const values = [
-      artists.id,
       artists.estado,
       artists.nombre,
       artists.foto,
@@ -35,3 +34,4 @@ class Artist {
   }
   
 }
+export default new Artist();
