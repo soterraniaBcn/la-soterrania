@@ -8,7 +8,7 @@ const userController = {
       const { email, password, id: id, estado, rol }: iUser = req.body;
 
       if (!email || !password) {
-        res.status(400).send("Falta el correo electrónico o contraseña");
+        res.status(400).send("Falta el correu electrònic o la contrasenya");
       }
 
       const result = await userModel.saveUser({
@@ -20,7 +20,7 @@ const userController = {
       });
       result
         ? res.status(200).json({ result: result })
-        : res.status(500).send("No se pudo crear un nuevo usuario");
+        : res.status(500).send("No es va poder crear un nou usuari");
     } catch (error: any) {
       res.status(400).send(error.message);
     }
@@ -41,7 +41,7 @@ const userController = {
       const result: any = await userModel.getAllUsers();
       result
         ? res.status(200).json(result)
-        : res.status(500).send("Hubo un error en la obtención los datos");
+        : res.status(500).send("Va haver-hi un error en l'obtenció les dades");
     } catch (error: any) {
       res.status(400).send(error.message);
     }
@@ -65,12 +65,10 @@ const userController = {
   deleteUser: async (req: Request, res: Response) => {
     try {
       const param = req.params.id;
-      console.log(param, "llegas al param");
       const result = await userModel.deleteUser(param);
-      console.log(result, "llega al result");
       result
         ? res.status(200).json({ result: `user deleted with ID: ${param}` })
-        : res.status(500).send("No se pudo borrar el usuario seleccionado");
+        : res.status(500).send("No es va poder esborrar l'usuari seleccionat");
     } catch (error: any) {
       res.status(400).send(error.message);
     }

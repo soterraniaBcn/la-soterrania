@@ -10,7 +10,7 @@ export default function FooterAzul(){
         <div className="divContainer1">
               <h3 id="h3">Avís legal</h3>
               <div className="div2">
-                <h3 id="h3">Segueix-nos</h3>
+                <h3 id="h3">Contacte</h3>
             
             <div className="div3">
               <a href="https://www.instagram.com/lasoterrania/" rel="noreferrer" target="_blank" className="link-div">
