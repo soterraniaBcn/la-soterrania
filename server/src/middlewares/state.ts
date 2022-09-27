@@ -3,18 +3,17 @@ import userModel from "../model/userModel";
 
 const checkState = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const { email } = req.body;
+    const  email  = (req as any).email || req.body.email;
 
     if (!email) {
-      throw new Error(" email or password not exist");
+      throw new Error("L'email o password no existeix");
     }
 
     const result = await userModel.getUserByEmail(email);
-    console.dir(result)
-    if (result && result.estado === true) {
+    if (result && result.estado === 1) {
       next();
     } else {
-      res.status(403).send("No autorizado");
+      res.status(403).send("No autoritzat");
     }
   } catch (error: any) {
     res.status(400).send(error.message);
