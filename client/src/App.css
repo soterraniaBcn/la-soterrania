@@ -149,12 +149,14 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
 .flow{
   font-family: "Inter", sans-serif;
  width: 100vw;
- height: 100vh;
+
   padding: 2rem 1.5rem;
   background-color:#e2a0ff ;
   background-repeat: no-repeat;
   display:flex;
   justify-content: center;
+
+  flex-direction: column;
 
  
 }
@@ -186,6 +188,7 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   );
   grid-gap: var(--auto-grid-gap, 0);
   padding: 0;
+  width: 100%;
 }
 
 .flow > * + * {
@@ -199,6 +202,8 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
 
 /* Blocks */
 .profile {
+  width: 350px ;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -326,5 +331,10 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   filter: grayscale(0);
   transform: scale(1.05) rotate(1deg);
 }
-         
+
+#profile{
+  width: 300px;
+  height: 200px;
   
+}
+
