@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import SearchBar from '../components/SearchBar'
 import { Container } from "@mui/material";
 import MediaCard from "../components/MediaCard"
@@ -11,7 +10,6 @@ export default function Artistas (){
         <>
         <Container style={{height:'10rem'}}>
         <SearchBar/>
-        <Header/>
         </Container>
         <MediaCard/>
         <FooterAzul/>
