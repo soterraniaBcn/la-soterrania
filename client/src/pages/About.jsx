@@ -18,7 +18,7 @@ export default function About() {
     
       >
         <Box style={{
-          backgroundColor: "#E2A0FF",
+          backgroundColor: "#cdcecf",
           height: "10rem",
           width: "100%",
           display: "flex",
