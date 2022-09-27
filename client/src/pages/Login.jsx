@@ -99,7 +99,7 @@ export default function Login() {
             </Box>
           </FormGroup>
         </Grid>
-        <Link to="/homepage">
+        <Link to="/homepage" style={{textDecoration:"none"}}>
           <Button
             onClick={handleSubmit}
             style={{
@@ -113,6 +113,7 @@ export default function Login() {
               fontWeight: "200",
               border: "2.5px solid grey",
               margin: "1.3em",
+        
             }}
           >
             Enviar{" "}

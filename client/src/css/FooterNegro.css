@@ -1,10 +1,9 @@
-.divContainer{
+.divContainer1{
     width:100%;
- 
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    justify-content: space-around;
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: black;
 }
@@ -12,34 +11,45 @@
 .div1{
     display: flex;
     width:20%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
+    justify-content: space-between;
 }
 
-
 .div2{
-   width:20%;
+    display: flex;
+    flex-direction: row;
+    width:40%;
+    justify-content: space-around;
+}
+
+.div3{
+   width:50%;
    display: flex;
    flex-direction: row;
    justify-content: space-around;
    align-items: center;
-   color: white;
 }
 
-.div3{
-    color: white;
+.link-div{
+    width: 40%;
+    width:2em;
+    color:white;
 }
+
+#h3{
+    color:white;
+    padding-left: 5%;
+}
+
 
 @media screen and (max-width: 600px){
-    h3{
+    #h3{
         font-size: 80%;
     }
     .div1{
         width:40%;
     }
     .div2{
-        width:40%;
+        width:60%;
+    
     }
-}
+} 

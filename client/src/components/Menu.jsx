@@ -1,3 +1,4 @@
+import React from "react";
 import { Grid } from "@mui/material";
 
 export default function Menu() {
@@ -10,6 +11,7 @@ export default function Menu() {
         alignItems: "center",
         height: "5vh",
         width: "100%",
+
       }}
     >
       <Grid
@@ -25,10 +27,10 @@ export default function Menu() {
           width: "50vw",
         }}
       >
-        <a href="/sobrenosaltres">Sobre nosaltres</a>
-        <a href="">Artistes</a>
-        <a href="">Espais</a>
-        <a href="">Esdeveniments</a>
+        <a className="links-menu" href="/sobrenosaltres">Sobre nosaltres</a>
+        <a className="links-menu" href="">Artistes</a>
+        <a className="links-menu" href="">Espais</a>
+        <a className="links-menu" href="">Esdeveniments</a>
       </Grid>
     </Grid>
   );
