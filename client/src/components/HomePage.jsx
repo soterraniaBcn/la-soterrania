@@ -1,6 +1,7 @@
 
 import { Grid, Box } from "@mui/material";
 import React from 'react';
+import flecha2 from '../imagenes/flecha2.png';
 import flecha from '../imagenes/flecha.png';
  import escenario from '../imagenes/escenario.png';
  import evento2 from '../imagenes/evento2.png';
@@ -14,21 +15,22 @@ import señor from '../imagenes/señor.png';
 // import trompeta from '../imagenes/trompeta.png';
  import usuario1 from '../imagenes/usuario1.png';
 // import violin from '../imagenes/violin.png';
-
+import Footer from './FooterAzul'
 import Header from "./Header.jsx";
 import { Link } from "react-router-dom";
+import { height } from "@mui/system";
 
 
 export default function HomePage() {
     return ( 
     <>
-            <Box style={{height:"10rem",width:"100vw", overflowY:"auto"}}> 
+            <Box style={{height:"10rem",width:"100vw",backgroundColor:"#E2A0FF"}}> 
             <Header/>
             </Box>
         <Grid container className="flow " style={{}}>
            
            <Grid item style={{}}>
-        <Box className="team" style ={{marginTop:"7rem"}}>
+        <Box className="team" style ={{backgroundColor:"white",borderRadius:"3%"}}>
         <p className="artista" style={{fontSize:"30px",fontWeight:"bold"}}>Artistas</p>
             <Grid container className="auto-grid" role="list">
 
@@ -53,13 +55,13 @@ export default function HomePage() {
                    </a>
                    
             <Link to = "/artistes">
-                   <img src={flecha} alt="flecha" style={{width:"5rem",height:"5rem"}}/>
+                   <img src={flecha} alt="flecha" style={{width:"5rem",height:"5rem",marginTop:"9rem",marginLeft:"3rem"}}/>
                    </Link>
             </Grid>
         </Box>
        
 
-        <Box className="team" >
+        <Box className="team" style={{marginTop:"10%",backgroundColor:"#CDCECF",borderRadius:"3%"}}>
         <p className="artista" style={{fontSize:"30px",fontWeight:"bold"}}>Espai</p>
             <Grid container className="auto-grid" role="list">
 
@@ -82,19 +84,24 @@ export default function HomePage() {
                     <p className="genero">Calle de Méndez Álvaro, 28045 Madrid</p>
                     <img src={escenario} alt="usuario1" />
                 </a>
+                <Link to = "/artistes">
+                   <img src={flecha} alt="flecha" style={{width:"5rem",height:"5rem",marginTop:"9rem",marginLeft:"3rem"}}/>
+                   </Link>
             </Grid>
         </Box>
-        <p className="artista" style={{fontSize:"30px",fontWeight:"bold"}}>Eventos</p>
-        <Grid Item style ={{width:"800px",height:"auto",display:"flex",justifyContent:"center"}}>
+        <Grid Item style ={{width:"1150px",height:"500px",display:"flex",backgroundColor:"white",borderRadius:"3%",marginTop:"10%"}}>
+        <p className="artista" style={{ fontSize:"30px",fontWeight:"bold"}}>Eventos</p>
         <Box  id ="eventos" >              
-    <img style={{width:"600px",position:"absolute"}} src={evento2} alt="evento" />
-    <a style ={{textDecoration:"none",fontSize:"1.7rem"}} href="" target="_blank" id="perfil">
-    <p style={{position:"relative",marginLeft:"250px",marginTop:"50%",color:"white", fontFamily:"SansSerif", fontWeight:"bold"}}id ="calle">Esdeveniments</p>
-    </a>
+    <img style={{width:"900px",height:"400px",position:"absolute",marginTop:"6%"}} src={evento2} alt="evento" />
+    <Link style={{textDecoration:"none",fontSize:"1.7rem"}} to = "/esdeveniments">
+    <p style={{position:"relative",marginLeft:"350px",marginTop:"35%",color:"white", fontFamily:"SansSerif", fontWeight:"bold"}}id ="calle">Veure més Esdeveniments</p>
+    </Link>
+ 
            </Box>
            </Grid>
         </Grid>
     </Grid>
+    <Footer/>
     </>
 )
 }

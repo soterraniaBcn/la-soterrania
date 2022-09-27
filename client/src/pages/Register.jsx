@@ -2,17 +2,18 @@ import React from 'react';
 import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button} from '@mui/material';
 import Header from '../components/Header';
 import {Link} from 'react-router-dom'
+import FooterRosa from '../components/FooterRosa';
 
 
-export default function Register(){
 
+  export default function Register(){
     return (
           <>
 
          <Grid container
          id="register"
             style={{ backgroundColor: '#cdcecf',
-            height: '100vh',
+            height: 'calc(100vh-16rem)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent:'center', 
@@ -32,13 +33,10 @@ export default function Register(){
                      width:'25rem',
                      maxHeight:'30rem',
                      borderRadius:"1rem",
-                     marginTop:"6rem",
+                     marginTop: "6rem",
                      border: '2px solid #ea20ff'
                     
                       }}>
-                       
-                    
-                
     
                    <FormGroup className='checkbox'style={{lineHeight:"1px"}}>
              
@@ -153,8 +151,8 @@ export default function Register(){
                   Enviar
                 </Button>
                 </Link>
+<FooterRosa/>
            </Grid>
- 
         </>
     )
   }

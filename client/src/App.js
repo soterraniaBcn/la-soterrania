@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
+import './App.css';
 import Router from './Router'
-import "./App.css"
 
 
 
@@ -13,7 +13,7 @@ function App() {
     <Router/>
 
     </>
-  )
+  );
 }
 
-export default App
+export default App;

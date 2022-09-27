@@ -1,18 +1,36 @@
-.profile{
-    width: 15%;
+.div-cards{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+
+.flows  {
+  margin:2%;
+  width:20%;
+}
+
+.profile__names, #genero{
+  color:white;
+}
+
+
+.profiles{
+  display: flex;
+  flex-wrap: wrap;
   }
   
-  h1 {
+  .profile__names{
     font-weight: 900;
     font-size: 2.7rem;
     max-width: 20ch;
   }
   
-  p {
+  #genero {
     max-width: 60ch;
   }
   
-  a {
+  .profiles {
     color: currentcolor;
   }
   
@@ -27,17 +45,14 @@
     padding: 0;
   }
   
-  .flow  {
-    margin:2%;
-  }
-  
   /* Composition */
-  .team {
+
+  .teams {
     --flow-space: 2em;
   }
   
   /* Blocks */
-  .profile {
+  .profiles {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -50,8 +65,8 @@
     overflow: hidden;
   }
   
-  .profile::before,
-  .profile::after {
+  .profiles::before,
+  .profiles::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -61,7 +76,7 @@
     left: 0;
   }
   
-  .profile::before {
+  .profiles::before {
     background: linear-gradient(
       to top,
       hsl(0 0% 0% / 0.79) 0%,
@@ -84,7 +99,7 @@
     transition: 300ms opacity linear;
   }
   
-  .profile::after {
+  .profiles::after {
     background: linear-gradient(
       45deg,
       hsl(5 97% 63% / 0.7) 0,
@@ -94,11 +109,11 @@
     transition: 300ms opacity linear;
   }
   
-  .profile > * {
+  .profiles > * {
     z-index: 1;
   }
   
-  .profile img {
+  .profiles img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -111,12 +126,12 @@
     transition: filter 200ms ease, transform 250ms linear;
   }
   
-  .profile h2,
-  .profile p {
+  .profile__names,
+   #genero {
     transform: translateY(2ex);
   }
   
-  .profile h2 {
+  .profile__names {
     font-size: 1.7rem;
     line-height: 1.2;
     font-weight: 900;
@@ -124,56 +139,60 @@
     transition: 300ms transform ease;
   }
   
-  .profile p {
+  #genero {
     font-size: 1.2rem;
     font-weight: 500;
   }
   
-  .profile p {
+  #genero{
     opacity: 0;
     transition: 300ms opacity linear, 300ms transform ease-in-out;
   }
   
-  .profile:focus {
+  .profiles:focus {
     outline: 0.5rem solid white;
     outline-offset: -0.5rem;
   }
   
-  .profile:hover :is(h2, p),
-  .profile:focus :is(h2, p) {
+  .profiles:hover :is(.profile__names, #genero),
+  .profiles:focus :is(.profile__names, #genero) {
     transform: none;
   }
   
-  .profile:hover::after,
-  .profile:focus::after,
-  .profile:hover::before,
-  .profile:focus::before {
+  .profiles:hover::after,
+  .profiles:focus::after,
+  .profiles:hover::before,
+  .profiles:focus::before {
     opacity: 0.7;
   }
   
-  .profile:hover p,
-  .profile:focus p {
+  .profiles:hover #genero,
+  .profiles:focus #genero {
     opacity: 1;
     transition-delay: 200ms;
   }
   
-  .profile:hover img,
-  .profile:focus img {
+  .link:hover img,
+  .link:focus img {
     filter: grayscale(0);
     transform: scale(1.05) rotate(1deg);
   }
 
   @media screen and (max-width: 600px) {
-    .profile h2{
+    .profile__names{
         font-size: 55%;
-        margin-left: -20%;
     }
-    .profile p{
+    #genero{
         margin:0;
         font-size:50%;
-        margin-left: -20%;
+        margin-right: 10%;
     }
-    .flow{
+    .flows{
         margin:2%;
+        width:50%;
+    }
+    .div-cards{
+      display: flex;
+      justify-content: space-around;
     }
   }

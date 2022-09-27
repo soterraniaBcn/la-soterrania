@@ -1,33 +1,48 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid,Box, Typography } from "@mui/material";
 import Header from "../components/Header";
+import FooterGris from "../components/FooterGris";
+
+
 
 export default function About() {
   return (
     <>
+       
       <Grid
-        container 
-        style={{
+        container style={{display:"flex", justifyContent:"center"}}
+        
+      
+      
+          
+    
+      >
+        <Box style={{
           backgroundColor: "#E2A0FF",
-          height: "100vh",
+          height: "10rem",
+          width: "100%",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-        
-        
-          
-        }}
-      >
+          flexDirection:"column"}}>
+    
         <Header />
-       <Grid container className="about-container" 
-       style={{maxWidth:"80rem",mt:5, backgroundColor:"white", pl:3, }}>
+        </Box>
+  
+
+  
+  
+       <Grid container style={{justifyContent:"center", mt:5, backgroundColor:"white",maxWidth:"80%"}}>
+        <p>Sobre nosaltres</p>
         <Typography 
                 variant="p"
                 color="black"
+                fontFamily="Consolas"
                 component="div"
-                style={{ padding:"2rem",fontSize:"1rem", lineHeight:"2rem"}}
+                padding="2rem"
+                fontSize="0.8rem" 
+                lineHeight="2rem"
               >
+    
     La soterrània és un projecte de gestió i de difusió cultural que actua com a una plataforma artística, amb la idea de promoure vincles entre l'art i els usuaris de diferents espais socials i culturals.
 
 
@@ -62,8 +77,10 @@ Actualment, amb la situació de pandèmia de la Covid-19, hem hagut de reinventa
     Projecte nascut al 2013
                
               </Typography>
+              </Grid>
         </Grid>
-    
-        </Grid>
-        </>
+      
+   <FooterGris/> 
+
+      </>
   )}

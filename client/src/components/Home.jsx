@@ -1,9 +1,9 @@
 import background5 from '../imagenes/background5.png';
-import { Grid, Container, Button,Box } from "@mui/material";
+import { Grid, Button,Box } from "@mui/material";
 import React from 'react';
 import { Link } from "react-router-dom";
 import Header from "./Header.jsx";
-
+import Footer from "./FooterNegro";
 
 
 
@@ -23,7 +23,7 @@ export default function Home(){
                 <Button className="btn-grad">Login</Button>
                 </Link>
                 </Box>
-
+                <Footer/>
             </Grid>
             
 

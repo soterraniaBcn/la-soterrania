@@ -193,6 +193,7 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
+  
 }
 
 /* Composition */
