@@ -5,7 +5,7 @@ import {AiFillFacebook} from 'react-icons/ai'
 import {AiFillYoutube} from 'react-icons/ai'
 
 
-export default function Footer(){
+export default function FooterAzul(){
     return(
         <div className="divContainer1">
               <h3 id="h3">Avís legal</h3>
