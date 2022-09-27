@@ -14,7 +14,7 @@ export default function MediaCard() {
   }, [])
 
   return (
-   /* 
+   
     <div className="div-cards">
   {allArtists.map((item, i) =>(
   <article className="flows">
@@ -27,13 +27,13 @@ export default function MediaCard() {
     </div>
  </article>
     ))}
-    </div>*/
-     <div>
+    </div>
+    /* <div>
     {allArtists.map((e, i) => 
         <div key={i}>
           <h1>nombre: {e.nombre}</h1>
         </div>
       )}
-    </div>
+    </div>*/
   );
 }
