@@ -2,6 +2,8 @@ import React from 'react';
 import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button} from '@mui/material';
 import Header from '../components/Header';
 import {Link} from 'react-router-dom'
+import FooterRosa from '../components/FooterRosa';
+
 
 
   export default function Register(){
@@ -11,33 +13,31 @@ import {Link} from 'react-router-dom'
          <Grid container
          id="register"
             style={{ backgroundColor: '#cdcecf',
-            height: '100vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent:'center', 
             alignItems: 'center',
-            position: 'absolute',
-            paddingTop:'0'
+      
+
+      
       
            
             }}>
                    <Header/>
               
-                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
+                    <Grid item xs={10} style={{ display: 'flex',
 
                      alignItems: 'center', 
                      justifyContent: 'center',
                      backgroundColor:'white',
-                     width:'25rem',
-                     maxHeight:'30rem',
+                     width:'27rem',
+                     height:'auto',
                      borderRadius:"1rem",
-                     marginTop:"6rem",
+                     marginTop: "3rem",
+                     padding:"3rem",
                      border: '2px solid #ea20ff'
                     
                       }}>
-                       
-                    
-                
     
                    <FormGroup className='checkbox'style={{lineHeight:"1px"}}>
              
@@ -153,7 +153,7 @@ import {Link} from 'react-router-dom'
                 </Button>
                 </Link>
            </Grid>
- 
+<FooterRosa/>
         </>
     )
   }
