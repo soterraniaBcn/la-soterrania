@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Header from "../components/Header";
 import imagenperfil from "../imagenes/imageperfil.jpeg";
+import FooterGris from "../components/FooterGris";
 
 
 
@@ -30,7 +31,7 @@ export default function PerfilAdmin() {
       <Grid
         item
         style={{
-          backgroundColor: "#E2A0FF",
+          backgroundColor: "#cdcecf",
           height: "10rem",
           width: "100%",
         
@@ -46,9 +47,9 @@ export default function PerfilAdmin() {
           flexDirection: "column", mt:5
         }}
       >
-        <p
+        <p xs={10}
           style={{
-            fontSize: "2rem",
+            fontSize: "1.7rem",
             display: "flex",
             justifyContent: "center",
           }}
@@ -219,7 +220,7 @@ export default function PerfilAdmin() {
             
          </Grid>
       
-  
+  <FooterGris/>
     </Grid>
 
   );

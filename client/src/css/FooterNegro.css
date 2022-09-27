@@ -1,11 +1,11 @@
-.divContainer1{
+.divContainerNegro{
     width:100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     position: relative;
     bottom: 0;
-    background-color: black;
+    background-color: black !important;
 }
 
 .div1{
@@ -29,20 +29,20 @@
    align-items: center;
 }
 
-.link-div{
+.link-divNegro{
     width: 40%;
     width:2em;
-    color:white;
+    color:white !important;
 }
 
-#h3{
-    color:white;
+.h3Negro{
+    color:white !important;
     padding-left: 5%;
 }
 
 
 @media screen and (max-width: 600px){
-    #h3{
+    .h3Negro{
         font-size: 80%;
     }
     .div1{

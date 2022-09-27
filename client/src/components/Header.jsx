@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material';
 import {Box, Drawer, Grid,Toolbar, CssBaseline, List, IconButton, ListItemButton} from '@mui/material';
 import MuiAppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -72,9 +72,9 @@ export default function Header() {
 
   return (
 
-    <Grid container>
+    <Grid container style={{position:'sticky'}}>
       <CssBaseline />
-      <AppBar className="navbar" elevation={0} open={open}>
+      <AppBar className="navbar" position="sticky" elevation={0} open={open}>
 
         <Toolbar style={{ justifyContent:'space-between'}}>
         <Link to="/homepage">
@@ -132,7 +132,7 @@ export default function Header() {
            <a className='links-menu-hamburger'  href='/sobrenosaltres'>Sobre Nosaltres</a>
            </ListItemButton>
            <ListItemButton>
-            <a className='links-menu-hamburger'   href='/elmeuperfil'> El meu perfil</a>
+            <a className='links-menu-hamburger'   href='/elmeuperfilartista'> El meu perfil</a>
            </ListItemButton>
            <ListItemButton>
             <a className='links-menu-hamburger'  href='/artistes'> Artistes</a>
@@ -151,9 +151,4 @@ export default function Header() {
       </Grid>
   );
 }
-
-
-
-
-
 

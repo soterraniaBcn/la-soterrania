@@ -1,11 +1,11 @@
-.divContainer1{
+.divContainerAzul{
     width:100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     position: relative;
     bottom: 0;
-    background-color:#1446A0;
+    background-color:#1446A0 !important;
 }
 
 .div1{
@@ -29,20 +29,20 @@
    align-items: center;
 }
 
-.link-div{
+.link-divAzul{
     width: 40%;
-    color:white;
+    color:white !important;
     width:2em;
 }
 
-#h3{
+.h3Azul{
     padding-left: 5%;
-    color:white;
+    color:white !important;
 }
 
 
 @media screen and (max-width: 600px){
-    #h3{
+    .h3Azul{
         font-size: 80%;
     }
     .div1{

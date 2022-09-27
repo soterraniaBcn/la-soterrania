@@ -1,11 +1,11 @@
-.divContainer1{
+.divContainerRosa{
     width:100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     position: relative;
     bottom: 0;
-    background-color:#E3A0FF;
+    background-color:#E2A0FF !important;
 }
 
 .div1{
@@ -29,20 +29,20 @@
    align-items: center;
 }
 
-.link-div{
+.link-divRosa{
     width:2em;
     width: 40%;
-    color: #1446A0;
+    color: #1446A0 !important;
 }
 
-#h3{
-    color: #1446A0;
+.h3Rosa{
+    color: #1446A0 !important;
     padding-left: 5%;
 }
 
 
 @media screen and (max-width: 600px){
-    #h3{
+    .h3Rosa{
         font-size: 80%;
     }
     .div1{
