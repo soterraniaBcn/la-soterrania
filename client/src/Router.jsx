@@ -38,7 +38,7 @@ export default function Router() {
         <Route exact path="/admin/editarartistes" element={<EditArtist />} />
         <Route exact path="/admin/editarespais" element={<EditSpaces />} />
         <Route exact path="/admin/editaresdeveniments" element={<EditEvents />} />
-        <Route exact path="/artistas" element={<Artistas />} />
+        <Route exact path="/artistes" element={<Artistas />} />
 
       </Routes>
 
