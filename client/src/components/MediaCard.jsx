@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { useSearchParams, Link } from 'react-router-dom';
 import '../css/MediaCard.css'
+import DATABASE_URL from '../.env'
 
 export default function MediaCard() {
   const [searchParams, setSearchParams]= useSearchParams ()
@@ -9,7 +10,7 @@ export default function MediaCard() {
   const [card, setCard] = useState([]);
   useEffect(() => {
     axios({
-      url: "http://localhost:3000/artistas",
+      DATABASE_URL
     })
       .then((response) => {
         console.log(response)

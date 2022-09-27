@@ -72,7 +72,7 @@ export default function Header() {
 
   return (
 
-    <Grid container>
+    <Grid container style={{position:'sticky'}}>
       <CssBaseline />
       <AppBar className="navbar" elevation={0} open={open}>
 
