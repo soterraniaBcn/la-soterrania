@@ -15,7 +15,8 @@ import NewPost from './pages/NewPost'
 import EditArtist from './pages/EditArtist'
 import EditSpaces from './pages/EditSpaces'
 import EditEvents from './pages/EditEvent'
-
+import ElMeuPerfilArtista from './pages/ElMeuPerfilArtista'
+import ElMeuPerfilEspai from './pages/ElMeuPerfilEspai'
 
 export default function Router() {
   return (
@@ -34,6 +35,8 @@ export default function Router() {
         <Route exact path="/events" element={<DetailEvent />} />
         <Route exact path="/newpost" element={<NewPost />} />
         <Route exact path="/avíslegal" element={<LegalWarning />} />
+        <Route exact path="/elmeuperfilartista" element={<ElMeuPerfilArtista />} />
+        <Route exact path="/elmeuperfilespai" element={<ElMeuPerfilEspai />} />
         <Route exact path="/admin/editarartistes" element={<EditArtist />} />
         <Route exact path="/admin/editarespais" element={<EditSpaces />} />
         <Route exact path="/admin/editaresdeveniments" element={<EditEvents />} />
