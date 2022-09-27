@@ -10,7 +10,11 @@ export default function FooterGris(){
         <div className="divContainer1Gris">
               <h3 className="h3Gris">Avís legal</h3>
               <div className="div2">
+<<<<<<< HEAD
               <h3 className="h3Gris">Contacte</h3>
+=======
+                <h3 id="h3">Contacte</h3>
+>>>>>>> 72cc4930af2078e9fea797adde0cd0044745f39e
             
             <div className="div3">
               <a href="https://www.instagram.com/lasoterrania/" rel="noreferrer" target="_blank" className="link-divGris">

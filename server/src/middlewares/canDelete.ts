@@ -15,13 +15,13 @@ const checkCanDelete = async (req: any, res: Response, next: NextFunction) => {
 
     jwt.verify(req.token, secret, async (err: any, decoded: any) => {
       if (err) {
-        return res.status(403).send("Token no válido");
+        return res.status(403).send("El token no és vàlid");
       } else {
         try {
           const { id } = decoded;
           console.dir({ decoded, params: req.params });
           if (!id) {
-            return res.status(403).send("Token no válido");
+            return res.status(403).send("El token no és vàlid");
           }
 
           const result = await userModel.getUserById(id);
@@ -30,7 +30,7 @@ const checkCanDelete = async (req: any, res: Response, next: NextFunction) => {
           } else if (id === parseInt(req.params.id)) {
             next();
           } else {
-            res.status(403).send("No autorizado");
+            res.status(403).send("No autoritzat");
           }
         } catch (error: any) {
           res.status(400).send(error.message);

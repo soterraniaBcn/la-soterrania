@@ -31,7 +31,7 @@ export default function PerfilAdmin() {
       <Grid
         item
         style={{
-          backgroundColor: "#E2A0FF",
+          backgroundColor: "#cdcecf",
           height: "10rem",
           width: "100%",
         
