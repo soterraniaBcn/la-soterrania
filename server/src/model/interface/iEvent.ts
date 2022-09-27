@@ -1,6 +1,6 @@
 export interface iEvent {
   id: number;
-  estado: boolean;//REVISARRRRRRRRRRRRRRRRRRRRRRRRR!!!!!!!!!!!
+  estado: string;
   nombre: string;
   foto: string;
   descripcion: string;
