@@ -15,6 +15,9 @@ import NewPost from './pages/NewPost'
 import EditArtist from './pages/EditArtist'
 import EditSpaces from './pages/EditSpaces'
 import EditEvents from './pages/EditEvent'
+import ElMeuPerfilArtista from './pages/ElMeuPerfilArtista'
+import ElMeuPerfilEspai from './pages/ElMeuPerfilEspai'
+import Artistas from './pages/Artistas'
 
 
 export default function Router() {
@@ -29,11 +32,11 @@ export default function Router() {
         <Route exact path="/homepage" element={<HomePage />} />
         <Route exact path="/artistes/detall" element={<DetailArtista />} />
         <Route exact path="/espais/detall" element={<DetailSpace />} />
-        <Route exact path="/perfiladmin" element={<PerfilAdmin />} />
+        <Route exact path="/admin/perfiladmin" element={<PerfilAdmin />} />
         <Route exact path="/sobrenosaltres" element={<About />} />
         <Route exact path="/events" element={<DetailEvent />} />
         <Route exact path="/newpost" element={<NewPost />} />
-        <Route exact path="/avíslegal" element={<LegalWarning />} />
+        <Route exact path="/avislegal" element={<LegalWarning />} />
         <Route exact path="/elmeuperfilartista" element={<ElMeuPerfilArtista />} />
         <Route exact path="/elmeuperfilespai" element={<ElMeuPerfilEspai />} />
         <Route exact path="/admin/editarartistes" element={<EditArtist />} />

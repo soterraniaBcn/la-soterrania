@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Header from "../components/Header";
 import imagenperfil from "../imagenes/imageperfil.jpeg";
+import FooterGris from "../components/FooterGris";
 
 
 
@@ -219,7 +220,7 @@ export default function PerfilAdmin() {
             
          </Grid>
       
-  
+  <FooterGris/>
     </Grid>
 
   );

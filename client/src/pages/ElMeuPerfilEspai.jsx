@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Header from "../components/Header";
 import imagenperfil from "../imagenes/imageperfil.jpeg";
+import FooterAzul from "../components/FooterAzul"
 
 
 
@@ -23,7 +24,7 @@ export default function ElMeuPerfilArtista() {
     <Grid
       container
       sx={{
-        height: "100vh",
+        height: "calc(100vh-16rem)",
       
       }}
     >
@@ -48,7 +49,7 @@ export default function ElMeuPerfilArtista() {
       >
         <p
           style={{
-            fontSize: "2rem",
+            fontSize: "1.3rem",
             display: "flex",
             justifyContent: "center",
           }}
@@ -60,7 +61,7 @@ export default function ElMeuPerfilArtista() {
           <CardMedia
             style={{ display: "flex", alignItems: "start" }}
             component="img"
-            sx={{ width: 151, ml: 3, mr: 2, mt: 5, mb: 3 }}
+            sx={{ width: 151, ml: 3, mr: 2, mt: 2, mb: 3 }}
             src={imagenperfil}
             alt="Perfil image"
           />
@@ -146,6 +147,7 @@ export default function ElMeuPerfilArtista() {
          </Grid>
          </Grid>
        </Grid>
+       <FooterAzul/>
        </Grid>
   
   )

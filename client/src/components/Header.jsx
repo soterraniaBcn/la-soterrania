@@ -74,7 +74,7 @@ export default function Header() {
 
     <Grid container>
       <CssBaseline />
-      <AppBar className="navbar" position="fixed" elevation={0} open={open}>
+      <AppBar className="navbar" position="sticky" elevation={0} open={open}>
 
         <Toolbar style={{ justifyContent:'space-between'}}>
         <Link to="/homepage">

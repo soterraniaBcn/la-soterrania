@@ -7,6 +7,8 @@ import {
   Button,
 } from "@mui/material";
 import Header from "../components/Header";
+import FooterAzul from "../components/FooterAzul";
+
 
 export default function EditSpaces() {
   return (
@@ -42,8 +44,8 @@ export default function EditSpaces() {
               marginTop: "12rem",
 
               backgroundColor: "#00000",
-              width: "25rem",
-              height: "30rem",
+              width: "22rem",
+              height: "25rem",
               borderRadius: "1rem",
               border: "2px solid #ea20ff",
               lineHeight: "1px",
@@ -173,6 +175,7 @@ export default function EditSpaces() {
           </Grid>
         </Grid>
       </Grid>
+      <FooterAzul/>
     </>
   );
 }
