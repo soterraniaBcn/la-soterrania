@@ -32,7 +32,7 @@ export default function About() {
   
   
        <Grid container style={{justifyContent:"center", mt:5, backgroundColor:"white",maxWidth:"80%"}}>
-        <p>Sobre nosaltres</p>
+        <p style={{fontSize:"2rem"}}>Sobre nosaltres</p>
         <Typography 
                 variant="p"
                 color="black"

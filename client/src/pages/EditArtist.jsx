@@ -14,7 +14,7 @@ import FooterAzul from "../components/FooterAzul"
 export default function EditArtist() {
   return (
     <>
-      <Grid container className="vh-100">
+      <Grid container className="100-vh">
         <Box
           className="header-edit-spaces"
           sx={{
@@ -22,7 +22,7 @@ export default function EditArtist() {
             bgcolor: "#E2A0FF",
             height: "10rem",
             width: "100%",
-            position: "fixed",
+      
           }}
         >
           <Header />
@@ -42,7 +42,7 @@ export default function EditArtist() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              marginTop: "12rem",
+              marginTop: "4rem",
 
               backgroundColor: "#00000",
               width: "22rem",
@@ -123,7 +123,7 @@ export default function EditArtist() {
             </Box>
           </FormGroup>
 
-          <Grid item className="Buttons-row">
+          <Grid item className="Buttons-row"style={{margin:"2rem 2rem"}}>
             <Button
               style={{
                 backgroundColor: "#E2A0FF",

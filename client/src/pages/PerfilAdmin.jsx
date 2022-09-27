@@ -47,9 +47,9 @@ export default function PerfilAdmin() {
           flexDirection: "column", mt:5
         }}
       >
-        <p
+        <p xs={10}
           style={{
-            fontSize: "2rem",
+            fontSize: "1.7rem",
             display: "flex",
             justifyContent: "center",
           }}

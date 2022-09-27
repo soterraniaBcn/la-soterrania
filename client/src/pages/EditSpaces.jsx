@@ -13,7 +13,7 @@ import FooterAzul from "../components/FooterAzul";
 export default function EditSpaces() {
   return (
     <>
-      <Grid container l={12} className="vh-100">
+      <Grid container l={12} className="100-vh">
         <Box
           className="header-edit-spaces"
           sx={{
@@ -21,7 +21,7 @@ export default function EditSpaces() {
             bgcolor: "#E2A0FF",
             height: "10rem",
             width: "100%",
-            position: "fixed",
+          
           }}
         >
           <Header />
@@ -41,14 +41,13 @@ export default function EditSpaces() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              marginTop: "12rem",
-
               backgroundColor: "#00000",
               width: "22rem",
               height: "25rem",
               borderRadius: "1rem",
               border: "2px solid #ea20ff",
               lineHeight: "1px",
+              marginTop: "4rem"
             }}
           >
             <Box style={{ lineHeight: "1px" }}>
@@ -122,7 +121,7 @@ export default function EditSpaces() {
             </Box>
           </FormGroup>
 
-          <Grid item className="Buttons-row">
+          <Grid item className="Buttons-row"style={{margin:"2rem 2rem"}}>
             <Button
               style={{
                 backgroundColor: "#E2A0FF",
@@ -134,7 +133,7 @@ export default function EditSpaces() {
                 fontSize: "1rem",
                 fontWeight: "200",
                 border: "2.5px solid grey",
-                margin: "0.8rem",
+              
               }}
             >
               Afegir +

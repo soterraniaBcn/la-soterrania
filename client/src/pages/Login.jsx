@@ -32,7 +32,7 @@ export default function Login() {
         container
         style={{
           backgroundColor: "#E2A0FF",
-          height: "calc(100vh-16rem",
+          height: "100vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -51,10 +51,10 @@ export default function Login() {
             justifyContent: "center",
             backgroundColor: "white",
             width: "22rem",
-            maxHeight: "25rem",
+            maxHeight: "27rem",
             borderRadius: "1rem",
             border: "5px solid #cdcecf",
-            marginTop: "6rem"
+            marginTop: "2rem"
           }}
         >
           <FormGroup className="form" xs={8}>

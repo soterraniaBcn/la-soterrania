@@ -21,7 +21,6 @@ export default function EditEvent() {
             bgcolor: "#E2A0FF",
             height: "10rem",
             width: "100%",
-            position: "fixed",
           }}
         >
           <Header />
@@ -31,6 +30,7 @@ export default function EditEvent() {
           container
           className="Form-container"
           style={{
+            height:"auto",
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
@@ -41,7 +41,7 @@ export default function EditEvent() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              marginTop: "12rem",
+              marginTop: "4rem",
               backgroundColor: "#00000",
               width: "22rem",
               height: "25rem",
@@ -133,7 +133,7 @@ export default function EditEvent() {
             </Box>
           </FormGroup>
 
-          <Grid item className="Buttons-row">
+          <Grid item className="Buttons-row" style={{margin:"2rem 2rem"}} >
             <Button
               style={{
                 backgroundColor: "#E2A0FF",
