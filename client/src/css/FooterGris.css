@@ -1,11 +1,11 @@
-.divContainer1{
+.divContainer1Gris{
     width:100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     position: relative;
     bottom: 0;
-    background-color:#CDCECF;
+    background-color:#CDCECF !important;
 }
 
 .div1{
@@ -29,20 +29,20 @@
    align-items: center;
 }
 
-.link-div{
+.link-divGris{
     width:2em;
     width: 40%;
-    color: #1446A0;
+    color: #1446A0 !important;
 }
 
-#h3{
+.h3Gris{
     padding-left: 5%;
-    color: #1446A0;
+    color: #1446A0 !important;
 }
 
 
 @media screen and (max-width: 600px){
-    #h3{
+    .h3Gris{
         font-size: 80%;
     }
     .div1{
