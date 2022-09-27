@@ -9,7 +9,7 @@ export const encryptPassword = async (
 ) => {
   try {
     if (!req.body.password) {
-      res.send("password missing");
+      res.send("Falta la contrasenya");
     } else {
       const saltRounds = 10;
       const passwordHash = await bcrypt.hash(req.body.password, saltRounds);
@@ -17,7 +17,7 @@ export const encryptPassword = async (
       next();
     }
   } catch (error) {
-    res.status(500).send("error auth");
+    res.status(500).send("Hi ha un error en l'autorització");
   }
 };
 
@@ -30,7 +30,7 @@ const validateUser = async (
     const { email, password } = req.body;
 
     if (!email || !password) {
-      throw new Error(" email or password not exist");
+      throw new Error("El correu electrònic o la contrasenya no existeixen");
     }
 
     const result = await userModel.getUserByEmail(email);
@@ -39,7 +39,7 @@ const validateUser = async (
     if (comparePassword) {
       next();
     } else {
-      throw new Error("password not valid");
+      throw new Error("Contrasenya no vàlida");
     }
   } catch (error: any) {
     res.status(400).send(error.message);
