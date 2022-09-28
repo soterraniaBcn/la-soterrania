@@ -1,17 +1,17 @@
 import React from "react";
 import SearchBar from '../components/SearchBar'
 import { Container } from "@mui/material";
-import MediaCardArtistas from "../components/MediaCardArtistas"
+import MediaCardEspacios from "../components/MediaCardEspacios"
 import FooterAzul from "../components/FooterAzul"
 
-export default function Artistas (){
+export default function Espacios (){
    
     return(
         <>
         <Container style={{height:'10rem'}}>
         <SearchBar/>
         </Container>
-        <MediaCardArtistas/>
+        <MediaCardEspacios/>
         <FooterAzul/>
         </>
     )
