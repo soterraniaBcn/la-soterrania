@@ -15,6 +15,7 @@ import NewPost from './pages/NewPost'
 import EditArtist from './pages/EditArtist'
 import EditSpaces from './pages/EditSpaces'
 import EditEvents from './pages/EditEvent'
+import Artistas from './pages/Artistas'
 
 
 export default function Router() {
@@ -37,6 +38,7 @@ export default function Router() {
         <Route exact path="/admin/editarartistes" element={<EditArtist />} />
         <Route exact path="/admin/editarespais" element={<EditSpaces />} />
         <Route exact path="/admin/editaresdeveniments" element={<EditEvents />} />
+        <Route exact path="/artistes" element={<Artistas />} />
 
       </Routes>
 

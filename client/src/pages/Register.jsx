@@ -4,8 +4,7 @@ import Header from '../components/Header';
 import {Link} from 'react-router-dom'
 
 
-export default function Register(){
-
+  export default function Register(){
     return (
           <>
 
@@ -24,7 +23,7 @@ export default function Register(){
             }}>
                    <Header/>
               
-                    <Grid item xs={10} style={{ display: 'flex',flexDirection:'row',
+                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
 
                      alignItems: 'center', 
                      justifyContent: 'center',
@@ -135,7 +134,7 @@ export default function Register(){
                      </FormGroup>
                   
                      </Grid>
-                <Link to='/espera'>
+                <Link to='/espera' style={{textDecoration:"none"}}>
                 <Button 
                   style={{
                         backgroundColor: "#E2A0FF",
@@ -147,7 +146,7 @@ export default function Register(){
                         fontSize: "1rem",
                         fontWeight: "200",
                         border: "2.5px solid grey",
-                        margin: "0.8rem"
+                        margin: "0.8rem",
                   }}
                   >
                   Enviar

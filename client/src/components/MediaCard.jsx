@@ -1,38 +1,39 @@
-import * as React from 'react';
-import '../Css/MediaCard.css'
-//import {Card, CardContent, CardMedia, Typography } from '@mui/material';7
-//import bandaMusical from '../assets/bandaMusical.jpg';
+import React, { useState, useEffect } from "react";
+import {Link } from 'react-router-dom';
+import '../css/MediaCard.css'
+import GetArtists from '../services/getArtists'
 
 export default function MediaCard() {
-  return (
-    
-    /*<Card sx={{ maxWidth: 345, m: 3 }} className="card2">
-      <CardMedia
-        component="img"
-        height="140"
-        img={bandaMusical}
-        alt="banda musical"
-      />
-     
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Genero
-        </Typography>
-      </CardContent>
-    </Card>*/ 
+  const [allArtists, setAllArtists] = useState([])
 
-  <article className="flow">
-     <div className="team">
-        <a href="google.com" className="profile">
-          <h2 className="profile__name">Nombre de la artista</h2>
-          <p>Genero</p>
-          <img alt="Anita Simmons" src="https://source.unsplash.com/BhcutpohYwg/800x800" />
+  useEffect(() => {
+    GetArtists.getAll().then((res) => {
+      let artistsList = res
+      setAllArtists(artistsList)
+    })
+  }, [])
+
+  return (
+   
+    <div className="div-cards">
+  {allArtists.map((item, i) =>(
+  <article className="flows">
+     <div className="teams" key={i}>
+        <a href={'/artistes/:id'} className="profiles">
+          <h2 className="profile__names">{item.nombre}</h2>
+          <p id="genero">{item.generomusical}</p>
+          <img alt="Imagen de artista" src={item.foto} />
         </a>
     </div>
  </article>
-    
+    ))}
+    </div>
+    /* <div>
+    {allArtists.map((e, i) => 
+        <div key={i}>
+          <h1>nombre: {e.nombre}</h1>
+        </div>
+      )}
+    </div>*/
   );
 }
