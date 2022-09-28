@@ -4,7 +4,7 @@ import { Container } from "@mui/material";
 import MediaCardEspacios from "../components/MediaCardEspacios"
 import FooterAzul from "../components/FooterAzul"
 
-export default function Artistas (){
+export default function Espacios (){
    
     return(
         <>
