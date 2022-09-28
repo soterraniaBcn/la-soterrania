@@ -4,7 +4,7 @@ import { iPlace } from "./interface/iPlace";
 class Place {
 
   async getAllPlaces() {
-    const queryStr = 'SELECT   "id", estado, nombre, foto, descripcion, horario, telefono1, telefono2, email1, email2, web, redsocial1, redsocial2,redsocial3, aforo, transporte, equipamiento, notas, lgtbifriend, petfriend, accesible, direccion FROM public.espacio';
+    const queryStr = 'SELECT   "id", estado, nombre, foto, descripcion, horario, telefono1, telefono2, email1, email2, web, redsocial1, redsocial2, redsocial3, aforo, transporte, equipamiento, notas, lgtbifriend, petfriend, accesible, direccion FROM public.espacio';
     const result: any = await connection.query(queryStr, []);
     return result.rows;
   }
@@ -13,6 +13,38 @@ class Place {
     const result:any = await connection.query(queryStr,[id])
     return result.rows[0];
 }
-
+async savePlace(place: iPlace) {
+  const queryStr =
+    "INSERT INTO public.espacio ( estado, nombre, foto, descripcion, horario, telefono1, telefono2, email1, email2, web, redsocial1, redsocial2, redsocial3, aforo, transporte, equipamiento, notas, lgtbifriend, petfriend, accesible, latitud, longitud, direccion, id_ciudad, id_usuaria) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25) RETURNING *";
+  const values = [
+    place.estado,
+    place.nombre,
+    place.foto,
+    place.descripcion,
+    place.horario || null,
+    place.telefono1,
+    place.telefono2 || null,
+    place.email1,
+    place.email2 || null,
+    place.web,
+    place.redsocial1 || null,
+    place.redsocial2 || null,
+    place.redsocial3 || null,
+    place.aforo, 
+    place.transporte || null,
+    place.equipamiento || null,
+    place.notas || null,
+    place.lgtbifriend || null,
+    place.petfriend || null,
+    place.accesible || null,
+    place.latitud,
+    place.longitud,
+    place.direccion,
+    place.id_usuaria,
+    place.id_ciudad,
+  ] as string[];
+  const result: any = await connection.query(queryStr, values);
+  return result.rows[0];
+}
 }
 export default new Place();
