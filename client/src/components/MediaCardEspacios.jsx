@@ -21,8 +21,8 @@ export default function MediaCard() {
      <div className="teams" key={i}>
         <a href={'/espais/:id'} className="profiles">
           <h2 className="profile__names">{place.nombre}</h2>
-          <p id="genero">{place.generomusical}</p>
-          <img alt="Imagen de artista" src={place.foto} />
+          <p id="genero">{place.telefono1}</p>
+          <img alt="Imagen de la sala" src={place.foto} />
         </a>
     </div>
  </article>
