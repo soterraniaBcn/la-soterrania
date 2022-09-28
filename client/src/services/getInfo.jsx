@@ -7,7 +7,6 @@
         return result.data    
      }
  }
- 
  export default GetEvents;
 
 
