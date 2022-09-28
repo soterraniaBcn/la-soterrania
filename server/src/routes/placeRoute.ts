@@ -5,8 +5,8 @@ import admin from '../middlewares/admin';
 
 const router = Router();
 
-router.get('/places', jwt.validateToken, placeController.getAllPlaces);
-router.get('/places/:id', jwt.validateToken, placeController.getOnePlace);
+router.get('/espais', jwt.validateToken, placeController.getAllPlaces);
+router.get('/espais/:id', jwt.validateToken, placeController.getOnePlace);
 /*
 router.post("/artistas", jwt.validateToken, admin.checkRol, artistController.saveArtist);
 router.put('/artistas/:id', jwt.validateToken, admin.checkRol, artistController.modifyArtist)
