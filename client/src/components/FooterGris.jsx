@@ -8,7 +8,13 @@ export default function FooterGris() {
   return (
     <footer className="divContainer1Gris">
       <div className="div1">
-        <h3 className="h3Gris">Avís legal</h3>
+        <a
+          href="http://localhost:3001/avislegal"
+          rel="noreferrer"
+          className="h3Gris"
+        >
+          <h3>Avís legal</h3>
+        </a>
       </div>
       <div className="div2">
         <h3 className="h3Gris">lasoterrania@gmail.com</h3>
