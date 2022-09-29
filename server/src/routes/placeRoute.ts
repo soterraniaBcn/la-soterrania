@@ -7,10 +7,8 @@ const router = Router();
 
 router.get('/espais', jwt.validateToken, placeController.getAllPlaces);
 router.get('/espais/:id', jwt.validateToken, placeController.getOnePlace);
-/*
-router.post("/artistas", jwt.validateToken, admin.checkRol, artistController.saveArtist);
-router.put('/artistas/:id', jwt.validateToken, admin.checkRol, artistController.modifyArtist)
-router.delete('/artistas/:id', jwt.validateToken, admin.checkRol, artistController.deleteArtist)
-*/
+router.post("/espais", jwt.validateToken, admin.checkRol, placeController.savePlace);
+router.put('/espais/:id', jwt.validateToken, admin.checkRol, placeController.modifySpace)
+router.delete('/espais/:id', jwt.validateToken, admin.checkRol, placeController.deleteSpace)
 
 export default router; 
