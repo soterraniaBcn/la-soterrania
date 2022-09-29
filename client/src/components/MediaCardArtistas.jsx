@@ -28,12 +28,5 @@ export default function MediaCard() {
  </article>
     ))}
     </div>
-    /* <div>
-    {allArtists.map((e, i) => 
-        <div key={i}>
-          <h1>nombre: {e.nombre}</h1>
-        </div>
-      )}
-    </div>*/
   );
 }

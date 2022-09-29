@@ -7,6 +7,8 @@ import {
   Button,
 } from "@mui/material";
 import Header from "../components/Header";
+import FooterRosa from "../components/FooterRosa"
+
 
 export default function EditEvent() {
   return (
@@ -19,7 +21,6 @@ export default function EditEvent() {
             bgcolor: "#E2A0FF",
             height: "10rem",
             width: "100%",
-            position: "fixed",
           }}
         >
           <Header />
@@ -29,6 +30,7 @@ export default function EditEvent() {
           container
           className="Form-container"
           style={{
+            height:"auto",
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
@@ -39,10 +41,10 @@ export default function EditEvent() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              marginTop: "12rem",
+              marginTop: "4rem",
               backgroundColor: "#00000",
-              width: "23rem",
-              height: "30rem",
+              width: "22rem",
+              height: "25rem",
               borderRadius: "1rem",
               border: "2px solid #ea20ff",
               lineHeight: "1px",
@@ -131,7 +133,7 @@ export default function EditEvent() {
             </Box>
           </FormGroup>
 
-          <Grid item className="Buttons-row">
+          <Grid item className="Buttons-row" style={{margin:"2rem 2rem"}} >
             <Button
               style={{
                 backgroundColor: "#E2A0FF",
@@ -184,6 +186,7 @@ export default function EditEvent() {
           </Grid>
         </Grid>
       </Grid>
+      <FooterRosa/>
     </>
   );
 }

@@ -3,6 +3,7 @@ import { Grid, FormGroup, Box, Button } from "@mui/material";
 import Header from "../components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { authService } from "../services/authService";
+import FooterRosa from "../components/FooterRosa";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -49,11 +50,11 @@ export default function Login() {
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: "white",
-            width: "25rem",
-            maxHeight: "30rem",
+            width: "22rem",
+            maxHeight: "27rem",
             borderRadius: "1rem",
             border: "5px solid #cdcecf",
-            marginTop: "6rem"
+            marginTop: "2rem"
           }}
         >
           <FormGroup className="form" xs={8}>
@@ -121,6 +122,7 @@ export default function Login() {
         </Link>
       </Grid>
       {error}
+        <FooterRosa/>
     </>
   );
 }
