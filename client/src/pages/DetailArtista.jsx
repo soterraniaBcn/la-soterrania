@@ -11,19 +11,17 @@ import { useParams } from 'react-router-dom'
 
 export default function DetailArtista() {
   const {id}=useParams()
-  const [oneArtist, setOneArtist] = useState([id])
+  const [oneArtist, setOneArtist] = useState({})
 
   useEffect(() => {
     GetArtistById.getOne(id).then((res) => {
       let artist = res
-      setOneArtist(artist.data[id])
+      setOneArtist(artist)
     })
   }, [])
 
   return (
     <div style={{backgroundColor:"pink"}}>  
-    {oneArtist.map((e, i) => (
-          <div key={i}>
     <Box style={{backgroundColor:"pink", height:'90px' }}>
       
       </Box>  
@@ -32,13 +30,13 @@ export default function DetailArtista() {
           <CardMedia
             component="img"
             sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
-            src={e.foto}
+            src={oneArtist.foto}
             alt="Live from space album cover"
           />
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flex: '1 0 auto', mt: 5 }}>
               <Typography sx={{}} component="div" variant="h5">
-                {e.nombre}
+                {oneArtist.nombre}
               </Typography>
               <Typography
                 component="div"
@@ -51,7 +49,7 @@ export default function DetailArtista() {
                   color="text.secondary"
                   style={{ marginLeft: '0.3rem' }}
                 >
-                  {e.generomusical}
+                  {oneArtist.generomusical}
                 </Typography>
               </Typography>
             </CardContent>
@@ -69,7 +67,7 @@ export default function DetailArtista() {
                 component="div"
                 sx={{ ml: 2 }}
               >
-                {e.descripcion}
+                {oneArtist.descripcion}
               </Typography>
               <Grid
                 container
@@ -92,7 +90,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        {e.nombre}
+                        {oneArtist.nombre}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -102,7 +100,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        {e.instrumentacion}
+                        {oneArtist.instrumentacion}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -122,7 +120,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        {e.genero}
+                        {oneArtist.genero}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -132,7 +130,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        {e.notas}
+                        {oneArtist.notas}
                       </Typography>
                     </Typography>
                   </CardContent>
@@ -159,7 +157,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        {e.telefono1}
+                        {oneArtist.telefono1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -173,7 +171,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        {e.email}
+                        {oneArtist.email}
                       </Typography>
                     </Typography>
                     <Typography
@@ -187,7 +185,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                       {e.redsocial1}
+                       {oneArtist.redsocial1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -201,7 +199,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        {e.redsocial2}
+                        {oneArtist.redsocial2}
                       </Typography>
                     </Typography>
                   </CardContent>
@@ -215,8 +213,6 @@ export default function DetailArtista() {
           </Box>
         </Card>
       </Container>
-      </div>
-      ))}
 </div>
   )
 }
