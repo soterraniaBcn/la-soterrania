@@ -12,8 +12,9 @@ export default function DetailArtista() {
   return (
     <div style={{ backgroundColor: "#E2A0FF" }}>
       <Header />
-      <Container ClassName="vh=100">
-        <Card sx={{ display: "flex" }}>
+      <Container ClassName="vh=100 containerMain">
+        <h2 className="tituloMain">Detalls de l'artista</h2>
+        <Card sx={{ display: "flex"  }}>
           <CardMedia
             component="img"
             sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}

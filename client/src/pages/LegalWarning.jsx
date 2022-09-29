@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
-import Header from "../components/Header";
+import { Grid, Typography, Box } from "@mui/material";
+import HeaderBlue from "../components/HeaderBlue";
 import FooterGris from "../components/FooterGris";
 
 export default function About() {
@@ -9,7 +9,7 @@ export default function About() {
       <Grid
         container
         style={{
-          backgroundColor: "#E2A0FF",
+          backgroundColor: "#FFFFFF",
           height: "100vh",
           display: "flex",
           justifyContent: "center",
@@ -17,7 +17,18 @@ export default function About() {
           flexDirection: "column",
         }}
       >
-        <Header />
+        <Box
+          className="header-edit-spaces"
+          sx={{
+            mt: 0,
+            bgcolor: "#CDCECF",
+            height: "10rem",
+            width: "100%",
+      
+          }}
+        >
+          <HeaderBlue />
+        </Box>
         <Grid
           container
           className="about-container"
@@ -30,20 +41,16 @@ export default function About() {
             justifyContent: "center",
           }}
         >
-          <h1>Avis legal</h1>
+          <h1>Avís legal</h1>
           <Typography
             variant="h1"
             color="black"
             component="div"
             style={{ padding: "2rem", fontSize: "1rem", lineHeight: "2rem" }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            <p>El prestador, responsable del lloc web, posa a disposició dels usuaris aquest document amb què pretén donar compliment a les obligacions disposades a la Llei 34/2002, de Serveis de la Societat de la Informació i del Comerç Electrònic ( LSSI-CE), així com informar a tots els usuaris del lloc web respecte a quines són les condicions dús del lloc web.</p>
+            <p>El prestador es reserva el dret a modificar qualsevol tipus d'informació que pogués aparèixer al lloc web, sense que hi hagi obligació de preavisar o posar en coneixement dels usuaris aquestes obligacions, entenent-se com suficient amb la publicació al lloc web del prestador.</p>
+
           </Typography>
         </Grid>
         <FooterGris />
