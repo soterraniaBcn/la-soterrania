@@ -5,7 +5,6 @@ import Toolbar from '@mui/material/Toolbar';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { Grid } from '@mui/material';
-import Header from '../components/Header';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -53,8 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function SearchBar() {
   return (
    <Grid container>
-    <Header/>
-      <AppBar sx={{backgroundColor:"transparent"}} elevation={0}>
+      <AppBar sx={{backgroundColor:"transparent", position:'sticky'}} elevation={0}>
         <Toolbar style={{
          display: 'flex', 
          justifyContent: 'center', 
@@ -62,7 +60,7 @@ export default function SearchBar() {
          marginTop:"6rem"
          }} >
          <Grid item className="search-bar">
-         <Search style={{position:'sticky'}} >
+         <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>

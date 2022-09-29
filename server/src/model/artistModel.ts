@@ -42,7 +42,6 @@ class Artist {
   }
   async modifyArtist(artist: iArtist){
     const queryStr='UPDATE artista SET (estado, nombre, foto, genero, descripcion, generomusical, instrumentacion, telefono1, telefono2, email, web, redsocial1, redsocial2, redsocial3, notas, id_usuaria, id_ciudad) = ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17)  WHERE id = $18 RETURNING *';
-    console.dir({artist,queryStr})
     const result:any = await connection.query(queryStr,[artist.estado,
       artist.nombre,
       artist.foto,
