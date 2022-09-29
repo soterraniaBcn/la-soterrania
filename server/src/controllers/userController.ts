@@ -26,10 +26,10 @@ const userController = {
     }
   },
 
-  getUserById: async (req: Request, res: Response) => {
+  getOneUser: async (req: Request, res: Response) => {
     try {
       const param = req.params.id;
-      const user: any = await userModel.getUserById(param);
+      const user: any = await userModel.getOneUser(param);
       res.json(user);
     } catch (error: any) {
       res.status(400).send(error.message);
@@ -46,28 +46,26 @@ const userController = {
       res.status(400).send(error.message);
     }
   },
-  /*
-    modifUser: async (req:Request,res:Response) => {
-        try{
-                const{nombre, email, password, rol, permisos, ...users}: iUser= req.body
-                console.dir(req.query)
-                const result = await userModel.modifUser({user_id, nombre, email, password, rol, permisos, ...users});
-                console.log(result.rows[0])
-                const result = await userModel.modifUser(req.params.user_id, req.query)
-                result
-                ? res.status(200).json({result})
-                : res.status(500).send('No se pudo modificar el usuario');
-         }catch (error: any){
-                res.status(400).send(error.message);
-        }
-    },
-    */
+
+  modifUser: async (req: Request, res: Response) => {
+    try {
+      const { id, email, estado, rol }: iUser = req.body;
+      await userModel.modifUser({ id, email, estado, rol, password: "" });
+      const result = await userModel.getOneUser(id);
+      result
+        ? res.status(200).json(result)
+        : res.status(500).send("No s'ha pogut modificar la usuària");
+    } catch (error: any) {
+      res.status(400).send(error.message);
+    }
+  },
+
   deleteUser: async (req: Request, res: Response) => {
     try {
       const param = req.params.id;
       const result = await userModel.deleteUser(param);
       result
-        ? res.status(200).json({ result: `user deleted with ID: ${param}` })
+        ? res.status(200).json({ result: `L'usuària amb ID: ${param} està eliminat` })
         : res.status(500).send("No es va poder esborrar l'usuari seleccionat");
     } catch (error: any) {
       res.status(400).send(error.message);
