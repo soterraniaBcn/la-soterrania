@@ -7,7 +7,7 @@ import {
   Button,
 } from "@mui/material";
 import Header from "../components/Header";
-import FooterAzul from "../components/FooterAzul";
+import FooterRosa from "../components/FooterRosa";
 
 
 export default function EditSpaces() {
@@ -174,7 +174,7 @@ export default function EditSpaces() {
           </Grid>
         </Grid>
       </Grid>
-      <FooterAzul/>
+      <FooterRosa/>
     </>
   );
 }

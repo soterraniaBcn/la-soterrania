@@ -3,7 +3,6 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Card from '@mui/material/Card'
 import React, { useEffect, useState } from 'react'
-import imagen from '../imagenes/imagen_nuria.PNG'
 import { Container, Box, Grid, Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 import GetEvent from '../services/getInfo'
@@ -42,7 +41,7 @@ export default function DetailEvent() {
                 <CardMedia
                   component="img"
                   sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
-                  src={imagen}
+                  src={e.foto}
                   alt="Live from space album cover"
                 />
                 <Box
@@ -61,7 +60,7 @@ export default function DetailEvent() {
                       variant="p"
                       style={{ marginRight: '1%' }}
                     >
-                      Banda/Artista
+                      {e.organizacion}
                     </Typography>
                     <Typography
                       component="div"
@@ -108,13 +107,13 @@ export default function DetailEvent() {
                           variant="p"
                           style={{ marginRight: '1%' }}
                         >
-                          Facil acceso a traves de
+                          Sitio web: 
                           <Typography
                             variant="p"
                             color="text.secondary"
                             style={{ marginLeft: '0.3rem' }}
                           >
-                            L3, L1, bicying
+                            {e.web}
                           </Typography>
                         </Typography>
                       </CardContent>

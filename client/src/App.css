@@ -327,3 +327,10 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   transform: scale(1.05) rotate(1deg);
 }
 
+/* Main */
+
+.tituloMain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+}

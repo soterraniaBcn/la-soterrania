@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import Header from "../components/Header";
 import imagenperfil from "../imagenes/imageperfil.jpeg";
-import FooterAzul from "../components/FooterAzul"
+import FooterRosa from "../components/FooterRosa"
 
 
 
@@ -143,7 +143,7 @@ export default function ElMeuPerfilArtista() {
          </Grid>
        </Grid>
        </Grid>
-       <FooterAzul/>
+       <FooterRosa/>
        </>
   
   )

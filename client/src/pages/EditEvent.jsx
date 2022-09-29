@@ -7,7 +7,7 @@ import {
   Button,
 } from "@mui/material";
 import Header from "../components/Header";
-import FooterAzul from "../components/FooterAzul"
+import FooterRosa from "../components/FooterRosa"
 
 
 export default function EditEvent() {
@@ -186,7 +186,7 @@ export default function EditEvent() {
           </Grid>
         </Grid>
       </Grid>
-      <FooterAzul/>
+      <FooterRosa/>
     </>
   );
 }

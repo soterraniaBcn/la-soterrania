@@ -2,7 +2,7 @@ import React from 'react';
 import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button} from '@mui/material';
 import Header from '../components/Header';
 import {Link} from 'react-router-dom'
-import FooterRosa from '../components/FooterRosa';
+import FooterGris from '../components/FooterGris';
 
 
 
@@ -153,7 +153,7 @@ import FooterRosa from '../components/FooterRosa';
                 </Button>
                 </Link>
            </Grid>
-<FooterRosa/>
+            <FooterGris/>
         </>
     )
   }
