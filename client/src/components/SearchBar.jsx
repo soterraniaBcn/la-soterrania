@@ -1,11 +1,20 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import InputBase from '@mui/material/InputBase';
+import {InputBase, Grid, Toolbar, AppBar} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { Grid } from '@mui/material';
-import Header from '../components/Header';
+import GetArtists from '../services/getArtists';
+
+//Logical Search//
+
+
+/*export default function SearchBar ({ search, searchInput, handleSearch }) {
+  return(
+      <section>
+          <input type='text' value={search} ref={searchInput} onChange={handleSearch}/>
+      </section>
+  )
+}
+*/
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -50,27 +59,33 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchBar() {
-  return (
-   <Grid container>
-    <Header/>
-      <AppBar sx={{backgroundColor:"transparent"}} elevation={0}>
-        <Toolbar style={{
+export default function SearchBar ({ search, searchInput, handleSearch}) {
+  
+
+   
+           return (
+                <Grid container>
+
+                 <AppBar on sx={{backgroundColor:"transparent"}} elevation={0} >
+                  <Toolbar style={{
          display: 'flex', 
          justifyContent: 'center', 
          alignItems:"center", 
          marginTop:"6rem"
          }} >
-         <Grid item className="search-bar">
-         <Search style={{position:'sticky'}} >
-            <SearchIconWrapper>
+         <Grid item className="search-bar" >
+         <Search  style={{position:'sticky'}}  >
+            <SearchIconWrapper >
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+            ref={searchInput} onChange={handleSearch}
+              placeholder="Search…" 
+              value={search}
               inputProps={{ 'aria-label': 'search' }}
+              
               sx={{width: '20rem', height:'auto', borderRadius:"50%"}}
-            />
+           />
           </Search>
           </Grid>
         </Toolbar>

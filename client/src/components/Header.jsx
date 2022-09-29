@@ -101,10 +101,10 @@ export default function Header() {
           
         </Toolbar>
       </AppBar>
-      <Main open={open}>
+    
         <DrawerHeader />
         
-      </Main>
+    
       <Drawer
         sx={{
           width: drawerWidth,
