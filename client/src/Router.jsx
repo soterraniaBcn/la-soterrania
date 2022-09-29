@@ -31,8 +31,8 @@ export default function Router() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/espera" element={<WaitingRoom/>} />
         <Route exact path="/homepage" element={<HomePage />} />
-        <Route exact path="/artistes/detall" element={<DetailArtista />} />
-        <Route exact path="/espais/detall" element={<DetailSpace />} />
+        <Route exact path="/artistes/:id" element={<DetailArtista />} />
+        <Route exact path="/espais/:id" element={<DetailSpace />} />
         <Route exact path="/admin/perfiladmin" element={<PerfilAdmin />} />
         <Route exact path="/sobrenosaltres" element={<About />} />
         <Route exact path="/events" element={<DetailEvent />} />

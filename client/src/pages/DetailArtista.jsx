@@ -2,15 +2,28 @@ import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Card from '@mui/material/Card'
-import React from 'react'
-import imagen from '../imagenes/imagen_nuria.PNG'
+import React, { useState, useEffect } from "react";
 import { Container, Box, Grid, Button } from '@mui/material'
+import GetArtistById from '../services/getArtistById'
+import { useParams } from 'react-router-dom'
+
 
 
 export default function DetailArtista() {
+  const {id}=useParams()
+  const [oneArtist, setOneArtist] = useState([id])
+
+  useEffect(() => {
+    GetArtistById.getOne(id).then((res) => {
+      let artist = res
+      setOneArtist(artist.data[id])
+    })
+  }, [])
+
   return (
     <div style={{backgroundColor:"pink"}}>  
-
+    {oneArtist.map((e, i) => (
+          <div key={i}>
     <Box style={{backgroundColor:"pink", height:'90px' }}>
       
       </Box>  
@@ -19,13 +32,13 @@ export default function DetailArtista() {
           <CardMedia
             component="img"
             sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
-            src={imagen}
+            src={e.foto}
             alt="Live from space album cover"
           />
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flex: '1 0 auto', mt: 5 }}>
               <Typography sx={{}} component="div" variant="h5">
-                Nombre del artista/espacio/evento
+                {e.nombre}
               </Typography>
               <Typography
                 component="div"
@@ -38,7 +51,7 @@ export default function DetailArtista() {
                   color="text.secondary"
                   style={{ marginLeft: '0.3rem' }}
                 >
-                  Pop-Electrónico-magnético
+                  {e.generomusical}
                 </Typography>
               </Typography>
             </CardContent>
@@ -56,14 +69,7 @@ export default function DetailArtista() {
                 component="div"
                 sx={{ ml: 2 }}
               >
-                Portada de #Genderful sin censura, el próximo lanzamiento de
-                @thepunkyunicorns en el que tengo el enorme placer de colaborar.
-                Genderful is comming! 27/05/2022 🎸🦄🌈*Noticia con la portada
-                sin censura de @lamanyanacat (gràcies Andrés) Pre-save
-                disponible ⬇️ en la bio de @thepunkyunicorns #thepunkyunicorns
-                #censura #artecensurado #lleidatanament #lleidacity #lleidamusic
-                #musicslleida #punkmusic #punksnotdead #punkisnotdead #unicorn
-                #unicornio
+                {e.descripcion}
               </Typography>
               <Grid
                 container
@@ -86,7 +92,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        Unicornio Loco
+                        {e.nombre}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -96,7 +102,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        Guitarrista, flauta y trompeta
+                        {e.instrumentacion}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -116,7 +122,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        Pansexual
+                        {e.genero}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -126,7 +132,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        Recibimos comida como parte de pago
+                        {e.notas}
                       </Typography>
                     </Typography>
                   </CardContent>
@@ -153,7 +159,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        663344557
+                        {e.telefono1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -167,7 +173,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        hola@gmail.com
+                        {e.email}
                       </Typography>
                     </Typography>
                     <Typography
@@ -181,7 +187,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        holahola
+                       {e.redsocial1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -195,7 +201,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        hola chau
+                        {e.redsocial2}
                       </Typography>
                     </Typography>
                   </CardContent>
@@ -209,6 +215,8 @@ export default function DetailArtista() {
           </Box>
         </Card>
       </Container>
+      </div>
+      ))}
 </div>
   )
 }
