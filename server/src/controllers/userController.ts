@@ -11,6 +11,10 @@ const userController = {
         res.status(400).send("Falta el correu electrònic o la contrasenya");
       }
 
+      console.dir(req.body)
+
+      return res.status(200).json()
+
       const result = await userModel.saveUser({
         email,
         password,
