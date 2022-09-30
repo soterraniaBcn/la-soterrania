@@ -1,13 +1,11 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import InputBase from '@mui/material/InputBase';
+import {InputBase, Grid, Toolbar, AppBar} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { Grid } from '@mui/material';
-import Header from '../components/Header';
 
-const Search = styled('div')(({ theme }) => ({
+
+
+ const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius:"5rem",
   backgroundColor: alpha(theme.palette.common.black, 0.25),
@@ -50,27 +48,33 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchBar() {
-  return (
-   <Grid container>
-    <Header/>
-      <AppBar sx={{backgroundColor:"transparent"}} elevation={0}>
-        <Toolbar style={{
+export default function SearchBar ({handleSearch}) {
+  
+
+   
+           return (
+                <Grid container>
+
+                 <AppBar on sx={{backgroundColor:"transparent"}} elevation={0} >
+                  <Toolbar style={{
          display: 'flex', 
          justifyContent: 'center', 
          alignItems:"center", 
          marginTop:"6rem"
          }} >
-         <Grid item className="search-bar">
-         <Search style={{position:'sticky'}} >
-            <SearchIconWrapper>
+         <Grid item className="search-bar" >
+         <Search  style={{position:'sticky'}}  >
+            <SearchIconWrapper >
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+            
+              placeholder="Search…" 
+             
               inputProps={{ 'aria-label': 'search' }}
+              onChange={handleSearch}
               sx={{width: '20rem', height:'auto', borderRadius:"50%"}}
-            />
+           />
           </Search>
           </Grid>
         </Toolbar>

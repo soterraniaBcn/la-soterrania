@@ -5,6 +5,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
+
 export default function FooterGris() {
   return (
     <footer className="divContainer1Gris">
@@ -45,3 +46,4 @@ export default function FooterGris() {
     </footer>
   );
 }
+

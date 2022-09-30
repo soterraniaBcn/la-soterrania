@@ -44,6 +44,7 @@ export default function Router() {
         <Route exact path="/admin/editaresdeveniments" element={<EditEvents />} />
         <Route exact path="/artistes" element={<Artistas />} />
 
+
       </Routes>
 
     </div>
