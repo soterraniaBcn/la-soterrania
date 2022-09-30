@@ -8,17 +8,19 @@ import canDelete from "../middlewares/canDelete";
 const router = Router();
 
 router.post("/user", encryptPassword, userController.saveUser);
-router.get("/users", userController.getAllUsers);
-router.get("/users/:id", userController.getUserById);
 router.get(
-  "/admin/user",
+  "/users",
   jwt.validateToken,
   admin.checkRol,
   userController.getAllUsers
 );
-
-//router.put('/admin/user/:user_id', jwt.validateToken, admin.checkRol, userController.modifUser)
-
+router.get("/users/:id", jwt.validateToken, userController.getOneUser);
+router.put(
+  "/users/:id",
+  jwt.validateToken,
+  admin.checkRol,
+  userController.modifUser
+);
 router.delete(
   "/user/:id",
   jwt.validateToken,

@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid,Box, Typography } from "@mui/material";
-import Header from "../components/Header";
+import HeaderBlue from "../components/HeaderBlue";
 import FooterGris from "../components/FooterGris";
 
 
@@ -18,14 +18,14 @@ export default function About() {
     
       >
         <Box style={{
-          backgroundColor: "#E2A0FF",
+          backgroundColor: "#cdcecf",
           height: "10rem",
           width: "100%",
           display: "flex",
           justifyContent: "center",
           flexDirection:"column"}}>
     
-        <Header />
+        <HeaderBlue />
         </Box>
   
 

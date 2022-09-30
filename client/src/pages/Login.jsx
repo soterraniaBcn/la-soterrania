@@ -3,7 +3,7 @@ import { Grid, FormGroup, Box, Button } from "@mui/material";
 import Header from "../components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { authService } from "../services/authService";
-import FooterGris from "../components/FooterGris";
+import FooterRosa from "../components/FooterRosa";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -122,7 +122,7 @@ export default function Login() {
         </Link>
       </Grid>
       {error}
-        <FooterGris/>
+        <FooterRosa/>
     </>
   );
 }

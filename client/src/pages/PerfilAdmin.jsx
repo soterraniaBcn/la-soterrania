@@ -10,7 +10,7 @@ import {
   Card,
 
 } from "@mui/material";
-import Header from "../components/Header";
+import HeaderBlue from "../components/HeaderBlue";
 import imagenperfil from "../imagenes/imageperfil.jpeg";
 import FooterGris from "../components/FooterGris";
 
@@ -31,13 +31,13 @@ export default function PerfilAdmin() {
       <Grid
         item
         style={{
-          backgroundColor: "#E2A0FF",
+          backgroundColor: "#cdcecf",
           height: "10rem",
           width: "100%",
         
         }}
       >
-        <Header />
+        <HeaderBlue />
       </Grid>
       <Container
         sx={{

@@ -7,6 +7,7 @@ import { Container, Box, Grid, Button } from '@mui/material'
 import GetArtistById from '../services/getArtistById'
 import { useParams } from 'react-router-dom'
 import imagenmusical from '../imagenes/imagenmusical.webp'
+import FooterRosa from '../components/FooterRosa';
 
 
 
@@ -34,21 +35,21 @@ export default function DetailArtista() {
             src={imagenmusical}
             alt="Live from space album cover"
           />
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flex: '1 0 auto', mt: 5 }}>
+          <Box sx={{ display: "flex", flexDirection: "column" }}>
+            <CardContent sx={{ flex: "1 0 auto", mt: 5 }}>
               <Typography sx={{}} component="div" variant="h5">
                 {oneArtist.nombre}
               </Typography>
               <Typography
                 component="div"
                 variant="p"
-                style={{ marginRight: '1%' }}
+                style={{ marginRight: "1%" }}
               >
                 Género musical:
                 <Typography
                   variant="p"
                   color="text.secondary"
-                  style={{ marginLeft: '0.3rem' }}
+                  style={{ marginLeft: "0.3rem" }}
                 >
                   {oneArtist.generomusical}
                 </Typography>
@@ -56,9 +57,9 @@ export default function DetailArtista() {
             </CardContent>
           </Box>
         </Card>
-        <Card sx={{ display: 'flex' }}>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flex: '1 0 auto' }}>
+        <Card sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex", flexDirection: "column" }}>
+            <CardContent sx={{ flex: "1 0 auto" }}>
               <Typography component="div" variant="h5" sx={{ ml: 2 }}>
                 Descripción:
               </Typography>
@@ -73,23 +74,23 @@ export default function DetailArtista() {
               <Grid
                 container
                 sx={{
-                  display: 'flex',
-                  justifyContent: 'space-around',
-                  alignItems: 'center',
+                  display: "flex",
+                  justifyContent: "space-around",
+                  alignItems: "center",
                 }}
               >
                 <Grid item md={7}>
-                  <CardContent sx={{ flex: '1 0 auto' }}>
+                  <CardContent sx={{ flex: "1 0 auto" }}>
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: '1%' }}
+                      style={{ marginRight: "1%" }}
                     >
                       Nombre de la banda:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: '0.3rem' }}
+                        style={{ marginLeft: "0.3rem" }}
                       >
                         {oneArtist.nombre}
                       </Typography>
@@ -99,7 +100,7 @@ export default function DetailArtista() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: '0.3rem' }}
+                        style={{ marginLeft: "0.3rem" }}
                       >
                         {oneArtist.instrumentacion}
                       </Typography>
@@ -109,7 +110,7 @@ export default function DetailArtista() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: '0.3rem' }}
+                        style={{ marginLeft: "0.3rem" }}
                       >
                         No tenemos nada pero tocamos muy bien
                       </Typography>
@@ -119,7 +120,7 @@ export default function DetailArtista() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: '0.3rem' }}
+                        style={{ marginLeft: "0.3rem" }}
                       >
                         {oneArtist.genero}
                       </Typography>
@@ -129,7 +130,7 @@ export default function DetailArtista() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: '0.3rem' }}
+                        style={{ marginLeft: "0.3rem" }}
                       >
                         {oneArtist.notas}
                       </Typography>
@@ -140,23 +141,23 @@ export default function DetailArtista() {
                   item
                   md={5}
                   sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    flexDirection: 'column',
-                    alignItems: 'center',
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    alignItems: "center",
                   }}
                 >
                   <CardContent
                     sx={{
-                      flex: '1 0 auto',
+                      flex: "1 0 auto",
                     }}
                   >
-                    <Typography variant="p" style={{ marginRight: '1%' }}>
+                    <Typography variant="p" style={{ marginRight: "1%" }}>
                       Número telefónico:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: '0.3rem' }}
+                        style={{ marginLeft: "0.3rem" }}
                       >
                         {oneArtist.telefono1}
                       </Typography>
@@ -164,13 +165,13 @@ export default function DetailArtista() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: '1%' }}
+                      style={{ marginRight: "1%" }}
                     >
                       E-mail:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: '0.3rem' }}
+                        style={{ marginLeft: "0.3rem" }}
                       >
                         {oneArtist.email}
                       </Typography>
@@ -178,13 +179,13 @@ export default function DetailArtista() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: '1%' }}
+                      style={{ marginRight: "1%" }}
                     >
                       Instagram:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: '0.3rem' }}
+                        style={{ marginLeft: "0.3rem" }}
                       >
                        {oneArtist.redsocial1}
                       </Typography>
@@ -192,28 +193,36 @@ export default function DetailArtista() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: '1%' }}
+                      style={{ marginRight: "1%" }}
                     >
                       Facebook:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: '0.3rem' }}
+                        style={{ marginLeft: "0.3rem" }}
                       >
                         {oneArtist.redsocial2}
                       </Typography>
                     </Typography>
                   </CardContent>
                 </Grid>
-                    <Box style={{width: "100%", display:"flex", justifyContent: "end", gap:"4%"}}>
-                      <Button>editar</Button>
-                      <Button style={{color: "red"}}>eliminar</Button>
-                    </Box>
+                <Box
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "end",
+                    gap: "4%",
+                  }}
+                >
+                  <Button>editar</Button>
+                  <Button style={{ color: "red" }}>eliminar</Button>
+                </Box>
               </Grid>
             </CardContent>
           </Box>
         </Card>
       </Container>
-</div>
-  )
+      <FooterRosa />
+    </div>
+  );
 }

@@ -24,7 +24,7 @@ const checkCanDelete = async (req: any, res: Response, next: NextFunction) => {
             return res.status(403).send("El token no és vàlid");
           }
 
-          const result = await userModel.getUserById(id);
+          const result = await userModel.getOneUser(id);
           if (result && result.rol === "admin") {
             next();
           } else if (id === parseInt(req.params.id)) {
