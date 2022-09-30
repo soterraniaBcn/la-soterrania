@@ -3,8 +3,6 @@ import { Grid,Box, Typography } from "@mui/material";
 import HeaderBlue from "../components/HeaderBlue";
 import FooterGris from "../components/FooterGris";
 
-
-
 export default function About() {
   return (
     <>
@@ -39,7 +37,7 @@ export default function About() {
                 fontFamily="Consolas"
                 component="div"
                 padding="2rem"
-                fontSize="0.8rem" 
+                fontSize="1rem" 
                 lineHeight="2rem"
               >
     
@@ -64,7 +62,7 @@ La recaptació va destinada a causes socials com ara donacions a caixes de resis
 
 De cada esdeveniment es genera un video-reportatge documental on s'exposa, de forma intercalada, el projecte social existent en l'espai on succeeix i les actuacions dels i les artistes participants que passen per l'escenari. 
 
-Es penja al nostre canal youtube: <a href="https://www.youtube.com/c/lasoterr%C3%A0nia">www.youtube.com/noesmokodepava</a> i d'aquesta manera construïm un petit recull dels projectes artístics i els socials, sent un mitjà de consulta i creació de ponts entre espais i artistes que dinamitzen un teixit social i cultural.
+Es penja al nostre canal youtube: <a href="https://www.youtube.com/c/lasoterr%C3%A0nia">la soterrània</a> i d'aquesta manera construïm un petit recull dels projectes artístics i els socials, sent un mitjà de consulta i creació de ponts entre espais i artistes que dinamitzen un teixit social i cultural.
 
 
 Des de que va néixer el projecte ja són molts els espais que hem visitat: l'Ateneu Popular de Vallcarca, Ateneu Llibertari de Gràcia, PIC de Can Masdeu, Casa Okupa Cádiz, Centre cívic Can Basté, festes del barri de Gràcia i Sant Andreu, l'Ateneu La Torna, el Casal Popular 3 Voltes Rebel, entre d'altres.

@@ -8,7 +8,7 @@ export default function Artistas (){
    
     return(
         <>
-        <Container style={{height:'10rem'}}>
+        <Container style={{height:'10rem', backgroundColor: "#1446A0"}}>
         <SearchBar/>
         </Container>
         <MediaCard/>

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Grid, FormGroup, Box, Button } from "@mui/material";
-import Header from "../components/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { authService } from "../services/authService";
-import FooterRosa from "../components/FooterRosa";
+import HeaderBlue from "../components/HeaderBlue";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -40,7 +39,7 @@ export default function Login() {
           marginTop: 0,
         }}
       >
-        <Header />
+        <HeaderBlue />
         <Grid
           item
           xs={8}
@@ -65,7 +64,7 @@ export default function Login() {
                 justifyContent: "center",
               }}
             >
-              LOGIN
+              Iniciar sessió
             </p>
             <Box style={{ lineHeight: "1px" }}>
               <p>Correu electrònic:</p>
@@ -96,7 +95,7 @@ export default function Login() {
             <Box style={{ lineHeight: "1px", fontSize: "0.8rem" }}>
               <p>Encara no tens compte? </p>
               <p>Pots enregistrar-te</p>
-              <a href="/register">aquí</a>
+              <Link to="/register">aquí</Link>
             </Box>
           </FormGroup>
         </Grid>
@@ -122,7 +121,6 @@ export default function Login() {
         </Link>
       </Grid>
       {error}
-        <FooterRosa/>
     </>
   );
 }
