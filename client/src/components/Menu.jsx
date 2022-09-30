@@ -28,9 +28,9 @@ export default function Menu() {
         }}
       >
         <a className="links-menu" href="/sobrenosaltres">Sobre nosaltres</a>
-        <a className="links-menu" href="">Artistes</a>
-        <a className="links-menu" href="">Espais</a>
-        <a className="links-menu" href="">Esdeveniments</a>
+        <a className="links-menu" href="/artistes">Artistes</a>
+        <a className="links-menu" href="/espais">Espais</a>
+        <a className="links-menu" href="/esdeveniments">Esdeveniments</a>
       </Grid>
     </Grid>
   );

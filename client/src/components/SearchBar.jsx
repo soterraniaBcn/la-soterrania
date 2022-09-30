@@ -60,7 +60,8 @@ export default function SearchBar ({handleSearch}) {
          display: 'flex', 
          justifyContent: 'center', 
          alignItems:"center", 
-         marginTop:"6rem"
+         marginTop:"6rem",
+         position: 'sticky'
          }} >
          <Grid item className="search-bar" >
          <Search  style={{position:'sticky'}}  >
@@ -70,10 +71,9 @@ export default function SearchBar ({handleSearch}) {
             <StyledInputBase
             
               placeholder="Search…" 
-             
               inputProps={{ 'aria-label': 'search' }}
               onChange={handleSearch}
-              sx={{width: '20rem', height:'auto', borderRadius:"50%"}}
+              sx={{width: '20rem', height:'auto', borderRadius:"50%", position:'sticky'}}
            />
           </Search>
           </Grid>

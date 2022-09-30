@@ -5,6 +5,8 @@ import {Container} from '@mui/material'
 import SearchBar from './SearchBar'
 
 
+
+
 export default function MediaCard() {
   const [allArtists, setAllArtists] = useState([])
   const [search, setSearch] = useState('')
@@ -34,9 +36,11 @@ export default function MediaCard() {
 
 
   return (
-
-   <Container>
+<>
+   <Container style={{height:"100vh"}}>
+    <Container style={{position:"sticky"}}>
     <SearchBar search={search} searchInput={searchInput} handleSearch={handleSearch}/>
+    </Container>
     <div className="div-cards">
   {filterArtists.map((artist, i) =>(
   <article className="flows">
@@ -50,6 +54,8 @@ export default function MediaCard() {
  </article>
     ))}
     </div>
+
     </Container>
+    </>
   );
 }

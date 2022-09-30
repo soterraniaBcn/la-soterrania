@@ -11,16 +11,12 @@ import FooterGris from '../components/FooterGris';
           <>
 
          <Grid container
-         id="register"
             style={{ backgroundColor: '#cdcecf',
             display: 'flex',
             flexDirection: 'column',
             justifyContent:'center', 
             alignItems: 'center',
-      
 
-      
-      
            
             }}>
                    <Header/>
