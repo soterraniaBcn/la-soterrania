@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Box, Grid, Button } from '@mui/material'
 import GetArtistById from '../services/getArtistById'
 import { useParams } from 'react-router-dom'
+import imagenmusical from '../imagenes/imagenmusical.webp'
 
 
 
@@ -30,7 +31,7 @@ export default function DetailArtista() {
           <CardMedia
             component="img"
             sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
-            src={oneArtist.foto}
+            src={imagenmusical}
             alt="Live from space album cover"
           />
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>

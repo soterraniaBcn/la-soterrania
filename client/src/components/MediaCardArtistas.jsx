@@ -3,8 +3,10 @@ import {Link } from 'react-router-dom';
 import '../css/MediaCard.css'
 import GetArtists from '../services/getArtists'
 
+
 export default function MediaCard() {
   const [allArtists, setAllArtists] = useState([])
+
 
   useEffect(() => {
     GetArtists.getAll().then((res) => {
@@ -13,17 +15,18 @@ export default function MediaCard() {
     })
   }, [])
 
+
   return (
    
     <div className="div-cards">
   {allArtists.map((item, i) =>(
   <article className="flows">
      <div className="teams" key={i}>
-        <a href={'/artistes/:id'} className="profiles">
+        <Link to={`/artistes/${i}`} className="profiles">
           <h2 className="profile__names">{item.nombre}</h2>
           <p id="genero">{item.generomusical}</p>
           <img alt="Imagen de artista" src={item.foto} />
-        </a>
+        </Link>
     </div>
  </article>
     ))}
