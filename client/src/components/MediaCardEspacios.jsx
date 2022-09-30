@@ -19,7 +19,7 @@ export default function MediaCard() {
   {allSpaces.map((place, i) =>(
   <article className="flows">
      <div className="teams" key={i}>
-        <a href={'/espais/:id'} className="profiles">
+        <a href={`/espais/${place.id}`} className="profiles">
           <h2 className="profile__names">{place.nombre}</h2>
           <p id="genero">{place.telefono1}</p>
           <img alt="Imagen de la sala" src={place.foto} />
