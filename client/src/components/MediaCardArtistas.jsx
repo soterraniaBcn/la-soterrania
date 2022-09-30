@@ -15,6 +15,7 @@ export default function MediaCard() {
     })
   }, [])
 
+  let i=i +2
 
   return (
    
@@ -22,7 +23,7 @@ export default function MediaCard() {
   {allArtists.map((item, i) =>(
   <article className="flows">
      <div className="teams" key={i}>
-        <Link to={`/artistes/${i}`} className="profiles">
+        <Link to={`/artistes/${item.id}`} className="profiles">
           <h2 className="profile__names">{item.nombre}</h2>
           <p id="genero">{item.generomusical}</p>
           <img alt="Imagen de artista" src={item.foto} />
