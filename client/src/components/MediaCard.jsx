@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useMemo,useRef, useCallback, useReducer } from "react";
+import React, { useState, useEffect,useMemo,useRef } from "react";
 import '../css/MediaCard.css'
 import GetArtists from '../services/getArtists'
 import {Container} from '@mui/material'
@@ -20,9 +20,9 @@ export default function MediaCard() {
 
    
   // Capta valor que se escribe en la barra
-    const handleSearch = useCallback(() => {
-        setSearch(searchInput.current.value);
-    }, [])
+    const handleSearch = (e) => {
+        setSearch(e.target.value);
+    }
 
  
   // Filtra la info que coincide con el valor del campo de búsqueda

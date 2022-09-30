@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import {InputBase, Grid, Toolbar, AppBar} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import GetArtists from '../services/getArtists';
+
 
 //Logical Search//
 
@@ -13,10 +13,11 @@ import GetArtists from '../services/getArtists';
           <input type='text' value={search} ref={searchInput} onChange={handleSearch}/>
       </section>
   )
-}
-*/
+}*/
 
-const Search = styled('div')(({ theme }) => ({
+
+
+ const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius:"5rem",
   backgroundColor: alpha(theme.palette.common.black, 0.25),
@@ -59,7 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchBar ({ search, searchInput, handleSearch}) {
+export default function SearchBar ({handleSearch}) {
   
 
    
@@ -79,11 +80,11 @@ export default function SearchBar ({ search, searchInput, handleSearch}) {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-            ref={searchInput} onChange={handleSearch}
+            
               placeholder="Search…" 
-              value={search}
+             
               inputProps={{ 'aria-label': 'search' }}
-              
+              onChange={handleSearch}
               sx={{width: '20rem', height:'auto', borderRadius:"50%"}}
            />
           </Search>
