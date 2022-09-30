@@ -4,18 +4,6 @@ import {InputBase, Grid, Toolbar, AppBar} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-//Logical Search//
-
-
-/*export default function SearchBar ({ search, searchInput, handleSearch }) {
-  return(
-      <section>
-          <input type='text' value={search} ref={searchInput} onChange={handleSearch}/>
-      </section>
-  )
-}*/
-
-
 
  const Search = styled('div')(({ theme }) => ({
   position: 'relative',
