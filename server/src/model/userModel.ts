@@ -14,7 +14,7 @@ class User {
     const result: any = await connection.query(queryStr, values);
     return result.rows[0];
   }
-  async getUserById(id: any) {
+  async getOneUser(id: any) {
     const queryStr =
       'SELECT "id", estado, email, rol FROM public.usuaria WHERE "id"= $1';
     const result: any = await connection.query(queryStr, [id]);
@@ -33,6 +33,19 @@ class User {
     console.dir(result);
     return result.rows;
   }
+  async modifUser(userParam: iUser) {
+    const user = await this.getOneUser(userParam.id);
+    const queryStr =
+      "UPDATE public.usuaria SET (email, estado, rol) = ($1, $2, $3)  WHERE id = $4 RETURNING *";
+    const result: any = await connection.query(queryStr, [
+      userParam.email,
+      userParam.estado,
+      userParam.rol,
+      userParam.id,
+    ]);
+    return result.rows[0];
+  }
+
   async deleteUser(id: any) {
     const queryStr = "DELETE FROM public.usuaria WHERE 'id'=$1 RETURNING *";
     const result: any = await connection.query(queryStr, [id]);

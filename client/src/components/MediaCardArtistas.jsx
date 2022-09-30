@@ -3,6 +3,8 @@ import '../css/MediaCard.css'
 import GetArtists from '../services/getArtists'
 import {Container} from '@mui/material'
 import SearchBar from './SearchBar'
+import { Link } from "react-router-dom";
+
 
 
 export default function MediaCard() {
@@ -11,6 +13,7 @@ export default function MediaCard() {
   const searchInput = useRef()
 
   // Obtener datos  
+
   useEffect(() => {
   GetArtists.getAll().then((res) => {
    let artistsList = res
@@ -33,6 +36,7 @@ export default function MediaCard() {
   
 
 
+
   return (
 
    <Container>
@@ -41,11 +45,11 @@ export default function MediaCard() {
   {filterArtists.map((artist, i) =>(
   <article className="flows">
      <div className="teams" key={i}>
-        <a href={'/artistes/:id'} className="profiles">
+        <Link to={`/artistes/${artist.id}`} className="profiles">
           <h2 className="profile__names">{artist.nombre}</h2>
           <p id="genero">{artist.generomusical}</p>
           <img alt="Imagen de artista" src={artist.foto} />
-        </a>
+        </Link>
     </div>
  </article>
     ))}

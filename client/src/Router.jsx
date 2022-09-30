@@ -18,6 +18,7 @@ import EditEvents from './pages/EditEvent'
 import ElMeuPerfilArtista from './pages/ElMeuPerfilArtista'
 import ElMeuPerfilEspai from './pages/ElMeuPerfilEspai'
 import Artistas from './pages/Artistas'
+import Espacios from './pages/Espacios'
 
 
 export default function Router() {
@@ -30,8 +31,8 @@ export default function Router() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/espera" element={<WaitingRoom/>} />
         <Route exact path="/homepage" element={<HomePage />} />
-        <Route exact path="/artistes/detall" element={<DetailArtista />} />
-        <Route exact path="/espais/detall" element={<DetailSpace />} />
+        <Route exact path="/artistes/:id" element={<DetailArtista />} />
+        <Route exact path="/espais/:id" element={<DetailSpace />} />
         <Route exact path="/admin/perfiladmin" element={<PerfilAdmin />} />
         <Route exact path="/sobrenosaltres" element={<About />} />
         <Route exact path="/events" element={<DetailEvent />} />
@@ -43,6 +44,7 @@ export default function Router() {
         <Route exact path="/admin/editarespais" element={<EditSpaces />} />
         <Route exact path="/admin/editaresdeveniments" element={<EditEvents />} />
         <Route exact path="/artistes" element={<Artistas />} />
+        <Route exact path="/espais" element={<Espacios />} />
 
 
       </Routes>

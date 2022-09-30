@@ -2,9 +2,6 @@ import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import {InputBase, Grid, Toolbar, AppBar} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-
-
-
  const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius:"5rem",
@@ -20,7 +17,6 @@ import SearchIcon from '@mui/icons-material/Search';
     width: '25rem',
   },
 }));
-
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: '100%',
@@ -30,7 +26,6 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
 }));
-
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
@@ -47,20 +42,16 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-
 export default function SearchBar ({handleSearch}) {
-  
-
-   
            return (
                 <Grid container>
-
                  <AppBar on sx={{backgroundColor:"transparent"}} elevation={0} >
                   <Toolbar style={{
-         display: 'flex', 
-         justifyContent: 'center', 
-         alignItems:"center", 
-         marginTop:"6rem"
+         display: 'flex',
+         justifyContent: 'center',
+         alignItems:"center",
+         marginTop:"6rem",
+         position: 'sticky'
          }} >
          <Grid item className="search-bar" >
          <Search  style={{position:'sticky'}}  >
@@ -68,18 +59,15 @@ export default function SearchBar ({handleSearch}) {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-            
-              placeholder="Search…" 
-             
+              placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
               onChange={handleSearch}
-              sx={{width: '20rem', height:'auto', borderRadius:"50%"}}
+              sx={{width: '20rem', height:'auto', borderRadius:"50%", position:'sticky'}}
            />
           </Search>
           </Grid>
         </Toolbar>
       </AppBar>
       </Grid>
-
   );
 }
