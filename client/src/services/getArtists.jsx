@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "axios";
 
 const GetArtists = {   
     async getAll(){ 
@@ -8,4 +8,4 @@ const GetArtists = {
     }
 } 
 
-export default GetArtists
+export default GetArtists;
