@@ -46,6 +46,7 @@ text-decoration: none;
 /*------------ CSS Hillary --------------------*/
 
 /* home */
+
 .hero-image {
    
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -107,9 +108,9 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   display:flex;
   font-size: 1.2rem !important;
   text-align: center;
-  height: 6.90vh;
-  width: 6.90vw;
-
+  height: 3rem;
+  width: 8rem;
+  margin-top:-3rem;
   transition: 0.5s;
   background-size: 200% auto;
   color: black !important ;
@@ -353,3 +354,10 @@ height: 90%;
   
 }
 
+/* Main */
+
+.tituloMain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+}

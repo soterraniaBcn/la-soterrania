@@ -1,55 +1,60 @@
-.divContainer1{
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    position: relative;
-    bottom: 0;
-    background-color:#1446A0;
+.divContainerAzul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  bottom: 0;
+  background-color: #1446a0 !important;
 }
 
-.div1{
-    display: flex;
-    width:20%;
-    justify-content: space-between;
+.div1 {
+  display: flex;
+  width: 20% !important;
+  justify-content: space-between;
+  padding-left: 10px !important;
 }
 
-.div2{
-    display: flex;
-    flex-direction: row;
-    width:40%;
-    justify-content: space-around;
+.div2 {
+  display: flex;
+  flex-direction: row;
+  width: 60% !important;
+  justify-content: center !important;
 }
 
-.div3{
-   width:50%;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   align-items: center;
+.div3 {
+  width: 20% !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important;
+  padding-left: 10px !important;
 }
 
-.link-div{
-    width: 40%;
-    color:white;
-    width:2em;
+.link-divAzul {
+  width: 40%;
+  color: white !important;
+  width: 2em;
 }
 
-#h3{
+.h3Azul {
+    color: white !important;
     padding-left: 5%;
-    color:white;
+    font-size: 10px !important;
+    text-decoration: none;
 }
 
+.div2 > .h3Azul{
+    font-size: 12px !important;
+}
 
-@media screen and (max-width: 600px){
-    #h3{
-        font-size: 80%;
-    }
-    .div1{
-        width:40%;
-    }
-    .div2{
-        width:60%;
-    
-    }
+@media screen and (max-width: 600px) {
+  .h3Azul {
+    font-size: 80%;
+  }
+  .div1 {
+    width: 40%;
+  }
+  .div2 {
+    width: 60%;
+  }
 }

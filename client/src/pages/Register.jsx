@@ -2,7 +2,7 @@ import React from 'react';
 import {Grid, FormGroup, RadioGroup, Radio, FormControlLabel, TextareaAutosize, Box, Button} from '@mui/material';
 import Header from '../components/Header';
 import {Link} from 'react-router-dom'
-import FooterRosa from '../components/FooterRosa';
+import FooterGris from '../components/FooterGris';
 
 
 
@@ -13,27 +13,28 @@ import FooterRosa from '../components/FooterRosa';
          <Grid container
          id="register"
             style={{ backgroundColor: '#cdcecf',
-            height: 'calc(100vh-16rem)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent:'center', 
             alignItems: 'center',
-            position: 'absolute',
-            paddingTop:'0'
+      
+
+      
       
            
             }}>
                    <Header/>
               
-                    <Grid item xs={8} style={{ display: 'flex',flexDirection:'row',
+                    <Grid item xs={10} style={{ display: 'flex',
 
                      alignItems: 'center', 
                      justifyContent: 'center',
                      backgroundColor:'white',
-                     width:'25rem',
-                     maxHeight:'30rem',
+                     width:'27rem',
+                     height:'auto',
                      borderRadius:"1rem",
-                     marginTop: "6rem",
+                     marginTop: "3rem",
+                     padding:"3rem",
                      border: '2px solid #ea20ff'
                     
                       }}>
@@ -151,8 +152,8 @@ import FooterRosa from '../components/FooterRosa';
                   Enviar
                 </Button>
                 </Link>
-<FooterRosa/>
            </Grid>
+            <FooterGris/>
         </>
     )
   }
