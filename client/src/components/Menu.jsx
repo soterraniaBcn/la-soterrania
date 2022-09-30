@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 export default function Menu() {
   return (
@@ -27,10 +28,10 @@ export default function Menu() {
           width: "50vw",
         }}
       >
-        <a className="links-menu" href="/sobrenosaltres">Sobre nosaltres</a>
-        <a className="links-menu" href="">Artistes</a>
-        <a className="links-menu" href="">Espais</a>
-        <a className="links-menu" href="">Esdeveniments</a>
+        <Link to="/sobrenosaltres" className="links-menu" >Sobre nosaltres</Link>
+        <Link to="/artistes" className="links-menu" >Artistes</Link>
+        <Link to="/espais" className="links-menu" >Espais</Link>
+        <Link to="/events" className="links-menu" >Esdeveniments</Link>
       </Grid>
     </Grid>
   );

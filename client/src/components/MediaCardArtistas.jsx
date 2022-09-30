@@ -36,9 +36,7 @@ export default function MediaCard() {
   
 
 
-  let i=i +2
-
-  return (
+   return (
 
    <Container>
     <SearchBar search={search} searchInput={searchInput} handleSearch={handleSearch}/>
