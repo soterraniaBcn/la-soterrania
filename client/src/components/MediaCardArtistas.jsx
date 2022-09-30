@@ -36,6 +36,7 @@ export default function MediaCard() {
   
 
 
+  let i=i +2
 
   return (
 

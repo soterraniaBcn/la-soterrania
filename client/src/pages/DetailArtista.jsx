@@ -33,7 +33,7 @@ export default function DetailArtista() {
             component="img"
             sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
             src={imagenmusical}
-            alt="Live from space album cover"
+            alt="Imagen del artista"
           />
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent sx={{ flex: "1 0 auto", mt: 5 }}>
@@ -45,7 +45,7 @@ export default function DetailArtista() {
                 variant="p"
                 style={{ marginRight: "1%" }}
               >
-                Género musical:
+                Gènere musical:
                 <Typography
                   variant="p"
                   color="text.secondary"
@@ -61,7 +61,7 @@ export default function DetailArtista() {
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent sx={{ flex: "1 0 auto" }}>
               <Typography component="div" variant="h5" sx={{ ml: 2 }}>
-                Descripción:
+                Descripció:
               </Typography>
               <Typography
                 variant="p"
@@ -84,19 +84,17 @@ export default function DetailArtista() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: "1%" }}
-                    >
-                      Nombre de la banda:
+                      style={{ marginRight: "1%" }}>
+                      Web:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
-                      >
-                        {oneArtist.nombre}
+                        style={{ marginLeft: "0.3rem" }}>
+                        {oneArtist.web}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Componentes de la banda:
+                      Instrumentació:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -106,27 +104,16 @@ export default function DetailArtista() {
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Situación de la instrumentación:
+                    Gènere:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
-                      >
-                        No tenemos nada pero tocamos muy bien
-                      </Typography>
-                    </Typography>
-                    <Typography component="div" variant="p">
-                      Género:
-                      <Typography
-                        variant="p"
-                        color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
-                      >
+                        style={{ marginLeft: "0.3rem" }}>
                         {oneArtist.genero}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Notas:
+                      Notes:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -153,7 +140,7 @@ export default function DetailArtista() {
                     }}
                   >
                     <Typography variant="p" style={{ marginRight: "1%" }}>
-                      Número telefónico:
+                    Número de telèfon:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -167,7 +154,7 @@ export default function DetailArtista() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      E-mail:
+                      Correu electrònic:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -181,7 +168,7 @@ export default function DetailArtista() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      Instagram:
+                      Xarxa social 1:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -195,7 +182,7 @@ export default function DetailArtista() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      Facebook:
+                      Xarxa social 2:
                       <Typography
                         variant="p"
                         color="text.secondary"
