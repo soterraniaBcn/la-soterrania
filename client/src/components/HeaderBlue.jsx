@@ -8,7 +8,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useState } from 'react';
 import logo from '../imagenes/logosoteblanco.png';
 import { Link } from 'react-router-dom';
-import Menu from './Menu';
+import MenuBlue from './MenuBlue';
 
 
 
@@ -83,7 +83,7 @@ export default function Header() {
         height:"auto"}} ></img>
         </Link>
 
-        <Menu />  
+        <MenuBlue />  
 
   
           <IconButton
@@ -101,10 +101,10 @@ export default function Header() {
           
         </Toolbar>
       </AppBar>
-     
+
         <DrawerHeader />
         
-   
+
       <Drawer
         sx={{
           width: drawerWidth,

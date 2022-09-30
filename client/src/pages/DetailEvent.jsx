@@ -1,12 +1,14 @@
-import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Card from '@mui/material/Card'
-import React, { useEffect, useState } from 'react'
-import imagen from '../imagenes/imagen_nuria.PNG'
-import { Container, Box, Grid, Button } from '@mui/material'
-import { Link } from 'react-router-dom'
-import GetEvent from '../services/getInfo'
+import Typography from '@mui/material/Typography';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Card from '@mui/material/Card';
+import React, { useEffect, useState } from 'react';
+import imagen from '../imagenes/imagen_nuria.PNG';
+import { Container, Box, Grid, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
+import GetEvent from '../services/getInfo';
+import Header from "../components/Header";
+import FooterAzul from "../components/FooterAzul";
 
 export default function DetailEvent() {
   const [allEvents, setAllEvents] = useState([])
@@ -19,8 +21,9 @@ export default function DetailEvent() {
   }, [])
 
   return (
-    <div style={{ backgroundColor: 'pink' }}>
-      <Box style={{ backgroundColor: 'pink', height: '90px', display: 'flex', justifyContent: 'center', alignItems: "center" }}>
+    <section style={{ backgroundColor: '#1446A0' }}>
+      <Header/>
+      <Box style={{ backgroundColor: '#1446A0', height: '90px', display: 'flex', justifyContent: 'center', alignItems: "center" }}>
         <Link to="/newpost">
           <Button
             variant="contained"
@@ -30,15 +33,16 @@ export default function DetailEvent() {
         </Link>
       </Box>
 
-      <div>
+      <main>
         {
           allEvents.map((e, i) => 
             <div key={i}>
               <h1>nombre: {e.nombre}</h1>
             </div>
           )}
-      </div>
-    </div>
+      </main>
+      <FooterAzul/>
+    </section>
 
   )
   

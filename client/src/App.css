@@ -25,21 +25,19 @@ text-decoration: none;
  }
 
 
-@media screen and (max-width: 624px){ 
+ @media screen and (max-width: 624px){ 
   
-.MuiGrid-container .menu-container{
-      display: none;
+  .MuiGrid-container .menu-container{
+        display: none;
+      }
     }
+  
+  @media screen and (min-width: 624px){ 
+  
+  .menuhamburger{
+    display: none;
   }
-
-@media screen and (min-width: 624px){ 
-
-.menuhamburger{
-  display: none;
-}
-
-
-}
+  }  
 
 /*------------ CSS Sara hasta aquí -----------------------*/
 
@@ -48,6 +46,7 @@ text-decoration: none;
 /*------------ CSS Hillary --------------------*/
 
 /* home */
+
 .hero-image {
    
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
@@ -71,7 +70,7 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   width: 10rem;
   font-size: 2.7rem;
   z-index: 2;
-  margin: 10%  auto 0 auto;
+  margin: 7%  auto 0 auto;
   text-align: center;
 }
   
@@ -81,7 +80,7 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   font-size: 2rem !important;
   color: #eef2f4!important;
   z-index: 2;
-  margin: 5%  auto 5% auto;
+  margin: 3%  auto 5% auto;
   text-align: center;
 }
  
@@ -109,9 +108,9 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   display:flex;
   font-size: 1.2rem !important;
   text-align: center;
-  height: 6.90vh;
-  width: 6.90vw;
-
+  height: 3rem;
+  width: 8rem;
+  margin-top:-3rem;
   transition: 0.5s;
   background-size: 200% auto;
   color: black !important ;
@@ -149,13 +148,14 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
 .flow{
   font-family: "Inter", sans-serif;
  width: 100vw;
- height: 100vh;
+height: 90%;
   padding: 2rem 1.5rem;
-  background-color:#e2a0ff ;
+  background-color:#FFF;
   background-repeat: no-repeat;
   display:flex;
-  justify-content: center;
-
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
  
 }
 
@@ -173,7 +173,8 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   left: 50rem;
 }
 
-.profile {
+.profile,
+.events {
   color: currentcolor;
 }
 
@@ -186,10 +187,12 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   );
   grid-gap: var(--auto-grid-gap, 0);
   padding: 0;
+  width: 100%;
 }
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
+  
 }
 
 /* Composition */
@@ -198,7 +201,10 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
 }
 
 /* Blocks */
-.profile {
+.profile,
+.events {
+  width: 350px ;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -214,7 +220,9 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
 }
 
 .profile::before,
-.profile::after {
+.profile::after,
+.events::before,
+.events::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -224,7 +232,8 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   left: 0;
 }
 
-.profile::before {
+.profile::before,
+.events::before {
   background: linear-gradient(
     to top,
     hsl(0 0% 0% / 0.79) 0%,
@@ -247,7 +256,8 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   transition: 300ms opacity linear;
 }
 
-.profile::after {
+.profile::after,
+.events::after {
   background: linear-gradient(
     45deg,
     hsl(5 97% 63% / 0.7) 0,
@@ -262,7 +272,8 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   
 }
 
-.profile img {
+.profile img,
+.events img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -298,7 +309,8 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
   transition: 300ms opacity linear, 300ms transform ease-in-out;
 }
 
-.profile:focus {
+.profile:focus,
+.events:focus {
   outline: 0.5rem solid white;
   outline-offset: -0.5rem;
 }
@@ -311,19 +323,41 @@ text-shadow: rgb(8, 8, 8) 0.2em 0.1em 0.1em;
 .profile:hover::after,
 .profile:focus::after,
 .profile:hover::before,
-.profile:focus::before {
+.profile:focus::before ,
+.events:hover::after,
+.events:focus::after,
+.events:hover::before,
+.events:focus::before {
+  transform: translateY(0.5rem);
+
   opacity: 0.7;
 }
 
 .profile:hover p,
-.profile:focus p {
+.profile:focus p
+ {
   opacity: 1;
   transition-delay: 200ms;
 }
 
 .profile:hover img,
-.profile:focus img {
+.profile:focus img ,
+.events :hover img,
+.events:focus img {
   filter: grayscale(0);
   transform: scale(1.05) rotate(1deg);
 }
 
+#profile{
+  width: 300px;
+  height: 200px;
+  
+}
+
+/* Main */
+
+.tituloMain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+}
