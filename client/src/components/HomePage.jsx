@@ -1,13 +1,13 @@
 
-import { Grid, Box } from "@mui/material";
+import { Grid, Box ,Container} from "@mui/material";
 import React from 'react';
-import flecha2 from '../imagenes/flecha2.png';
+//import flecha2 from '../imagenes/flecha2.png';
 import flecha from '../imagenes/flecha.png';
  import escenario from '../imagenes/escenario.png';
  import evento2 from '../imagenes/evento2.png';
  import espacio from '../imagenes/espacio.png';
  import espai from '../imagenes/espai.png';
- import evento from '../imagenes/evento.png';
+ //import evento from '../imagenes/evento.png';
 import mujer from '../imagenes/mujer.png';
 //import persona2 from '../imagenes/persona2.png';
 import señor from '../imagenes/señor.png';
@@ -18,19 +18,21 @@ import señor from '../imagenes/señor.png';
 import Footer from './FooterAzul'
 import Header from "./Header.jsx";
 import { Link } from "react-router-dom";
-import { height } from "@mui/system";
+//import { height } from "@mui/system";
 
 
 export default function HomePage() {
     return ( 
+   
     <>
-            <Box style={{height:"10rem",width:"100vw",backgroundColor:"#E2A0FF"}}> 
+  
+            <Box style={{height:"10rem",width:"100vw",backgroundColor:"#1446A0"}}> 
             <Header/>
             </Box>
-        <Grid container className="flow " style={{}}>
+        <Grid container className="flow" >
            
-           <Grid item style={{}}>
-        <Box className="team" style ={{backgroundColor:"white",borderRadius:"3%"}}>
+         
+        <Box className="team" >
         <p className="artista" style={{fontSize:"30px",fontWeight:"bold"}}>Artistas</p>
             <Grid container className="auto-grid" role="list">
 
@@ -61,7 +63,7 @@ export default function HomePage() {
         </Box>
        
 
-        <Box className="team" style={{marginTop:"10%",backgroundColor:"#CDCECF",borderRadius:"3%"}}>
+        <Box className="team" style={{marginTop:"10rem"}}>
         <p className="artista" style={{fontSize:"30px",fontWeight:"bold"}}>Espai</p>
             <Grid container className="auto-grid" role="list">
 
@@ -89,18 +91,24 @@ export default function HomePage() {
                    </Link>
             </Grid>
         </Box>
-        <Grid Item style ={{width:"1150px",height:"500px",display:"flex",backgroundColor:"white",borderRadius:"3%",marginTop:"10%"}}>
-        <p className="artista" style={{ fontSize:"30px",fontWeight:"bold"}}>Eventos</p>
-        <Box  id ="eventos" >              
-    <img style={{width:"900px",height:"400px",position:"absolute",marginTop:"6%"}} src={evento2} alt="evento" />
+
+       
+
+             <Box className ="event" style={{marginTop:"10rem"}}>
+        <p className="eventos" style={{ fontSize:"30px",fontWeight:"bold",color:"red",marginLeft:"-20rem"}}>Eventos</p>
+        <Grid container style={{width:"100%",display:"flex",justifyContent:"center"}} >
+    <img className="events" style={{width:"600px",height:"600px",position:"relative"}} src={evento2} alt="evento" />
     <Link style={{textDecoration:"none",fontSize:"1.7rem"}} to = "/esdeveniments">
-    <p style={{position:"relative",marginLeft:"350px",marginTop:"35%",color:"white", fontFamily:"SansSerif", fontWeight:"bold"}}id ="calle">Veure més Esdeveniments</p>
+    <p style={{ marginTop:"15rem",marginLeft:"-28rem",position:"relative",color:"#1446A0", fontFamily:"Inter", fontWeight:"bold",fontSize:"2rem",zIndex:"2"}}id ="calle">Veure més Esdeveniments</p>
     </Link>
  
-           </Box>
-           </Grid>
         </Grid>
+          
+        </Box>
+           
+     
     </Grid>
+
     <Footer/>
     </>
 )

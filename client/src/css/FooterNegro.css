@@ -3,8 +3,8 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    
     background-color: black !important;
 }
 
@@ -12,6 +12,7 @@
     display: flex;
     width:20%;
     justify-content: space-between;
+   
 }
 
 .div2{
@@ -19,6 +20,8 @@
     flex-direction: row;
     width:40%;
     justify-content: space-around;
+ 
+    
 }
 
 .div3{
