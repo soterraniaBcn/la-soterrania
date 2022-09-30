@@ -1,18 +1,19 @@
 import React from "react";
-import SearchBar from '../components/SearchBar'
-import { Container } from "@mui/material";
-import MediaCard from "../components/MediaCard"
-import FooterAzul from "../components/FooterAzul"
+import {  Grid } from "@mui/material";
+import MediaCardArtistas from "../components/MediaCardArtistas";
+import FooterAzul from "../components/FooterAzul";
 
-export default function Artistas (){
-   
-    return(
-        <>
-        <Container style={{height:'10rem'}}>
-        <SearchBar/>
-        </Container>
-        <MediaCard/>
-        <FooterAzul/>
-        </>
-    )
+export default function Artistas() {
+  return (
+    <>
+      <Grid container style={{ height:'100vh'}}>
+
+<Grid item style={{width:'100vw'}}>
+    
+        <MediaCardArtistas />
+        </Grid>
+      </Grid>
+        <FooterAzul />
+    </>
+  );
 }

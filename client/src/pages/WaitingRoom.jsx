@@ -1,6 +1,6 @@
 import React from 'react'
-import { Grid, Typography } from '@mui/material'
-import Header from '../components/Header'
+import { Grid, Typography} from '@mui/material'
+import HeaderBlue from '../components/HeaderBlue'
 import { Link } from 'react-router-dom'
 
 export default function About() {
@@ -9,46 +9,63 @@ export default function About() {
       <Grid
         container
         style={{
-          backgroundColor: '#E2A0FF',
-          height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
+          backgroundColor: "#E2A0FF",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          marginTop: 0,
         }}
       >
-        <Header />
+        <HeaderBlue />
         <Grid
-          container
-          className="about-container"
+          item
+          xs={8}
           style={{
-            maxWidth: '80rem',
-            mt: 5,
-            backgroundColor: 'white',
-            pl: 3,
-            display: 'flex',
-            justifyContent: 'center',
-            flexDirection: 'row',
+
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "white",
+            width: "22rem",
+            maxHeight: "27rem",
+            borderRadius: "1rem",
+            border: "5px solid #cdcecf",
+            marginTop: "2rem"
           }}
         >
-          <h2>
-          Muchas gracias por tu solisitud, en breve tendras noticias del
-          equipo!! 
-          </h2>
-
-          <Typography
-            variant="h1"
-            color="black"
-            component="div"
-            style={{ padding: '2rem', fontSize: '1rem', lineHeight: '2rem' }}
-          >
-            <h4>
-              Puedes entrar en contacto con nosotros a travez de este e-mail
-            </h4>
-            <Link to={{}}>laquenosepresentaalasreuniones@gmail.com</Link>
-          </Typography>
+          <Grid container style={{justifyContent:"center", maxWidth:"80%"}}>
+        <p style={{fontSize:"2rem"}}>Moltes gràcies per la vostra sol·licitud!</p>
+        <Typography 
+                variant="p"
+                color="black"
+                fontFamily="Consolas"
+                component="div"
+                fontSize="1.1rem" 
+                lineHeight="2rem"
+              >
+    
+    En breu tindràs notícies de l'equip ;)
+    </Typography>
+    <Typography 
+                variant="p"
+                color="black"
+                fontFamily="Consolas"
+                component="div"
+                fontSize="0.8rem" 
+                lineHeight="2rem"
+              >
+    
+    Podeu entrar en contacte amb nosaltres a través d'aquest e-mail:<Link to={{}}>lasoterrania@gmail.com</Link>
+    </Typography>
+  
+    </Grid>
+    
+          
         </Grid>
+        
       </Grid>
-    </>
+</>
   )
 }

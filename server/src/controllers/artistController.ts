@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import artistsModel from "../model/artistsModel";
+import artistModel from "../model/artistModel";
 import { iArtist } from "../model/interface/iArtist";
 
-const artistsController = {
+const artistController = {
   getAllArtists: async (req: Request, res: Response) => {
     try {
-      const result: any = await artistsModel.getAllArtists();
+      const result: any = await artistModel.getAllArtists();
       result
         ? res.status(200).json(result)
         : res.status(500).send("Hi ha hagut un error fent l'obtenció de dades");
@@ -17,7 +17,7 @@ const artistsController = {
   getOneArtist: async (req: Request, res: Response) => {
     try {
       const param = req.params.id;
-      const artist: any = await artistsModel.getOneArtist(param);
+      const artist: any = await artistModel.getOneArtist(param);
       res.json(artist);
     } catch (error: any) {
       res.status(400).send(error.message);
@@ -65,7 +65,7 @@ const artistsController = {
         return;
       }
 
-      const result = await artistsModel.saveArtist({
+      const result = await artistModel.saveArtist({
         estado,
         nombre,
         foto,
@@ -115,7 +115,7 @@ const artistsController = {
         id,
       }: iArtist = req.body;
 
-      await artistsModel.modifyArtist({
+      await artistModel.modifyArtist({
         estado,
         nombre,
         foto,
@@ -136,7 +136,7 @@ const artistsController = {
         id,
       });
 
-      const result = await artistsModel.getOneArtist(id);
+      const result = await artistModel.getOneArtist(id);
 
       result
         ? res.status(201).json(result)
@@ -148,7 +148,7 @@ const artistsController = {
   deleteArtist: async (req: Request, res: Response) => {
     try {
       const param = req.params.id;
-      const result = await artistsModel.deleteArtist(param);
+      const result = await artistModel.deleteArtist(param);
       result
         ? res
             .status(201)
@@ -159,4 +159,4 @@ const artistsController = {
     }
   },
 };
-export default artistsController;
+export default artistController;

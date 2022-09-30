@@ -1,43 +1,57 @@
-import Typography from "@mui/material/Typography";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Card from "@mui/material/Card";
-import React from "react";
-import imagen from "../imagenes/imagen_nuria.PNG";
-import { Container, Box, Grid, Button } from "@mui/material";
-import Header from "../components/Header";
-import FooterRosa from "../components/FooterRosa";
+import Typography from '@mui/material/Typography'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
+import Card from '@mui/material/Card'
+import React, { useState, useEffect } from "react";
+import { Container, Box, Grid, Button } from '@mui/material'
+import GetArtistById from '../services/getArtistById'
+import { useParams } from 'react-router-dom'
+import imagenmusical from '../imagenes/imagenmusical.webp'
+import FooterRosa from '../components/FooterRosa';
+
+
 
 export default function DetailArtista() {
+  const {id}=useParams()
+  const [oneArtist, setOneArtist] = useState({})
+
+  useEffect(() => {
+    GetArtistById.getOne(id).then((res) => {
+      let artist = res
+      setOneArtist(artist)
+    })
+  }, [])
+
   return (
-    <div style={{ backgroundColor: "#E2A0FF" }}>
-      <Header />
-      <Container ClassName="vh=100 containerMain">
-        <h2 className="tituloMain">Detalls de l'artista</h2>
-        <Card sx={{ display: "flex"  }}>
+    <div style={{backgroundColor:"pink"}}>  
+    <Box style={{backgroundColor:"pink", height:'90px' }}>
+      
+      </Box>  
+      <Container ClassName="vh=100" >
+        <Card sx={{ display: 'flex'}}>
           <CardMedia
             component="img"
             sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
-            src={imagen}
-            alt="Live from space album cover"
+            src={imagenmusical}
+            alt="Imagen del artista"
           />
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent sx={{ flex: "1 0 auto", mt: 5 }}>
               <Typography sx={{}} component="div" variant="h5">
-                Nombre del artista/espacio/evento
+                {oneArtist.nombre}
               </Typography>
               <Typography
                 component="div"
                 variant="p"
                 style={{ marginRight: "1%" }}
               >
-                Género musical:
+                Gènere musical:
                 <Typography
                   variant="p"
                   color="text.secondary"
                   style={{ marginLeft: "0.3rem" }}
                 >
-                  Pop-Electrónico-magnético
+                  {oneArtist.generomusical}
                 </Typography>
               </Typography>
             </CardContent>
@@ -47,7 +61,7 @@ export default function DetailArtista() {
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent sx={{ flex: "1 0 auto" }}>
               <Typography component="div" variant="h5" sx={{ ml: 2 }}>
-                Descripción:
+                Descripció:
               </Typography>
               <Typography
                 variant="p"
@@ -55,14 +69,7 @@ export default function DetailArtista() {
                 component="div"
                 sx={{ ml: 2 }}
               >
-                Portada de #Genderful sin censura, el próximo lanzamiento de
-                @thepunkyunicorns en el que tengo el enorme placer de colaborar.
-                Genderful is comming! 27/05/2022 🎸🦄🌈*Noticia con la portada
-                sin censura de @lamanyanacat (gràcies Andrés) Pre-save
-                disponible ⬇️ en la bio de @thepunkyunicorns #thepunkyunicorns
-                #censura #artecensurado #lleidatanament #lleidacity #lleidamusic
-                #musicslleida #punkmusic #punksnotdead #punkisnotdead #unicorn
-                #unicornio
+                {oneArtist.descripcion}
               </Typography>
               <Grid
                 container
@@ -77,55 +84,42 @@ export default function DetailArtista() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: "1%" }}
-                    >
-                      Nombre de la banda:
+                      style={{ marginRight: "1%" }}>
+                      Web:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
-                      >
-                        Unicornio Loco
+                        style={{ marginLeft: "0.3rem" }}>
+                        {oneArtist.web}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Componentes de la banda:
+                      Instrumentació:
                       <Typography
                         variant="p"
                         color="text.secondary"
                         style={{ marginLeft: "0.3rem" }}
                       >
-                        Guitarrista, flauta y trompeta
+                        {oneArtist.instrumentacion}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Situación de la instrumentación:
+                    Gènere:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
-                      >
-                        No tenemos nada pero tocamos muy bien
+                        style={{ marginLeft: "0.3rem" }}>
+                        {oneArtist.genero}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Género:
+                      Notes:
                       <Typography
                         variant="p"
                         color="text.secondary"
                         style={{ marginLeft: "0.3rem" }}
                       >
-                        Pansexual
-                      </Typography>
-                    </Typography>
-                    <Typography component="div" variant="p">
-                      Notas:
-                      <Typography
-                        variant="p"
-                        color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
-                      >
-                        Recibimos comida como parte de pago
+                        {oneArtist.notas}
                       </Typography>
                     </Typography>
                   </CardContent>
@@ -146,13 +140,13 @@ export default function DetailArtista() {
                     }}
                   >
                     <Typography variant="p" style={{ marginRight: "1%" }}>
-                      Número telefónico:
+                    Número de telèfon:
                       <Typography
                         variant="p"
                         color="text.secondary"
                         style={{ marginLeft: "0.3rem" }}
                       >
-                        663344557
+                        {oneArtist.telefono1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -160,13 +154,13 @@ export default function DetailArtista() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      E-mail:
+                      Correu electrònic:
                       <Typography
                         variant="p"
                         color="text.secondary"
                         style={{ marginLeft: "0.3rem" }}
                       >
-                        hola@gmail.com
+                        {oneArtist.email}
                       </Typography>
                     </Typography>
                     <Typography
@@ -174,13 +168,13 @@ export default function DetailArtista() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      Instagram:
+                      Xarxa social 1:
                       <Typography
                         variant="p"
                         color="text.secondary"
                         style={{ marginLeft: "0.3rem" }}
                       >
-                        holahola
+                       {oneArtist.redsocial1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -188,13 +182,13 @@ export default function DetailArtista() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      Facebook:
+                      Xarxa social 2:
                       <Typography
                         variant="p"
                         color="text.secondary"
                         style={{ marginLeft: "0.3rem" }}
                       >
-                        hola chau
+                        {oneArtist.redsocial2}
                       </Typography>
                     </Typography>
                   </CardContent>

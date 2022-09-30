@@ -2,11 +2,21 @@ import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Card from '@mui/material/Card'
-import React from 'react'
-import imagen from '../imagenes/imagen_nuria.PNG'
+import React, { useEffect, useState } from 'react'
 import { Container, Box, Grid, Button } from '@mui/material'
+import { useParams } from 'react-router-dom'
+import GetSpaceById from '../services/getSpaceById'
 
 export default function DetailSpace() {
+  const {id}=useParams()
+  const [oneSpace, setOneSpace] = useState({})
+
+  useEffect(() => {
+    GetSpaceById.getOne(id).then((res) => {
+      let artist = res
+      setOneSpace(artist)
+    })
+  }, [])
   return (
     <div style={{ backgroundColor: 'pink' }}>
       <Container ClassName="vh=100">
@@ -14,13 +24,13 @@ export default function DetailSpace() {
           <CardMedia
             component="img"
             sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 2 }}
-            src={imagen}
+            src={oneSpace.foto}
             alt="Live from space album cover"
           />
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flex: '1 0 auto', mt: 5 }}>
               <Typography component="div" variant="h5">
-                Nombre del salon
+                {oneSpace.nombre}
               </Typography>
               <Typography
                 component="div"
@@ -33,7 +43,7 @@ export default function DetailSpace() {
                   color="text.secondary"
                   style={{ marginLeft: '0.3rem' }}
                 >
-                  Jazz contemporaneo
+                  {oneSpace.genero}
                 </Typography>
               </Typography>
             </CardContent>
@@ -51,14 +61,7 @@ export default function DetailSpace() {
                 component="div"
                 sx={{ ml: 2 }}
               >
-                Portada de #Genderful sin censura, el próximo lanzamiento de
-                @thepunkyunicorns en el que tengo el enorme placer de colaborar.
-                Genderful is comming! 27/05/2022 🎸🦄🌈*Noticia con la portada
-                sin censura de @lamanyanacat (gràcies Andrés) Pre-save
-                disponible ⬇️ en la bio de @thepunkyunicorns #thepunkyunicorns
-                #censura #artecensurado #lleidatanament #lleidacity #lleidamusic
-                #musicslleida #punkmusic #punksnotdead #punkisnotdead #unicorn
-                #unicornio
+                {oneSpace.descripcion}
               </Typography>
               <Grid
                 container
@@ -91,7 +94,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        200px, pero apretaditos entran 250
+                        {oneSpace.capacidad}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -101,7 +104,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        soterrania.com
+                        {oneSpace.web}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -111,7 +114,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        Micro, apmli y mucho mas
+                        {oneSpace.instrumentacion}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -121,7 +124,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        Si
+                        {oneSpace.ltbfrendly}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -131,7 +134,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        Si
+                        {oneSpace.petfrendly}
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
@@ -141,7 +144,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        Recibimos comida como parte de pago
+                        {oneSpace.notas}
                       </Typography>
                     </Typography>
                   </CardContent>
@@ -168,7 +171,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        663344557
+                        {oneSpace.telefono1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -182,7 +185,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        hola@gmail.com
+                        {oneSpace.email1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -196,7 +199,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        holahola
+                        {oneSpace.redsocial1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -210,7 +213,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        hola chau
+                        {oneSpace.redsocial2}
                       </Typography>
                     </Typography>
                     <Typography
@@ -224,7 +227,7 @@ export default function DetailSpace() {
                         color="text.secondary"
                         style={{ marginLeft: '0.3rem' }}
                       >
-                        Carrer florecillas
+                        {oneSpace.ubicacion}
                       </Typography>
                     </Typography>
                     <Typography

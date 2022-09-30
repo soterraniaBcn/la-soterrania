@@ -8,7 +8,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useState } from 'react';
 import logo from '../imagenes/logosoteblanco.png';
 import { Link } from 'react-router-dom';
-import MenuBlue from './MenuBlue';
+import Menu from './Menu';
 
 
 
@@ -53,12 +53,12 @@ const AppBar = styled(MuiAppBar, {
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  backgroundColor: '#E2A0FF',
+  backgroundColor: '#1446A0',
   padding: theme.spacing(0, 1),
   justifyContent: 'flex-start',
 }));
 
-export default function HeaderBlue() {
+export default function HeaderPestBlue() {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
 
@@ -72,10 +72,9 @@ export default function HeaderBlue() {
 
   return (
 
-    <Grid container style={{position:'sticky'}}>
+    <Grid container >
       <CssBaseline />
-      <AppBar className="navbar" elevation={0} open={open} sx={{ mb: 5 }}>
-
+      <AppBar className="navbar" style={{position:'sticky'}} elevation={0} open={open} sx={{ mb: 5 }}>
         <Toolbar style={{ justifyContent:'space-between'}}>
         <Link to="/homepage">
         <img  src={logo} alt=""
@@ -83,7 +82,7 @@ export default function HeaderBlue() {
         height:"auto"}} ></img>
         </Link>
 
-        <MenuBlue />  
+        <Menu />  
 
   
           <IconButton
@@ -117,7 +116,7 @@ export default function HeaderBlue() {
         anchor="right"
         open={open}
       >
-        <DrawerHeader>
+        <DrawerHeader style={{backgroundColor:'#1446A0'}}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
@@ -151,4 +150,3 @@ export default function HeaderBlue() {
       </Grid>
   );
 }
-

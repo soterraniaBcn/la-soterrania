@@ -1,8 +1,11 @@
 import React, { useState, useEffect,useMemo,useRef } from "react";
 import '../css/MediaCard.css'
 import GetArtists from '../services/getArtists'
-import {Container} from '@mui/material'
+import {Container, Grid} from '@mui/material'
 import SearchBar from './SearchBar'
+import { Link } from "react-router-dom";
+import HeadPestBlue from "../components/HeaderPestBlue";
+
 
 
 
@@ -13,6 +16,7 @@ export default function MediaCard() {
   const searchInput = useRef()
 
   // Obtener datos  
+
   useEffect(() => {
   GetArtists.getAll().then((res) => {
    let artistsList = res
@@ -35,27 +39,29 @@ export default function MediaCard() {
   
 
 
-  return (
-<>
-   <Container style={{height:"100vh"}}>
-    <Container style={{position:"sticky"}}>
+
+   return (
+ <>
+   <Grid container style={{height:'10rem', backgroundColor:"#1446A0", width:"100vw"}}>
+    <HeadPestBlue/>
+    <Grid item style={{marginTop:"-3rem",display:"flex", alignItems:"center", position:'sticky'}}>
     <SearchBar search={search} searchInput={searchInput} handleSearch={handleSearch}/>
-    </Container>
-    <div className="div-cards">
+    </Grid>
+    </Grid>
+    <Grid container className="div-cards">
   {filterArtists.map((artist, i) =>(
   <article className="flows">
      <div className="teams" key={i}>
-        <a href={'/artistes/:id'} className="profiles">
+        <Link to={`/artistes/${artist.id}`} className="profiles">
           <h2 className="profile__names">{artist.nombre}</h2>
           <p id="genero">{artist.generomusical}</p>
           <img alt="Imagen de artista" src={artist.foto} />
-        </a>
+        </Link>
     </div>
  </article>
     ))}
-    </div>
+    </Grid>
 
-    </Container>
     </>
   );
 }
