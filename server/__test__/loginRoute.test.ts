@@ -8,11 +8,12 @@ app.use(express.json());
 app.use(loginRoute);
 
 describe("POST/login", () => {
-    //testing login without password or email
-    test("should return status 400 if there is fields in the body", 
-    async () => {
-      const response = await request(app).post("/login").send({});
-      expect(response.status).toEqual(400);
-      expect(response.error.text).toEqual("Falta el correu electrònic o la contrasenya");
-    });
+  //testing login without password or email
+  test("should return status 400 if there isn't fields in the body", async () => {
+    const response = await request(app).post("/login").send({});
+    expect(response.status).toEqual(400);
+    expect(response.error.text).toEqual(
+      "Falta el correu electrònic o la contrasenya"
+    );
   });
+});
