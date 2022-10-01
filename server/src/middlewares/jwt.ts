@@ -30,8 +30,8 @@ const generateToken = async (
 
 const validateToken = (req: any, res: Response, next: NextFunction) => {
   const bearerHeader = req.headers["authorization"];
-
-  if (typeof bearerHeader !== undefined) {
+  console.dir({ bearerHeader, Headers: req.headers });
+  if (bearerHeader !== undefined) {
     const bearer = bearerHeader.split(" ");
     const bearerToken = bearer[1];
     req.token = bearerToken;
