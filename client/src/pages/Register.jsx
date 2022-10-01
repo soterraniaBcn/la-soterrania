@@ -13,6 +13,7 @@ import HeaderBlue from "../components/HeaderBlue";
 import { useNavigate } from "react-router-dom";
 import FooterGris from "../components/FooterGris";
 import { authService } from "../services/authService";
+
 export default function Register() {
   const nameRef = useRef(null);
   const groupNameRef = useRef(null);
@@ -24,17 +25,22 @@ export default function Register() {
   const roleChange = (e, value) => {
     setRole(value);
   };
+
+  const navigator = useNavigate();
+
   const handleClick = (e) => {
     const registerData = {
       rol: role,
-      nombreUsuaria: nameRef.current.value,
-      nombre: groupNameRef.current.value,
+      nombre: nameRef.current.value,
+      nombre_artista_espacio: groupNameRef.current.value,
       email: emailRef.current.value,
       password: passwordRef.current.value,
       descripcion: descriptionRef.current.value,
       link: linkRef.current.value,
     };
-    authService.register(registerData)
+    authService.register(registerData).then(() => {
+      navigator("/espera", { replace: true });
+    });
   };
   return (
     <>
