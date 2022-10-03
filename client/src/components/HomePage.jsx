@@ -95,7 +95,7 @@ export default function HomePage() {
        
 
              <Box className ="event" style={{marginTop:"10rem"}}>
-        <p className="eventos" style={{ fontSize:"30px",fontWeight:"bold",color:"red",marginLeft:"-20rem"}}>Eventos</p>
+        <p className="eventos" style={{ fontSize:"30px",fontWeight:"bold",color:"#1446A0",marginLeft:"-20rem"}}>Eventos</p>
         <Grid container style={{width:"100%",display:"flex",justifyContent:"center"}} >
     <img className="events" style={{width:"600px",height:"600px",position:"relative"}} src={evento2} alt="evento" />
     <Link style={{textDecoration:"none",fontSize:"1.7rem"}} to = "/esdeveniments">
