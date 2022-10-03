@@ -10,7 +10,7 @@ import {
   Box,
   Button,
 } from "@mui/material";
-import HeaderBlue from "../components/HeaderBlue";
+import HeaderPestGris from "../components/HeaderPestGris";
 import FooterGris from "../components/FooterGris";
 import { authService } from "../services/authService";
 export default function Register() {
@@ -49,7 +49,7 @@ export default function Register() {
           alignItems: "center",
         }}
       >
-        <HeaderBlue />
+        <HeaderPestGris />
         <Grid
           item
           xs={10}

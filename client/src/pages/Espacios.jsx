@@ -10,8 +10,8 @@ export default function Espacios() {
         <Grid item style={{ width: "100vw" }}>
           <MediaCardEspacios />
         </Grid>
+        <FooterAzul />
       </Grid>
-      <FooterAzul />
     </>
   );
 }

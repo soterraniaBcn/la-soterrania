@@ -33,7 +33,7 @@ export default function Menu() {
         <Link to="/sobrenosaltres" className="links-menu">Sobre nosaltres</Link>
         <Link to="/artistes" className="links-menu" >Artistes</Link>
         <Link to="/espais" className="links-menu" >Espais</Link>
-        <Link to="/events" className="links-menu" >Esdeveniments</Link>
+        <Link to="/esdeveniments" className="links-menu" >Esdeveniments</Link>
       </Grid>
     </Grid>
   );

@@ -3,7 +3,7 @@ import {Link } from 'react-router-dom';
 import '../css/MediaCard.css'
 import GetSpaces from '../services/getSpaces'
 import SearchBar from '../components/SearchBar'
-import { Grid } from "@mui/material"
+import { Grid, Button } from "@mui/material"
 import HeaderPestBlue from '../components/HeaderPestBlue'
 
 export default function MediaCard() {
@@ -44,6 +44,25 @@ useEffect(() => {
     <SearchBar search={search} searchInput={searchInput} handleSearch={handleSearch}/>
     </Grid>
     </Grid>
+    <Grid
+        item
+        style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
+      >
+        <Link to="/admin/editarespais">
+          <Button
+            variant="contained"
+            style={{
+              backgroundColor: "#E2A0FF",
+              color: "#1446A0",
+              borderRadius: "40px",
+              height: "2rem",
+              fontWeight: "bold",
+            }}
+          >
+            Afegir nou espai
+          </Button>
+        </Link>
+      </Grid>
     <Grid container className="div-cards">
    
   

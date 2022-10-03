@@ -34,7 +34,7 @@ export default function Router() {
         <Route exact path="/espais/:id" element={<DetailSpace />} />
         <Route exact path="/admin/perfiladmin" element={<PerfilAdmin />} />
         <Route exact path="/sobrenosaltres" element={<About />} />
-        <Route exact path="/events" element={<DetailEvent />} />
+        <Route exact path="/esdeveniments" element={<DetailEvent />} />
         <Route exact path="/avislegal" element={<LegalWarning />} />
         <Route exact path="/elmeuperfilartista" element={<ElMeuPerfilArtista />} />
         <Route exact path="/elmeuperfilespai" element={<ElMeuPerfilEspai />} />
