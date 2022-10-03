@@ -58,11 +58,11 @@ export default function HomePage() {
                     <Grid container className="auto-grid" role="list">
                         {allArtists.map((item, i) => (
                             <div className="Artists3" key={i}>
-                                <a href={`/artistes/${item.id}`} target="_blank" className="profile">
+                                <Link to={`/artistes/${item.id}`} target="_blank" className="profile">
                                     <h2 className="profile__name">{item.nombre}</h2>
                                     <p className="genero">{item.genero}</p>
                                     <img src={item.foto} alt="mujer" />
-                                </a>
+                                </Link>
                             </div>
                         ))}
 
