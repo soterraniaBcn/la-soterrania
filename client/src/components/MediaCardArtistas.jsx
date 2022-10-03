@@ -56,7 +56,7 @@ export default function MediaCard() {
         item
         style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
       >
-        <Link to="/admin/editarartista">
+        <Link to="/admin/editarartista" style={{textDecoration: "none"}} >
           <Button
             variant="contained"
             style={{

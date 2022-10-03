@@ -5,22 +5,38 @@ import userModel from "../model/userModel";
 const userController = {
   saveUser: async (req: Request, res: Response) => {
     try {
-      const { email, password, id: id, estado, rol }: iUser = req.body;
+      const {
+        email,
+        password,
+        estado,
+        rol,
+        nombre,
+        nombre_artista_espacio,
+        descripcion,
+        link,
+      }: iUser = req.body;
 
-      if (!email || !password) {
-        res.status(400).send("Falta el correu electrònic o la contrasenya");
+      if (
+        !email ||
+        !password ||
+        !rol ||
+        !nombre ||
+        !nombre_artista_espacio ||
+        !descripcion ||
+        !link
+      ) {
+        return res.status(400).send("Falten camps obligatoris. Els camps obligatoris son: email, rol (artista o espai), password, nom, nom d'artista o espai, descripció, link");
       }
-
-      console.dir(req.body)
-
-      return res.status(200).json()
 
       const result = await userModel.saveUser({
         email,
         password,
-        id,
         estado,
         rol,
+        nombre,
+        nombre_artista_espacio,
+        descripcion,
+        link,
       });
       result
         ? res.status(200).json({ result: result })
@@ -53,8 +69,8 @@ const userController = {
 
   modifUser: async (req: Request, res: Response) => {
     try {
-      const { id, email, estado, rol }: iUser = req.body;
-      await userModel.modifUser({ id, email, estado, rol, password: "" });
+      const { id, email, estado, rol, nombre, nombre_artista_espacio, descripcion, link }: iUser = req.body;
+      await userModel.modifUser({ id, email, estado, rol, password: "", nombre, nombre_artista_espacio, descripcion, link });
       const result = await userModel.getOneUser(id);
       result
         ? res.status(200).json(result)
@@ -69,7 +85,9 @@ const userController = {
       const param = req.params.id;
       const result = await userModel.deleteUser(param);
       result
-        ? res.status(200).json({ result: `L'usuària amb ID: ${param} està eliminat` })
+        ? res
+            .status(200)
+            .json({ result: `L'usuària amb ID: ${param} està eliminat` })
         : res.status(500).send("No es va poder esborrar l'usuari seleccionat");
     } catch (error: any) {
       res.status(400).send(error.message);

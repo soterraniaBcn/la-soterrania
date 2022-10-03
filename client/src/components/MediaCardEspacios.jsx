@@ -48,7 +48,7 @@ useEffect(() => {
         item
         style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
       >
-        <Link to="/admin/editarespais">
+        <Link to="/admin/editarespais" style={{textDecoration: "none"}} >
           <Button
             variant="contained"
             style={{
