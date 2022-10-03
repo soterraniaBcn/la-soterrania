@@ -12,8 +12,8 @@ export default function Artistas() {
     
         <MediaCardArtistas />
         </Grid>
-      </Grid>
         <FooterAzul />
+      </Grid>
     </>
   );
 }
