@@ -81,7 +81,7 @@ export default function HomePage() {
                     {allSpaces.map((item, i) =>(
                         <div className="teams" key={i}>
 
-                        <Link to={`/espais/${item.id}`} target="_blank" className="profile">
+                        <Link to={`/espais/${item.id}`} className="profile">
                             <h2 className="profile__name">{item.nombre}</h2>
                             <p className="genero">{item.genero}</p>
                             <img src={item.foto} alt="mujer" />
@@ -105,7 +105,7 @@ export default function HomePage() {
 
                        
 
-                        <Link to="/esdeveniments" target="_blank" className="profile">
+                        <Link to="/esdeveniments" className="profile">
                             <h2 className="profile__name">{e.nombre}</h2>
                             <p className="genero">{e.ubicacion}</p>
                             <img src="https://fever.imgix.net/filter/photo/00c8a68e-3d54-11ec-b103-ae6ad6225d20?auto=format" alt="mujer" />

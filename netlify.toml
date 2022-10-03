@@ -17,3 +17,8 @@
 
   [build.environment]
   REACT_APP_BASE_URL = "https://soterrania-api.herokuapp.com"
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
