@@ -43,7 +43,7 @@ export default function DetailEvent() {
         {allEvents.map((e, i) => (
           <div key={i}>
             <Container ClassName="vh=100">
-              <Card sx={{ display: 'flex', mb:'3rem' }}>
+              <Card sx={{ display: 'flex'}}>
                 <CardMedia
                   component="img"
                   sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
@@ -78,7 +78,7 @@ export default function DetailEvent() {
                   </CardContent>
                 </Box>
               </Card>
-              <Card sx={{ display: 'flex' }}>
+              <Card sx={{ display: 'flex', mb:'3rem'  }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography component="div" variant="h5" sx={{ ml: 2 }}>
