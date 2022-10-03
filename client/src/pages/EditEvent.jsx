@@ -1,14 +1,7 @@
 import React from "react";
-import {
-  Grid,
-  FormGroup,
-  TextareaAutosize,
-  Box,
-  Button,
-} from "@mui/material";
-import Header from "../components/Header";
-import FooterRosa from "../components/FooterRosa"
-
+import { Grid, FormGroup, TextareaAutosize, Box, Button } from "@mui/material";
+import HeaderBlue from "../components/HeaderBlue";
+import FooterRosa from "../components/FooterRosa";
 
 export default function EditEvent() {
   return (
@@ -23,14 +16,14 @@ export default function EditEvent() {
             width: "100%",
           }}
         >
-          <Header />
+          <HeaderBlue />
         </Box>
 
         <Grid
           container
           className="Form-container"
           style={{
-            height:"auto",
+            height: "auto",
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
@@ -133,7 +126,7 @@ export default function EditEvent() {
             </Box>
           </FormGroup>
 
-          <Grid item className="Buttons-row" style={{margin:"2rem 2rem"}} >
+          <Grid item className="Buttons-row" style={{ margin: "2rem 2rem", marginBottom: "3.6rem" }}>
             <Button
               style={{
                 backgroundColor: "#E2A0FF",
@@ -185,8 +178,8 @@ export default function EditEvent() {
             </Button>
           </Grid>
         </Grid>
+        <FooterRosa />
       </Grid>
-      <FooterRosa/>
     </>
   );
 }

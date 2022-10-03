@@ -11,7 +11,6 @@ import About from './pages/About'
 import DetailEvent from './pages/DetailEvent'
 import WaitingRoom from './pages/WaitingRoom'
 import LegalWarning from './pages/LegalWarning'
-import NewPost from './pages/NewPost'
 import EditArtist from './pages/EditArtist'
 import EditSpaces from './pages/EditSpaces'
 import EditEvents from './pages/EditEvent'
@@ -36,7 +35,6 @@ export default function Router() {
         <Route exact path="/admin/perfiladmin" element={<PerfilAdmin />} />
         <Route exact path="/sobrenosaltres" element={<About />} />
         <Route exact path="/events" element={<DetailEvent />} />
-        <Route exact path="/newpost" element={<NewPost />} />
         <Route exact path="/avislegal" element={<LegalWarning />} />
         <Route exact path="/elmeuperfilartista" element={<ElMeuPerfilArtista />} />
         <Route exact path="/elmeuperfilespai" element={<ElMeuPerfilEspai />} />

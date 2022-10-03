@@ -34,8 +34,8 @@ export default function DetailEvent() {
           alignItems: 'center',
         }}
       >
-        <Link to="/newpost">
-          <Button variant="contained">Crear Nuevo Evento</Button>
+        <Link to="/admin/editaresdeveniments">
+          <Button variant="contained" style={{backgroundColor:"#E2A0FF", color:"#1446A0", borderRadius:"40px", height:"2rem", fontWeight:"bold"}}>Crear Nuevo Evento</Button>
         </Link>
       </Box>
 
