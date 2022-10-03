@@ -1,24 +1,10 @@
 
-import { Grid, Box, Container } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import React, { useEffect, useState } from 'react';
-//import flecha2 from '../imagenes/flecha2.png';
 import flecha from '../imagenes/flecha.png';
-import escenario from '../imagenes/escenario.png';
-import evento2 from '../imagenes/evento2.png';
-import espacio from '../imagenes/espacio.png';
-import espai from '../imagenes/espai.png';
-//import evento from '../imagenes/evento.png';
-import mujer from '../imagenes/mujer.png';
-//import persona2 from '../imagenes/persona2.png';
-import señor from '../imagenes/señor.png';
-// import tambor from '../imagenes/tambor.png';
-// import trompeta from '../imagenes/trompeta.png';
-import usuario1 from '../imagenes/usuario1.png';
-// import violin from '../imagenes/violin.png';
 import Footer from './FooterAzul'
 import Header from "./Header.jsx";
 import { Link } from "react-router-dom";
-//import { height } from "@mui/system";
 import GetArtists from '../services/getArtists'
 import GetSpaces from '../services/getSpaces'
 import GetEvent from '../services/getInfo'
