@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react'
 import { Container, Box, Grid, Button } from '@mui/material'
 import { Link } from 'react-router-dom'
 import GetEvent from '../services/getInfo'
+import HeaderPestBlue from "../components/HeaderPestBlue";
+import FooterAzul from "../components/FooterAzul";
 
 export default function DetailEvent() {
   const [allEvents, setAllEvents] = useState([])
@@ -18,10 +20,14 @@ export default function DetailEvent() {
   }, [])
 
   return (
-    <div style={{ backgroundColor: 'pink' }}>
+    <>
+    <Grid container style={{height:'10rem', backgroundColor:"#1446A0", width:"100vw"}}>
+    <HeaderPestBlue/>
+    </Grid>
+    <div style={{ backgroundColor: '#1446A0' }}>
       <Box
         style={{
-          backgroundColor: 'pink',
+          backgroundColor: '#1446A0',
           height: '90px',
           display: 'flex',
           justifyContent: 'center',
@@ -137,5 +143,7 @@ export default function DetailEvent() {
         ))}
       </div>
     </div>
+    <FooterAzul />
+    </>
   )
 }
