@@ -101,10 +101,7 @@ export default function Header() {
           
         </Toolbar>
       </AppBar>
-     
-        <DrawerHeader />
-        
-   
+
       <Drawer
         sx={{
           width: drawerWidth,
@@ -117,6 +114,7 @@ export default function Header() {
         anchor="right"
         open={open}
       >
+        
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}

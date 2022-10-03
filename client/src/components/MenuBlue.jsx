@@ -1,7 +1,8 @@
 import React from "react";
 import { Grid } from "@mui/material";
+import { Link } from 'react-router-dom';
 
-export default function Menu() {
+export default function MenuBlue() {
   return (
     <Grid
       container
@@ -27,10 +28,10 @@ export default function Menu() {
           width: "50vw",
         }}
       >
-        <a className="links-menu" href="/sobrenosaltres" style={{ color:'#1446A0'}}>Sobre nosaltres</a>
-        <a className="links-menu" href="/artistes" style={{ color:'#1446A0'}}>Artistes</a>
-        <a className="links-menu" href="/espais" style={{ color:'#1446A0'}}>Espais</a>
-        <a className="links-menu" href="/events" style={{ color:'#1446A0'}}>Esdeveniments</a>
+        <Link to="/sobrenosaltres" style={{ color:'#1446A0'}} className="links-menu-blue" >Sobre nosaltres</Link>
+        <Link to="/artistes" style={{ color:'#1446A0'}} className="links-menu-blue" >Artistes</Link>
+        <Link to="/espais" style={{ color:'#1446A0'}} className="links-menu-blue" >Espais</Link>
+        <Link to="/events" style={{ color:'#1446A0'}} className="links-menu-blue" >Esdeveniments</Link>
       </Grid>
     </Grid>
   );
