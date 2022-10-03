@@ -9,7 +9,7 @@ export const encryptPassword = async (
 ) => {
   try {
     if (!req.body.password) {
-      res.send("Falta la contrasenya");
+      res.status(400).send("Falta la contrasenya");
     } else {
       const saltRounds = 10;
       const passwordHash = await bcrypt.hash(req.body.password, saltRounds);
@@ -30,7 +30,7 @@ const validateUser = async (
     const { email, password } = req.body;
 
     if (!email || !password) {
-      throw new Error("El correu electrònic o la contrasenya no existeixen");
+      throw new Error("Falta el correu electrònic o la contrasenya");
     }
 
     const result = await userModel.getUserByEmail(email);
