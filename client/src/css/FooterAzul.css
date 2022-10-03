@@ -4,7 +4,7 @@
   justify-content: space-between;
   flex-direction: row;
   position: relative;
-  bottom: 0;
+  bottom: 0 !important;
   background-color: #1446a0 !important;
 }
 
@@ -28,6 +28,7 @@
   flex-direction: row;
   justify-content: center !important;
   padding-left: 10px !important;
+  padding-top: 10px !important;
 }
 
 .link-divAzul {

@@ -6,7 +6,7 @@ import {
   Box,
   Button,
 } from "@mui/material";
-import Header from "../components/Header";
+import HeaderBlue from "../components/HeaderBlue";
 import FooterRosa from "../components/FooterRosa"
 
 
@@ -25,7 +25,7 @@ export default function EditArtist() {
       
           }}
         >
-          <Header />
+          <HeaderBlue />
         </Box>
 
         <Grid
@@ -34,8 +34,8 @@ export default function EditArtist() {
           style={{
             justifyContent: "center",
             flexDirection: "column",
-            alignItems: "center",
-          }}
+            alignItems: "center"
+                    }}
         >
           <FormGroup
             style={{
@@ -123,7 +123,7 @@ export default function EditArtist() {
             </Box>
           </FormGroup>
 
-          <Grid item className="Buttons-row"style={{margin:"2rem 2rem"}}>
+          <Grid item className="Buttons-row"style={{margin:"2rem 2rem", marginBottom: "3.7rem"}}>
             <Button
               style={{
                 backgroundColor: "#E2A0FF",
@@ -175,8 +175,10 @@ export default function EditArtist() {
             </Button>
           </Grid>
         </Grid>
+        
       </Grid>
       <FooterRosa/>
+      
     </>
   );
 }

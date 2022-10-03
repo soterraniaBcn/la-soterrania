@@ -72,9 +72,9 @@ export default function HeaderBlue() {
 
   return (
 
-    <Grid container style={{position:'sticky'}}>
+    <Grid container>
       <CssBaseline />
-      <AppBar className="navbar" elevation={0} open={open} sx={{ mb: 5 }}>
+      <AppBar className="navbar" elevation={0} open={open} sx={{ mb: 5 }} style={{position:'sticky'}}>
 
         <Toolbar style={{ justifyContent:'space-between'}}>
         <Link to="/homepage">

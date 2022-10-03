@@ -40,7 +40,7 @@ export default function Router() {
         <Route exact path="/avislegal" element={<LegalWarning />} />
         <Route exact path="/elmeuperfilartista" element={<ElMeuPerfilArtista />} />
         <Route exact path="/elmeuperfilespai" element={<ElMeuPerfilEspai />} />
-        <Route exact path="/admin/editarartistes" element={<EditArtist />} />
+        <Route exact path="/admin/editarartista" element={<EditArtist />} />
         <Route exact path="/admin/editarespais" element={<EditSpaces />} />
         <Route exact path="/admin/editaresdeveniments" element={<EditEvents />} />
         <Route exact path="/artistes" element={<Artistas />} />

@@ -1,34 +1,37 @@
-import Typography from '@mui/material/Typography'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Card from '@mui/material/Card'
+import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Card from "@mui/material/Card";
 import React, { useState, useEffect } from "react";
-import { Container, Box, Grid, Button } from '@mui/material'
-import GetArtistById from '../services/getArtistById'
-import { useParams } from 'react-router-dom'
-import imagenmusical from '../imagenes/imagenmusical.webp'
-import FooterRosa from '../components/FooterRosa';
-
-
+import { Container, Box, Grid, Button } from "@mui/material";
+import GetArtistById from "../services/getArtistById";
+import { useParams, Link } from "react-router-dom";
+import imagenmusical from "../imagenes/imagenmusical.webp";
+import FooterAzul from "../components/FooterAzul";
+import HeaderPestBlue from "../components/HeaderPestBlue";
 
 export default function DetailArtista() {
-  const {id}=useParams()
-  const [oneArtist, setOneArtist] = useState({})
+  const { id } = useParams();
+  const [oneArtist, setOneArtist] = useState({});
 
   useEffect(() => {
     GetArtistById.getOne(id).then((res) => {
-      let artist = res
-      setOneArtist(artist)
-    })
-  }, [])
+      let artist = res;
+      setOneArtist(artist);
+    });
+  }, []);
 
   return (
-    <div style={{backgroundColor:"pink"}}>  
-    <Box style={{backgroundColor:"pink", height:'90px' }}>
-      
-      </Box>  
-      <Container ClassName="vh=100" >
-        <Card sx={{ display: 'flex'}}>
+    <div style={{ backgroundColor: "#1446A0" }}>
+      <Grid
+        container
+        style={{ height: "10rem", backgroundColor: "#1446A0", width: "100vw" }}
+      >
+        <HeaderPestBlue />
+      </Grid>
+      <Box style={{ backgroundColor: "#1446A0", height: "90px" }}></Box>
+      <Container ClassName="vh=100">
+        <Card sx={{ display: "flex" }}>
           <CardMedia
             component="img"
             sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
@@ -84,12 +87,14 @@ export default function DetailArtista() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: "1%" }}>
+                      style={{ marginRight: "1%" }}
+                    >
                       Web:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}>
+                        style={{ marginLeft: "0.3rem" }}
+                      >
                         {oneArtist.web}
                       </Typography>
                     </Typography>
@@ -104,11 +109,12 @@ export default function DetailArtista() {
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                    Gènere:
+                      Gènere:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}>
+                        style={{ marginLeft: "0.3rem" }}
+                      >
                         {oneArtist.genero}
                       </Typography>
                     </Typography>
@@ -140,7 +146,7 @@ export default function DetailArtista() {
                     }}
                   >
                     <Typography variant="p" style={{ marginRight: "1%" }}>
-                    Número de telèfon:
+                      Número de telèfon:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -174,7 +180,7 @@ export default function DetailArtista() {
                         color="text.secondary"
                         style={{ marginLeft: "0.3rem" }}
                       >
-                       {oneArtist.redsocial1}
+                        {oneArtist.redsocial1}
                       </Typography>
                     </Typography>
                     <Typography
@@ -201,15 +207,19 @@ export default function DetailArtista() {
                     gap: "4%",
                   }}
                 >
-                  <Button>editar</Button>
-                  <Button style={{ color: "red" }}>eliminar</Button>
+                  <Button style={{ backgroundColor: "#1446A0" }}>
+                    <Link to="/admin/editarartista" style={{ color: "white", textDecoration: "none", fontWeight: "bold" }}>editar</Link>
+                  </Button>
+                  <Button style={{ backgroundColor: "red" }}>
+                    <Link to="/admin/editarartista" style={{ color: "white", textDecoration: "none", fontWeight: "bold" }}>eliminar</Link>
+                  </Button>
                 </Box>
               </Grid>
             </CardContent>
           </Box>
         </Card>
       </Container>
-      <FooterRosa />
+      <FooterAzul />
     </div>
   );
 }

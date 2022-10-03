@@ -1,5 +1,5 @@
 import React from "react";
-import {  Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import MediaCardArtistas from "../components/MediaCardArtistas";
 import FooterAzul from "../components/FooterAzul";
 
@@ -12,8 +12,9 @@ export default function Artistas() {
     
         <MediaCardArtistas />
         </Grid>
-      </Grid>
+      
         <FooterAzul />
+        </Grid>
     </>
   );
 }
