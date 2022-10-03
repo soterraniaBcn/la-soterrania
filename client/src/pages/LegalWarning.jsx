@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Typography, Box } from "@mui/material";
-import HeaderPestGris from "../components/HeaderPestGris";
+import HeaderBlue from "../components/HeaderBlue";
 import FooterGris from "../components/FooterGris";
 
 export default function About() {
@@ -17,7 +17,7 @@ export default function About() {
             flexDirection: "column",
           }}
         >
-          <HeaderPestGris />
+          <HeaderBlue />
         </Box>
 
         <Grid
