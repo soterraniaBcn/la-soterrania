@@ -1,10 +1,10 @@
 import React, { useState, useEffect,useMemo,useRef } from "react";
 import '../css/MediaCard.css'
 import GetArtists from '../services/getArtists'
-import {Container, Grid} from '@mui/material'
+import {Grid} from '@mui/material'
 import SearchBar from './SearchBar'
 import { Link } from "react-router-dom";
-import HeadPestBlue from "../components/HeaderPestBlue";
+import HeaderPestBlue from "../components/HeaderPestBlue";
 
 
 
@@ -43,7 +43,7 @@ export default function MediaCard() {
    return (
  <>
    <Grid container style={{height:'10rem', backgroundColor:"#1446A0", width:"100vw"}}>
-    <HeadPestBlue/>
+    <HeaderPestBlue/>
     <Grid item style={{marginTop:"-3rem",display:"flex", alignItems:"center", position:'sticky'}}>
     <SearchBar search={search} searchInput={searchInput} handleSearch={handleSearch}/>
     </Grid>
