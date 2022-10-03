@@ -131,7 +131,7 @@ export default function HeaderPestBlue() {
            <a className='links-menu-hamburger'  href='/sobrenosaltres'>Sobre Nosaltres</a>
            </ListItemButton>
            <ListItemButton>
-            <a className='links-menu-hamburger'   href='/elmeuperfilartista'> El meu perfil</a>
+            <a className='links-menu-hamburger'   href='/admin/perfiladmin'> El meu perfil</a>
            </ListItemButton>
            <ListItemButton>
             <a className='links-menu-hamburger'  href='/artistes'> Artistes</a>

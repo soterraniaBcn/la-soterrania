@@ -34,7 +34,7 @@ export default function DetailEvent() {
           alignItems: 'center',
         }}
       >
-        <Link to="/admin/editaresdeveniments">
+        <Link to="/admin/editaresdeveniments" style={{textDecoration: "none"}}>
           <Button variant="contained" style={{backgroundColor:"#E2A0FF", color:"#1446A0", borderRadius:"40px", height:"2rem", fontWeight:"bold"}}>Afegir nou esdeveniment</Button>
         </Link>
       </Box>
@@ -132,8 +132,10 @@ export default function DetailEvent() {
                         gap: '4%',
                       }}
                     >
+                      <Link to="/admin/editaresdeveniments" style={{textDecoration: "none"}}>
                       <Button>editar</Button>
                       <Button style={{ color: 'red' }}>eliminar</Button>
+                      </Link>
                     </Box>
                   </CardContent>
                 </Box>
