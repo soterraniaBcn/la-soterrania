@@ -47,7 +47,7 @@ export default function DetailEvent() {
                 <CardMedia
                   component="img"
                   sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
-                  src={e.foto}
+                  src="https://fever.imgix.net/filter/photo/00c8a68e-3d54-11ec-b103-ae6ad6225d20?auto=format"
                   alt="Live from space album cover"
                 />
                 <Box

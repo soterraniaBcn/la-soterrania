@@ -108,7 +108,7 @@ export default function HomePage() {
                         <a href="/esdeveniments" target="_blank" className="profile">
                             <h2 className="profile__name">{e.nombre}</h2>
                             <p className="genero">{e.ubicacion}</p>
-                            <img src={e.foto} alt="mujer" />
+                            <img src="https://fever.imgix.net/filter/photo/00c8a68e-3d54-11ec-b103-ae6ad6225d20?auto=format" alt="mujer" />
                         </a>
 
                               </div> ))}
