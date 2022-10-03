@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from "react";
 import {
   Grid,
@@ -10,7 +9,8 @@ import {
   Box,
   Button,
 } from "@mui/material";
-import HeaderPestGris from "../components/HeaderPestGris";
+import HeaderBlue from "../components/HeaderBlue";
+import { useNavigate } from "react-router-dom";
 import FooterGris from "../components/FooterGris";
 import { authService } from "../services/authService";
 
@@ -55,7 +55,7 @@ export default function Register() {
           alignItems: "center",
         }}
       >
-        <HeaderPestGris />
+        <HeaderBlue />
         <Grid
           item
           xs={10}

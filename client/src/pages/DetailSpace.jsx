@@ -4,7 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
 import React, { useEffect, useState } from "react";
 import { Container, Box, Grid, Button } from "@mui/material";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import GetSpaceById from "../services/getSpaceById";
 import FooterAzul from "../components/FooterAzul";
 import HeaderPestBlue from "../components/HeaderPestBlue";
@@ -262,8 +262,10 @@ export default function DetailSpace() {
                     gap: "4%",
                   }}
                 >
+                  <Link to="/admin/editarespais" style={{textDecoration: "none"}}>
                   <Button>editar</Button>
                   <Button style={{ color: "red" }}>eliminar</Button>
+                  </Link>
                 </Box>
               </Grid>
             </CardContent>

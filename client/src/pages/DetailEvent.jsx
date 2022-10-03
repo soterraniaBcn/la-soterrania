@@ -34,7 +34,7 @@ export default function DetailEvent() {
           alignItems: 'center',
         }}
       >
-        <Link to="/admin/editaresdeveniments">
+        <Link to="/admin/editaresdeveniments" style={{textDecoration: "none"}}>
           <Button variant="contained" style={{backgroundColor:"#E2A0FF", color:"#1446A0", borderRadius:"40px", height:"2rem", fontWeight:"bold"}}>Afegir nou esdeveniment</Button>
         </Link>
       </Box>
@@ -47,7 +47,7 @@ export default function DetailEvent() {
                 <CardMedia
                   component="img"
                   sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 3 }}
-                  src={e.foto}
+                  src="https://fever.imgix.net/filter/photo/00c8a68e-3d54-11ec-b103-ae6ad6225d20?auto=format"
                   alt="Live from space album cover"
                 />
                 <Box
@@ -132,8 +132,10 @@ export default function DetailEvent() {
                         gap: '4%',
                       }}
                     >
+                      <Link to="/admin/editaresdeveniments" style={{textDecoration: "none"}}>
                       <Button>editar</Button>
                       <Button style={{ color: 'red' }}>eliminar</Button>
+                      </Link>
                     </Box>
                   </CardContent>
                 </Box>

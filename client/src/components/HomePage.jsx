@@ -58,7 +58,7 @@ export default function HomePage() {
                     <Grid container className="auto-grid" role="list">
                         {allArtists.map((item, i) => (
                             <div className="Artists3" key={i}>
-                                <a href="" target="_blank" className="profile">
+                                <a href={`/artistes/${item.id}`} target="_blank" className="profile">
                                     <h2 className="profile__name">{item.nombre}</h2>
                                     <p className="genero">{item.genero}</p>
                                     <img src={item.foto} alt="mujer" />
@@ -81,7 +81,7 @@ export default function HomePage() {
                     {allSpaces.map((item, i) =>(
                         <div className="teams" key={i}>
 
-                        <a href="" target="_blank" className="profile">
+                        <a href={`/espais/${item.id}`} target="_blank" className="profile">
                             <h2 className="profile__name">{item.nombre}</h2>
                             <p className="genero">{item.genero}</p>
                             <img src={item.foto} alt="mujer" />
@@ -105,15 +105,15 @@ export default function HomePage() {
 
                        
 
-                        <a href="" target="_blank" className="profile">
+                        <a href="/esdeveniments" target="_blank" className="profile">
                             <h2 className="profile__name">{e.nombre}</h2>
-                            <p className="genero">{e.genero}</p>
-                            <img src={e.foto} alt="mujer" />
+                            <p className="genero">{e.ubicacion}</p>
+                            <img src="https://fever.imgix.net/filter/photo/00c8a68e-3d54-11ec-b103-ae6ad6225d20?auto=format" alt="mujer" />
                         </a>
 
                               </div> ))}
                         
-                        <Link to="/events">
+                        <Link to="/esdeveniments">
                             <img src={flecha} alt="flecha" style={{ width: "5rem", height: "5rem", marginTop: "9rem", marginLeft: "3rem" }} />
                         </Link>
                     </Grid>
