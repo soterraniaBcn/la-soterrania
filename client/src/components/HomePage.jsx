@@ -3,7 +3,7 @@ import { Grid, Box } from "@mui/material";
 import React, { useEffect, useState } from 'react';
 import flecha from '../imagenes/flecha.png';
 import Footer from './FooterAzul'
-import Header from "./Header.jsx";
+import HeaderPestBlue from "./HeaderPestBlue.jsx";
 import { Link } from "react-router-dom";
 import GetArtists from '../services/getArtists'
 import GetSpaces from '../services/getSpaces'
@@ -44,7 +44,7 @@ export default function HomePage() {
         <>
 
             <Box style={{ height: "10rem", width: "100vw", backgroundColor: "#1446A0" }}>
-                <Header />
+                <HeaderPestBlue/>
             </Box>
 
 
@@ -53,7 +53,7 @@ export default function HomePage() {
 
 
                 <Box className="team" >
-                    <p className="artista" style={{ fontSize: "30px", fontWeight: "bold" }}>Artistas</p>
+                    <p className="artista" style={{ fontSize: "30px", fontWeight: "bold" }}>Artistes</p>
 
                     <Grid container className="auto-grid" role="list">
                         {allArtists.map((item, i) => (
