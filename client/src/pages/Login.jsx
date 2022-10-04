@@ -33,10 +33,10 @@ export default function Login() {
           backgroundColor: "#E2A0FF",
           height: "100vh",
           display: "flex",
-          justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-          marginTop: "-1rem",
+      
+          
         }}
       >
         <HeaderBlue />
@@ -53,10 +53,12 @@ export default function Login() {
             maxHeight: "27rem",
             borderRadius: "1rem",
             border: "5px solid #cdcecf",
-            marginTop: "2rem"
+            marginTop: "3rem"
+      
+
           }}
         >
-          <FormGroup className="form" xs={8}>
+          <FormGroup className="form" xs={10}>
             <p
               style={{
                 fontSize: "2rem",
