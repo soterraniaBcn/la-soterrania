@@ -68,7 +68,8 @@ export default function Login() {
               style={{
                 fontSize: "2rem",
                 display: "flex",
-                justifyContent: "center"
+                justifyContent: "center",
+                position:"fixed"
               }}
             >
               Iniciar sessió
