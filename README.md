@@ -40,5 +40,5 @@
     <li><a href="https://github.com/Nedeltoga">Belen del Tovar</a></li>
     <li><a href="https://github.com/RoseB98">Rosi Blanco</a></li>
     <li><a href="https://github.com/Saracode13">Sara Egea</a></li>
-    <li><a href="https://github.com/Laurawynter">Hillary Segura</a></li>
+    <li><a href="https://github.com/hilla-sb">Hillary Segura</a></li>
 </ul> 
