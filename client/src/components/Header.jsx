@@ -10,8 +10,6 @@ import logo from '../imagenes/logosoteblanco.png';
 import { Link } from 'react-router-dom';
 import Menu from './Menu';
 
-
-
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(

@@ -35,10 +35,10 @@
 ## ✒️ Personas autoras
 
 <ul> 
-    <li><a href="https://github.com/nuria-b">Nuria</a></li> 
+    <li><a href="https://github.com/nuria-b">Nuria Bairun Struz</a></li> 
     <li><a href="https://github.com/madag7">Madai Garcia</a></li>
-    <li><a href="https://github.com/Nedeltoga">Belen</a></li>
-    <li><a href="https://github.com/RoseB98">Rosi</a></li>
-    <li><a href="https://github.com/Saracode13">Sara</a></li>
-    <li><a href="https://github.com/Laurawynter">Hillary Segura</a></li>
+    <li><a href="https://github.com/Nedeltoga">Belen del Tovar</a></li>
+    <li><a href="https://github.com/RoseB98">Rosi Blanco</a></li>
+    <li><a href="https://github.com/Saracode13">Sara Egea</a></li>
+    <li><a href="https://github.com/hilla-sb">Hillary Segura</a></li>
 </ul> 

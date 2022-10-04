@@ -83,7 +83,7 @@ export default function Login() {
 
               <p>Contrasenya:</p>
               <input
-                type="text"
+                type="password"
                 style={{
                   fontSize: "1.2rem",
                   borderRadius: "10px",

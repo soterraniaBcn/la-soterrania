@@ -3,7 +3,7 @@ import { Grid, Box } from "@mui/material";
 import React, { useEffect, useState } from 'react';
 import flecha from '../imagenes/flecha.png';
 import Footer from './FooterAzul'
-import Header from "./Header.jsx";
+import HeaderPestBlue from "./HeaderPestBlue.jsx";
 import { Link } from "react-router-dom";
 import GetArtists from '../services/getArtists'
 import GetSpaces from '../services/getSpaces'
@@ -44,7 +44,7 @@ export default function HomePage() {
         <>
 
             <Box style={{ height: "10rem", width: "100vw", backgroundColor: "#1446A0" }}>
-                <Header />
+                <HeaderPestBlue/>
             </Box>
 
 
@@ -53,16 +53,16 @@ export default function HomePage() {
 
 
                 <Box className="team" >
-                    <p className="artista" style={{ fontSize: "30px", fontWeight: "bold" }}>Artistas</p>
+                    <p className="artista" style={{ fontSize: "30px", fontWeight: "bold" }}>Artistes</p>
 
                     <Grid container className="auto-grid" role="list">
                         {allArtists.map((item, i) => (
                             <div className="Artists3" key={i}>
-                                <a href={`/artistes/${item.id}`} target="_blank" className="profile">
+                                <Link to={`/artistes/${item.id}`}className="profile">
                                     <h2 className="profile__name">{item.nombre}</h2>
                                     <p className="genero">{item.genero}</p>
                                     <img src={item.foto} alt="mujer" />
-                                </a>
+                                </Link>
                             </div>
                         ))}
 
@@ -81,11 +81,11 @@ export default function HomePage() {
                     {allSpaces.map((item, i) =>(
                         <div className="teams" key={i}>
 
-                        <a href={`/espais/${item.id}`} target="_blank" className="profile">
+                        <Link to={`/espais/${item.id}`} className="profile">
                             <h2 className="profile__name">{item.nombre}</h2>
                             <p className="genero">{item.genero}</p>
                             <img src={item.foto} alt="mujer" />
-                        </a>
+                        </Link>
 
                               </div> ))}
                         
@@ -105,11 +105,11 @@ export default function HomePage() {
 
                        
 
-                        <a href="/esdeveniments" target="_blank" className="profile">
+                        <Link to="/esdeveniments" className="profile">
                             <h2 className="profile__name">{e.nombre}</h2>
                             <p className="genero">{e.ubicacion}</p>
                             <img src="https://fever.imgix.net/filter/photo/00c8a68e-3d54-11ec-b103-ae6ad6225d20?auto=format" alt="mujer" />
-                        </a>
+                        </Link>
 
                               </div> ))}
                         
