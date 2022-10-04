@@ -45,7 +45,7 @@ export default function DetailSpace() {
                 variant="p"
                 style={{ marginRight: "1%" }}
               >
-                Tematica
+                Temàtica
                 <Typography
                   variant="p"
                   color="text.secondary"
@@ -61,7 +61,7 @@ export default function DetailSpace() {
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent sx={{ flex: "1 0 auto" }}>
               <Typography component="div" variant="h5" sx={{ ml: 2 }}>
-                Descripción:
+                Descripció:
               </Typography>
               <Typography
                 variant="p"
@@ -86,17 +86,17 @@ export default function DetailSpace() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      Dias y horarios:
+                      Dies i horaris:
                       <Typography
                         variant="p"
                         color="text.secondary"
                         style={{ marginLeft: "0.3rem" }}
                       >
-                        lunes a viernes de las 7:00 a las 7:15
+                        Dilluns a divendres de les 7:00 a les 7:15
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Capacidad:
+                      Aforament:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -106,7 +106,7 @@ export default function DetailSpace() {
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Pagina web:
+                      Web:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -116,7 +116,7 @@ export default function DetailSpace() {
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Equipamiento:
+                      Equipament:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -146,7 +146,7 @@ export default function DetailSpace() {
                       </Typography>
                     </Typography>
                     <Typography component="div" variant="p">
-                      Notas:
+                      Notes:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -173,7 +173,7 @@ export default function DetailSpace() {
                     }}
                   >
                     <Typography variant="p" style={{ marginRight: "1%" }}>
-                      Número telefónico:
+                      Número telèfon:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -187,7 +187,7 @@ export default function DetailSpace() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      E-mail:
+                      Correu electrònic:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -229,7 +229,7 @@ export default function DetailSpace() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      Ubicacion:
+                      Ubicació:
                       <Typography
                         variant="p"
                         color="text.secondary"
@@ -243,13 +243,13 @@ export default function DetailSpace() {
                       variant="p"
                       style={{ marginRight: "1%" }}
                     >
-                      Facil acceso a traves de
+                      Fàcil accés amb
                       <Typography
                         variant="p"
                         color="text.secondary"
                         style={{ marginLeft: "0.3rem" }}
                       >
-                        L3, L1, bicying
+                        L3, L1, bicing
                       </Typography>
                     </Typography>
                   </CardContent>
@@ -263,8 +263,8 @@ export default function DetailSpace() {
                   }}
                 >
                   <Link to="/admin/editarespais" style={{textDecoration: "none"}}>
-                  <Button>editar</Button>
-                  <Button style={{ color: "red" }}>eliminar</Button>
+                  <Button>Editar</Button>
+                  <Button style={{ color: "red" }}>Eliminar</Button>
                   </Link>
                 </Box>
               </Grid>

@@ -81,6 +81,7 @@ export default function Register() {
                 display: "flex",
                 flexDirection: "row",
                 fontFamily: "Consolas",
+            
               }}
             >
               <FormControlLabel
@@ -92,6 +93,7 @@ export default function Register() {
                 value="espai"
                 label="Espai"
                 control={<Radio />}
+                
               />
             </RadioGroup>
             <Grid item>

@@ -82,7 +82,7 @@ export default function DetailEvent() {
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography component="div" variant="h5" sx={{ ml: 2 }}>
-                      Descripción:
+                      Descripció:
                     </Typography>
                     <Typography
                       variant="p"
@@ -99,7 +99,7 @@ export default function DetailEvent() {
                           variant="p"
                           style={{ marginRight: '1%' }}
                         >
-                          Ubicacion:
+                          Ubicació:
                           <Typography
                             variant="p"
                             color="text.secondary"
@@ -113,7 +113,7 @@ export default function DetailEvent() {
                           variant="p"
                           style={{ marginRight: '1%' }}
                         >
-                          Sitio web: 
+                          : 
                           <Typography
                             variant="p"
                             color="text.secondary"
@@ -133,8 +133,8 @@ export default function DetailEvent() {
                       }}
                     >
                       <Link to="/admin/editaresdeveniments" style={{textDecoration: "none"}}>
-                      <Button>editar</Button>
-                      <Button style={{ color: 'red' }}>eliminar</Button>
+                      <Button>Editar</Button>
+                      <Button style={{ color: 'red' }}>Eliminar</Button>
                       </Link>
                     </Box>
                   </CardContent>
