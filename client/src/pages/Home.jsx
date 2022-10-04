@@ -2,8 +2,8 @@ import background5 from '../imagenes/background5.png';
 import { Grid, Button } from "@mui/material";
 import React from 'react';
 import { Link } from "react-router-dom";
-import Header from "./Header.jsx";
-import Footer from "./FooterNegro";
+import Header from "../components/Header.jsx";
+import Footer from "../components/FooterNegro";
 
 
 

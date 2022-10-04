@@ -2,8 +2,8 @@
 import { Grid, Box } from "@mui/material";
 import React, { useEffect, useState } from 'react';
 import flecha from '../imagenes/flecha.png';
-import Footer from './FooterAzul'
-import HeaderPestBlue from "./HeaderPestBlue.jsx";
+import Footer from '../components/FooterAzul'
+import HeaderPestBlue from "../components/HeaderPestBlue.jsx";
 import { Link } from "react-router-dom";
 import GetArtists from '../services/getArtists'
 import GetSpaces from '../services/getSpaces'
