@@ -69,7 +69,8 @@ export default function Login() {
                 fontSize: "2rem",
                 display: "flex",
                 justifyContent: "center",
-                position:"fixed"
+
+              
               }}
             >
               Iniciar sessió
@@ -108,7 +109,7 @@ export default function Login() {
           </FormGroup>
         </Grid>
         <Link to="/homepage" style={{textDecoration:"none"}}>
-          <Button  className="btn-login"
+          <Button
             onClick={handleSubmit}
             style={{
               backgroundColor: "#cdcecf",
@@ -120,7 +121,8 @@ export default function Login() {
               fontSize: "1rem",
               fontWeight: "200",
               border: "2.5px solid grey",
-              marginTop: "-10rem",
+              marginTop: "-5rem"
+            
         
             }}
           >
