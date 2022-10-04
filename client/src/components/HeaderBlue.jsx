@@ -87,7 +87,7 @@ export default function HeaderBlue() {
         sx={{ mb: 5 }}
         style={{ position: 'sticky' }}
       >
-        <Toolbar style={{ justifyContent: 'space-between',width:"100vw" }}>
+        <Toolbar style={{ justifyContent: 'space-between' }}>
           <Link to="/homepage">
             <img
               src={logo}
