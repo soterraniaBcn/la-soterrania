@@ -1,18 +1,25 @@
-import * as React from 'react';
-import { styled, useTheme } from '@mui/material';
-import {Box, Drawer, Grid,Toolbar, CssBaseline, List, IconButton, ListItemButton} from '@mui/material';
-import MuiAppBar from '@mui/material/AppBar';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { useState } from 'react';
-import logo from '../imagenes/logosoteblanco.png';
-import { Link } from 'react-router-dom';
-import MenuBlue from './MenuBlue';
+import * as React from 'react'
+import { styled, useTheme } from '@mui/material'
+import {
+  Box,
+  Drawer,
+  Grid,
+  Toolbar,
+  CssBaseline,
+  List,
+  IconButton,
+  ListItemButton,
+} from '@mui/material'
+import MuiAppBar from '@mui/material/AppBar'
+import MenuIcon from '@mui/icons-material/Menu'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import { useState } from 'react'
+import logo from '../imagenes/logosoteblanco.png'
+import { Link } from 'react-router-dom'
+import MenuBlue from './MenuBlue'
 
-
-
-const drawerWidth = 240;
+const drawerWidth = 240
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -31,7 +38,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
       marginRight: 0,
     }),
   }),
-);
+)
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -48,7 +55,7 @@ const AppBar = styled(MuiAppBar, {
     }),
     marginRight: drawerWidth,
   }),
-}));
+}))
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -56,55 +63,54 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   backgroundColor: '#E2A0FF',
   padding: theme.spacing(0, 1),
   justifyContent: 'flex-start',
-}));
+}))
 
 export default function HeaderBlue() {
-  const theme = useTheme();
-  const [open, setOpen] = useState(false);
+  const theme = useTheme()
+  const [open, setOpen] = useState(false)
 
   const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleDrawerClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
-
     <Grid container>
       <CssBaseline />
-      <AppBar className="navbar" elevation={0} open={open} sx={{ mb: 5 }} style={{position:'sticky'}}>
+      <AppBar
+        className="navbar"
+        elevation={0}
+        open={open}
+        sx={{ mb: 5 }}
+        style={{ position: 'sticky' }}
+      >
+        <Toolbar style={{ justifyContent: 'space-between' }}>
+          <Link to="/homepage">
+            <img
+              src={logo}
+              alt=""
+              style={{ width: '80px', height: 'auto' }}
+            ></img>
+          </Link>
 
-        <Toolbar style={{ justifyContent:'space-between'}}>
-        <Link to="/homepage">
-        <img  src={logo} alt=""
-        style={{width:"80px",
-        height:"auto"}} ></img>
-        </Link>
+          <MenuBlue />
 
-        <MenuBlue />  
-
-  
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
-            sx={{...(open && { display:'none' }) }}
+            sx={{ ...(open && { display: 'none' }) }}
           >
-
             <Box className="menuhamburger">
-
-            <MenuIcon sx={{width:'4rem', height:'4rem'}}/>
-            </Box> 
-         </IconButton>
-          
+              <MenuIcon sx={{ width: '4rem', height: '4rem' }} />
+            </Box>
+          </IconButton>
         </Toolbar>
       </AppBar>
-
-        <DrawerHeader />
-        
-
+      <DrawerHeader />
       <Drawer
         sx={{
           width: drawerWidth,
@@ -119,36 +125,51 @@ export default function HeaderBlue() {
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === 'rtl' ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
           </IconButton>
         </DrawerHeader>
-
         <List>
-          
-           <ListItemButton >
-            <a className='links-menu-hamburger'  href='/avislegal'> Avís Legal</a>
-           </ListItemButton>
-           <ListItemButton>
-           <a className='links-menu-hamburger'  href='/sobrenosaltres'>Sobre Nosaltres</a>
-           </ListItemButton>
-           <ListItemButton>
-            <a className='links-menu-hamburger'   href='/admin/perfiladmin'> El meu perfil</a>
-           </ListItemButton>
-           <ListItemButton>
-            <a className='links-menu-hamburger'  href='/artistes'> Artistes</a>
-           </ListItemButton>
-           <ListItemButton>
-            <a className='links-menu-hamburger'   href='/espais'> Espais</a>
-           </ListItemButton>
-           <ListItemButton>
-            <a className='links-menu-hamburger'  href='/esdeveniments'> Esdeveniments</a>
-           </ListItemButton>
-        
+          <ListItemButton>
+            <a className="links-menu-hamburger" href="/avislegal">
+              {' '}
+              Avís Legal
+            </a>
+          </ListItemButton>
+          <ListItemButton>
+            <a className="links-menu-hamburger" href="/sobrenosaltres">
+              Sobre Nosaltres
+            </a>
+          </ListItemButton>
+          <ListItemButton>
+            <a className="links-menu-hamburger" href="/admin/perfiladmin">
+              {' '}
+              El meu perfil
+            </a>
+          </ListItemButton>
+          <ListItemButton>
+            <a className="links-menu-hamburger" href="/artistes">
+              {' '}
+              Artistes
+            </a>
+          </ListItemButton>
+          <ListItemButton>
+            <a className="links-menu-hamburger" href="/espais">
+              {' '}
+              Espais
+            </a>
+          </ListItemButton>
+          <ListItemButton>
+            <a className="links-menu-hamburger" href="/esdeveniments">
+              {' '}
+              Esdeveniments
+            </a>
+          </ListItemButton>
         </List>
-      
       </Drawer>
-     
-      </Grid>
-  );
+    </Grid>
+  )
 }
-

@@ -1,29 +1,29 @@
-import Router from "express";
-import artistController from "../controllers/artistController";
-import jwt from "../middlewares/jwt";
-import admin from "../middlewares/admin";
+import Router from 'express'
+import artistController from '../controllers/artistController'
+import jwt from '../middlewares/jwt'
+import admin from '../middlewares/admin'
 
-const router = Router();
+const router = Router()
 
-router.get("/artistes", jwt.validateToken, artistController.getAllArtists);
-router.get("/artistes/:id", jwt.validateToken, artistController.getOneArtist);
+router.get('/artistes', jwt.validateToken, artistController.getAllArtists)
+router.get('/artistes/:id', jwt.validateToken, artistController.getOneArtist)
 router.post(
-  "/artistes",
+  '/artistes',
   jwt.validateToken,
   admin.checkRol,
-  artistController.saveArtist
-);
+  artistController.saveArtist,
+)
 router.put(
-  "/artistes/:id",
+  '/artistes/:id',
   jwt.validateToken,
   admin.checkRol,
-  artistController.modifyArtist
-);
+  artistController.modifyArtist,
+)
 router.delete(
-  "/artistes/:id",
+  '/artistes/:id',
   jwt.validateToken,
   admin.checkRol,
-  artistController.deleteArtist
-);
+  artistController.deleteArtist,
+)
 
-export default router;
+export default router

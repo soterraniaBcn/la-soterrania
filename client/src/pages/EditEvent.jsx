@@ -1,7 +1,7 @@
-import React from "react";
-import { Grid, FormGroup, TextareaAutosize, Box, Button } from "@mui/material";
-import HeaderBlue from "../components/HeaderBlue";
-import FooterRosa from "../components/FooterRosa";
+import React from 'react'
+import { Grid, FormGroup, TextareaAutosize, Box, Button } from '@mui/material'
+import HeaderBlue from '../components/HeaderBlue'
+import FooterRosa from '../components/FooterRosa'
 
 export default function EditEvent() {
   return (
@@ -11,9 +11,9 @@ export default function EditEvent() {
           className="header-edit-spaces"
           sx={{
             mt: 0,
-            bgcolor: "#E2A0FF",
-            height: "10rem",
-            width: "100%",
+            bgcolor: '#E2A0FF',
+            height: '10rem',
+            width: '100%',
           }}
         >
           <HeaderBlue />
@@ -23,92 +23,88 @@ export default function EditEvent() {
           container
           className="Form-container"
           style={{
-            height: "auto",
-            justifyContent: "center",
-            flexDirection: "column",
-            alignItems: "center",
+            height: 'auto',
+            justifyContent: 'center',
+            flexDirection: 'column',
+            alignItems: 'center',
           }}
         >
           <FormGroup
             style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginTop: "4rem",
-              backgroundColor: "#00000",
-              width: "22rem",
-              height: "25rem",
-              borderRadius: "1rem",
-              border: "2px solid #ea20ff",
-              lineHeight: "1px",
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginTop: '4rem',
+              backgroundColor: '#00000',
+              width: '22rem',
+              height: '25rem',
+              borderRadius: '1rem',
+              border: '2px solid #ea20ff',
+              lineHeight: '1px',
             }}
           >
-            <Box style={{ lineHeight: "1px" }}>
+            <Box style={{ lineHeight: '1px' }}>
               <p>Nom:</p>
               <input
                 type="text"
                 style={{
-                  width: "auto",
-                  fontSize: "1.1rem",
-                  borderRadius: "1rem",
-                  border: "0.1rem solid grey",
+                  width: 'auto',
+                  fontSize: '1.1rem',
+                  borderRadius: '1rem',
+                  border: '0.1rem solid grey',
                 }}
               />
             </Box>
-            <Box style={{ lineHeight: "1px" }}>
+            <Box style={{ lineHeight: '1px' }}>
               <p>Data:</p>
               <input
                 type="text"
                 style={{
-                  width: "auto",
-                  fontSize: "1.1rem",
-                  borderRadius: "1rem",
-                  border: "0.1rem solid grey",
+                  width: 'auto',
+                  fontSize: '1.1rem',
+                  borderRadius: '1rem',
+                  border: '0.1rem solid grey',
                 }}
               />
             </Box>
-
-            <Box style={{ lineHeight: "1px" }}>
+            <Box style={{ lineHeight: '1px' }}>
               <p>Fotografia (url):</p>
               <input
                 type="text"
                 style={{
-                  color: "#000000",
-                  width: "auto",
-                  fontSize: "1.1rem",
-                  borderRadius: "10px",
-                  border: "1px solid grey",
+                  color: '#000000',
+                  width: 'auto',
+                  fontSize: '1.1rem',
+                  borderRadius: '10px',
+                  border: '1px solid grey',
                 }}
               />
             </Box>
-
-            <Box style={{ lineHeight: "1px" }}>
+            <Box style={{ lineHeight: '1px' }}>
               <p>Ubicació:</p>
               <input
                 type="text"
                 style={{
-                  color: "#000000",
-                  width: "auto",
-                  fontSize: "1.1rem",
-                  borderRadius: "10px",
-                  border: "1px solid grey",
+                  color: '#000000',
+                  width: 'auto',
+                  fontSize: '1.1rem',
+                  borderRadius: '10px',
+                  border: '1px solid grey',
                 }}
               />
             </Box>
-
-            <Box style={{ lineHeight: "1px" }}>
+            <Box style={{ lineHeight: '1px' }}>
               <p>Aforament:</p>
               <input
                 type="text"
                 style={{
-                  fontSize: "1.1rem",
-                  borderRadius: "10px",
-                  border: "1px solid grey",
+                  fontSize: '1.1rem',
+                  borderRadius: '10px',
+                  border: '1px solid grey',
                 }}
               />
             </Box>
-
-            <Box style={{ lineHeight: "1px" }}>
+            <Box style={{ lineHeight: '1px' }}>
               <p>Descripció:</p>
               <TextareaAutosize
                 maxRows={6}
@@ -116,62 +112,64 @@ export default function EditEvent() {
                 placeholder="Escriu una breu descripció..."
                 defaultValue=""
                 style={{
-                  fontFamily: "Consolas",
-                  fontSize: "1.1rem",
+                  fontFamily: 'Consolas',
+                  fontSize: '1.1rem',
                   marginTop: 0,
-                  borderRadius: "10px",
-                  border: "1px solid grey",
+                  borderRadius: '10px',
+                  border: '1px solid grey',
                 }}
               />
             </Box>
           </FormGroup>
-
-          <Grid item className="Buttons-row" style={{ margin: "2rem 2rem", marginBottom: "3.6rem" }}>
+          <Grid
+            item
+            className="Buttons-row"
+            style={{ margin: '2rem 2rem', marginBottom: '3.6rem' }}
+          >
             <Button
               style={{
-                backgroundColor: "#E2A0FF",
-                width: "6rem",
-                height: "1.8rem",
-                borderRadius: "40px",
-                color: "black",
-                textTransform: "capitalize",
-                fontSize: "1rem",
-                fontWeight: "200",
-                border: "2.5px solid grey",
-                margin: "0.8rem",
+                backgroundColor: '#E2A0FF',
+                width: '6rem',
+                height: '1.8rem',
+                borderRadius: '40px',
+                color: 'black',
+                textTransform: 'capitalize',
+                fontSize: '1rem',
+                fontWeight: '200',
+                border: '2.5px solid grey',
+                margin: '0.8rem',
               }}
             >
               Afegir +
             </Button>
-
             <Button
               style={{
-                backgroundColor: "#E2A0FF",
-                width: "6rem",
-                height: "1.8rem",
-                borderRadius: "40px",
-                color: "black",
-                textTransform: "capitalize",
-                fontSize: "1rem",
-                fontWeight: "200",
-                border: "2.5px solid grey",
-                margin: "0.8rem",
+                backgroundColor: '#E2A0FF',
+                width: '6rem',
+                height: '1.8rem',
+                borderRadius: '40px',
+                color: 'black',
+                textTransform: 'capitalize',
+                fontSize: '1rem',
+                fontWeight: '200',
+                border: '2.5px solid grey',
+                margin: '0.8rem',
               }}
             >
               Editar
             </Button>
             <Button
               style={{
-                backgroundColor: "#E2A0FF",
-                width: "6rem",
-                height: "1.8rem",
-                borderRadius: "40px",
-                color: "black",
-                textTransform: "capitalize",
-                fontSize: "1rem",
-                fontWeight: "200",
-                border: "2.5px solid grey",
-                margin: "0.8rem",
+                backgroundColor: '#E2A0FF',
+                width: '6rem',
+                height: '1.8rem',
+                borderRadius: '40px',
+                color: 'black',
+                textTransform: 'capitalize',
+                fontSize: '1rem',
+                fontWeight: '200',
+                border: '2.5px solid grey',
+                margin: '0.8rem',
               }}
             >
               Eliminar
@@ -181,5 +179,5 @@ export default function EditEvent() {
         <FooterRosa />
       </Grid>
     </>
-  );
+  )
 }

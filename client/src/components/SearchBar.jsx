@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
-import {InputBase, Grid} from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
- const Search = styled('div')(({ theme }) => ({
+import * as React from 'react'
+import { styled, alpha } from '@mui/material/styles'
+import { InputBase, Grid } from '@mui/material'
+import SearchIcon from '@mui/icons-material/Search'
+const Search = styled('div')(({ theme }) => ({
   position: 'relative',
-  borderRadius:"5rem",
+  borderRadius: '5rem',
   backgroundColor: alpha(theme.palette.common.black, 0.25),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
-    color: "black"
+    color: 'black',
   },
   marginLeft: 0,
   width: '100%',
@@ -16,7 +16,7 @@ import SearchIcon from '@mui/icons-material/Search';
     marginLeft: theme.spacing(1),
     width: '25rem',
   },
-}));
+}))
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: '100%',
@@ -25,7 +25,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-}));
+}))
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
@@ -41,25 +41,37 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       },
     },
   },
-}));
-export default function SearchBar ({handleSearch}) {
-           return (
-                <Grid container style={{ width:'100vw', display:'flex',justifyContent:"center", alignItems:"center"}}>
-             
-         <Grid item className="search-bar" >
-         <Search style={{position:'sticky'}}  >
-            <SearchIconWrapper >
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase xs={6}
-              placeholder="Search…" 
-              inputProps={{ 'aria-label': 'search' }}
-              onChange={handleSearch}
-              sx={{width: '20rem', height:'auto', borderRadius:"50%", position:'sticky'}}
-           />
-          </Search>
-          </Grid>
-      
+}))
+export default function SearchBar({ handleSearch }) {
+  return (
+    <Grid
+      container
+      style={{
+        width: '100vw',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Grid item className="search-bar">
+        <Search style={{ position: 'sticky' }}>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            xs={6}
+            placeholder="Search…"
+            inputProps={{ 'aria-label': 'search' }}
+            onChange={handleSearch}
+            sx={{
+              width: '20rem',
+              height: 'auto',
+              borderRadius: '50%',
+              position: 'sticky',
+            }}
+          />
+        </Search>
       </Grid>
-  );
+    </Grid>
+  )
 }

@@ -1,20 +1,20 @@
-import React from "react";
-import { Grid, Box, Typography } from "@mui/material";
-import HeaderPestGris from "../components/HeaderPestGris";
-import FooterGris from "../components/FooterGris";
+import React from 'react'
+import { Grid, Box, Typography } from '@mui/material'
+import HeaderPestGris from '../components/HeaderPestGris'
+import FooterGris from '../components/FooterGris'
 
 export default function About() {
   return (
     <>
-      <Grid container style={{ display: "flex", justifyContent: "center" }}>
+      <Grid container style={{ display: 'flex', justifyContent: 'center' }}>
         <Box
           style={{
-            backgroundColor: "#cdcecf",
-            height: "10rem",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
+            backgroundColor: '#cdcecf',
+            height: '10rem',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'column',
           }}
         >
           <HeaderPestGris />
@@ -23,13 +23,13 @@ export default function About() {
         <Grid
           container
           style={{
-            justifyContent: "center",
+            justifyContent: 'center',
             mt: 5,
-            backgroundColor: "white",
-            maxWidth: "80%",
+            backgroundColor: 'white',
+            maxWidth: '80%',
           }}
         >
-          <p style={{ fontSize: "2rem" }}>Sobre nosaltres</p>
+          <p style={{ fontSize: '2rem' }}>Sobre nosaltres</p>
           <Typography
             variant="p"
             color="black"
@@ -65,10 +65,10 @@ export default function About() {
             esdeveniment es genera un video-reportatge documental on s'exposa,
             de forma intercalada, el projecte social existent en l'espai on
             succeeix i les actuacions dels i les artistes participants que
-            passen per l'escenari. Es penja al nostre canal youtube:{" "}
+            passen per l'escenari. Es penja al nostre canal youtube:{' '}
             <a href="https://www.youtube.com/c/lasoterr%C3%A0nia">
               la soterrània
-            </a>{" "}
+            </a>{' '}
             i d'aquesta manera construïm un petit recull dels projectes
             artístics i els socials, sent un mitjà de consulta i creació de
             ponts entre espais i artistes que dinamitzen un teixit social i
@@ -86,8 +86,7 @@ export default function About() {
           </Typography>
         </Grid>
       </Grid>
-
       <FooterGris />
     </>
-  );
+  )
 }

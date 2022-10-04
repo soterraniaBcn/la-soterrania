@@ -1,55 +1,55 @@
-import Typography from "@mui/material/Typography";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Card from "@mui/material/Card";
-import React, { useEffect, useState } from "react";
-import { Container, Box, Grid, Button } from "@mui/material";
-import { Link, useParams } from "react-router-dom";
-import GetSpaceById from "../services/getSpaceById";
-import FooterAzul from "../components/FooterAzul";
-import HeaderPestBlue from "../components/HeaderPestBlue";
+import Typography from '@mui/material/Typography'
+import CardContent from '@mui/material/CardContent'
+import CardMedia from '@mui/material/CardMedia'
+import Card from '@mui/material/Card'
+import React, { useEffect, useState } from 'react'
+import { Container, Box, Grid, Button } from '@mui/material'
+import { Link, useParams } from 'react-router-dom'
+import GetSpaceById from '../services/getSpaceById'
+import FooterAzul from '../components/FooterAzul'
+import HeaderPestBlue from '../components/HeaderPestBlue'
 
 export default function DetailSpace() {
-  const { id } = useParams();
-  const [oneSpace, setOneSpace] = useState({});
+  const { id } = useParams()
+  const [oneSpace, setOneSpace] = useState({})
 
   useEffect(() => {
     GetSpaceById.getOne(id).then((res) => {
-      let artist = res;
-      setOneSpace(artist);
-    });
-  }, []);
+      let artist = res
+      setOneSpace(artist)
+    })
+  }, [])
   return (
-    <div style={{ backgroundColor: "#1446A0", height: "100vh" }}>
+    <div style={{ backgroundColor: '#1446A0', height: '100vh' }}>
       <Grid
         container
-        style={{ height: "10rem", backgroundColor: "#1446A0", width: "100vw" }}
+        style={{ height: '10rem', backgroundColor: '#1446A0', width: '100vw' }}
       >
         <HeaderPestBlue />
       </Grid>
-      <Container style={{ marginBottom: "8rem" }}>
-        <Card sx={{ display: "flex" }}>
+      <Container style={{ marginBottom: '8rem' }}>
+        <Card sx={{ display: 'flex' }}>
           <CardMedia
             component="img"
             sx={{ width: 140, ml: 5, mr: 2, mt: 3, mb: 2 }}
             src={oneSpace.foto}
             alt="Live from space album cover"
           />
-          <Box sx={{ display: "flex", flexDirection: "column" }}>
-            <CardContent sx={{ flex: "1 0 auto", mt: 5 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flex: '1 0 auto', mt: 5 }}>
               <Typography component="div" variant="h5">
                 {oneSpace.nombre}
               </Typography>
               <Typography
                 component="div"
                 variant="p"
-                style={{ marginRight: "1%" }}
+                style={{ marginRight: '1%' }}
               >
                 Temàtica
                 <Typography
                   variant="p"
                   color="text.secondary"
-                  style={{ marginLeft: "0.3rem" }}
+                  style={{ marginLeft: '0.3rem' }}
                 >
                   {oneSpace.genero}
                 </Typography>
@@ -57,9 +57,9 @@ export default function DetailSpace() {
             </CardContent>
           </Box>
         </Card>
-        <Card sx={{ display: "flex", padding: 0 }}>
-          <Box sx={{ display: "flex", flexDirection: "column" }}>
-            <CardContent sx={{ flex: "1 0 auto" }}>
+        <Card sx={{ display: 'flex', padding: 0 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flex: '1 0 auto' }}>
               <Typography component="div" variant="h5" sx={{ ml: 2 }}>
                 Descripció:
               </Typography>
@@ -74,23 +74,23 @@ export default function DetailSpace() {
               <Grid
                 container
                 sx={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  alignItems: "center",
+                  display: 'flex',
+                  justifyContent: 'space-around',
+                  alignItems: 'center',
                 }}
               >
                 <Grid item md={6}>
-                  <CardContent sx={{ flex: "1 0 auto" }}>
+                  <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: "1%" }}
+                      style={{ marginRight: '1%' }}
                     >
                       Dies i horaris:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         Dilluns a divendres de les 7:00 a les 7:15
                       </Typography>
@@ -100,7 +100,7 @@ export default function DetailSpace() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.capacidad}
                       </Typography>
@@ -110,7 +110,7 @@ export default function DetailSpace() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.web}
                       </Typography>
@@ -120,7 +120,7 @@ export default function DetailSpace() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.instrumentacion}
                       </Typography>
@@ -130,7 +130,7 @@ export default function DetailSpace() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.ltbfrendly}
                       </Typography>
@@ -140,7 +140,7 @@ export default function DetailSpace() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.petfrendly}
                       </Typography>
@@ -150,7 +150,7 @@ export default function DetailSpace() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.notas}
                       </Typography>
@@ -161,15 +161,15 @@ export default function DetailSpace() {
                   item
                   md={6}
                   sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    flexDirection: "column",
-                    alignItems: "center",
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    alignItems: 'center',
                   }}
                 >
                   <CardContent
                     sx={{
-                      flex: "1 0 auto",
+                      flex: '1 0 auto',
                     }}
                   >
                     <Typography variant="p" style={{ marginRight: "1%" }}>
@@ -177,7 +177,7 @@ export default function DetailSpace() {
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.telefono1}
                       </Typography>
@@ -185,13 +185,13 @@ export default function DetailSpace() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: "1%" }}
+                      style={{ marginRight: '1%' }}
                     >
                       Correu electrònic:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.email1}
                       </Typography>
@@ -199,13 +199,13 @@ export default function DetailSpace() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: "1%" }}
+                      style={{ marginRight: '1%' }}
                     >
                       Instagram:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.redsocial1}
                       </Typography>
@@ -213,13 +213,13 @@ export default function DetailSpace() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: "1%" }}
+                      style={{ marginRight: '1%' }}
                     >
                       Facebook:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.redsocial2}
                       </Typography>
@@ -227,13 +227,13 @@ export default function DetailSpace() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: "1%" }}
+                      style={{ marginRight: '1%' }}
                     >
                       Ubicació:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         {oneSpace.ubicacion}
                       </Typography>
@@ -241,13 +241,13 @@ export default function DetailSpace() {
                     <Typography
                       component="div"
                       variant="p"
-                      style={{ marginRight: "1%" }}
+                      style={{ marginRight: '1%' }}
                     >
-                      Fàcil accés amb
+                      Fàcil accés:
                       <Typography
                         variant="p"
                         color="text.secondary"
-                        style={{ marginLeft: "0.3rem" }}
+                        style={{ marginLeft: '0.3rem' }}
                       >
                         L3, L1, bicing
                       </Typography>
@@ -256,10 +256,10 @@ export default function DetailSpace() {
                 </Grid>
                 <Box
                   style={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "end",
-                    gap: "4%",
+                    width: '100%',
+                    display: 'flex',
+                    justifyContent: 'end',
+                    gap: '4%',
                   }}
                 >
                   <Link to="/admin/editarespais" style={{textDecoration: "none"}}>
@@ -274,5 +274,5 @@ export default function DetailSpace() {
       </Container>
       <FooterAzul />
     </div>
-  );
+  )
 }
