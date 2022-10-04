@@ -33,13 +33,15 @@ export default function Login() {
           backgroundColor: "#E2A0FF",
           height: "100vh",
           display: "flex",
+          justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-      
-          
+          marginTop: 0,
+        
         }}
       >
         <HeaderBlue />
+        
         <Grid
           item
           xs={10}
@@ -53,7 +55,6 @@ export default function Login() {
             maxHeight: "27rem",
             borderRadius: "1rem",
             border: "5px solid #cdcecf",
-            marginTop: "3rem"
       
 
           }}
