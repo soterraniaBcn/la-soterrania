@@ -1,26 +1,26 @@
-import { Request, Response } from "express";
-import artistModel from "../model/artistModel";
-import { iArtist } from "../model/interface/iArtist";
+import { Request, Response } from 'express'
+import artistModel from '../model/artistModel'
+import { iArtist } from '../model/interface/iArtist'
 
 const artistController = {
   getAllArtists: async (req: Request, res: Response) => {
     try {
-      const result: any = await artistModel.getAllArtists();
+      const result: any = await artistModel.getAllArtists()
       result
         ? res.status(200).json(result)
-        : res.status(500).send("Hi ha hagut un error fent l'obtenció de dades");
-    } catch (error: any) {
-      res.status(400).send(error.message);
+        : res.status(500).send("Hi ha hagut un error fent l'obtenció de dades")
+    } catch (error) {
+      res.status(400).send(error.message)
     }
   },
 
   getOneArtist: async (req: Request, res: Response) => {
     try {
-      const param = req.params.id;
-      const artist: any = await artistModel.getOneArtist(param);
-      res.json(artist);
-    } catch (error: any) {
-      res.status(400).send(error.message);
+      const param = req.params.id
+      const artist: any = await artistModel.getOneArtist(param)
+      res.json(artist)
+    } catch (error) {
+      res.status(400).send(error.message)
     }
   },
 
@@ -44,7 +44,7 @@ const artistController = {
         notas,
         id_usuaria,
         id_ciudad,
-      }: iArtist = req.body;
+      }: iArtist = req.body
 
       if (
         !nombre ||
@@ -60,9 +60,9 @@ const artistController = {
         res
           .status(400)
           .send(
-            "El camps nom, imatge, descripció, gènere musical, telèfon1, email, web, id_usuaria, id_ciudad són obligatoris"
-          );
-        return;
+            'El camps nom, imatge, descripció, gènere musical, telèfon1, email, web, id_usuaria, id_ciudad són obligatoris',
+          )
+        return
       }
 
       const result = await artistModel.saveArtist({
@@ -83,12 +83,12 @@ const artistController = {
         notas,
         id_usuaria,
         id_ciudad,
-      });
+      })
       result
         ? res.status(200).json({ result: result })
-        : res.status(500).send("No s'ha pogut crear una nova usuària");
-    } catch (error: any) {
-      res.status(400).send(error.message);
+        : res.status(500).send("No s'ha pogut crear una nova usuària")
+    } catch (error) {
+      res.status(400).send(error.message)
     }
   },
 
@@ -113,7 +113,7 @@ const artistController = {
         id_usuaria,
         id_ciudad,
         id,
-      }: iArtist = req.body;
+      }: iArtist = req.body
 
       await artistModel.modifyArtist({
         estado,
@@ -134,29 +134,29 @@ const artistController = {
         id_usuaria,
         id_ciudad,
         id,
-      });
+      })
 
-      const result = await artistModel.getOneArtist(id);
+      const result = await artistModel.getOneArtist(id)
 
       result
         ? res.status(201).json(result)
-        : res.status(500).send("No s'ha pogut modificar l'usuària");
-    } catch (error: any) {
-      res.status(400).send(error.message);
+        : res.status(500).send("No s'ha pogut modificar l'usuària")
+    } catch (error) {
+      res.status(400).send(error.message)
     }
   },
   deleteArtist: async (req: Request, res: Response) => {
     try {
-      const param = req.params.id;
-      const result = await artistModel.deleteArtist(param);
+      const param = req.params.id
+      const result = await artistModel.deleteArtist(param)
       result
         ? res
             .status(201)
             .json({ result: `L'artista amb ID: ${param} està eliminat` })
-        : res.status(500).send("No s'ha pogut borrar l'artista seleccionada");
-    } catch (error: any) {
-      res.status(400).send(error.message);
+        : res.status(500).send("No s'ha pogut borrar l'artista seleccionada")
+    } catch (error) {
+      res.status(400).send(error.message)
     }
   },
-};
-export default artistController;
+}
+export default artistController

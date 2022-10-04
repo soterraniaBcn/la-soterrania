@@ -95,7 +95,7 @@ export default function Login() {
             <Box style={{ lineHeight: "1px", fontSize: "0.8rem" }}>
               <p>Encara no tens compte? </p>
               <p>Pots enregistrar-te</p>
-              <Link to="/register">aquí</Link>
+              <Link to="/register" style={{textDecoration:"none"}}>aquí</Link>
             </Box>
           </FormGroup>
         </Grid>

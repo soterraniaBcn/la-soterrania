@@ -1,35 +1,34 @@
-import React from "react";
-import { Grid, Typography, Box } from "@mui/material";
-import HeaderBlue from "../components/HeaderBlue";
-import FooterGris from "../components/FooterGris";
+import React from 'react'
+import { Grid, Typography, Box } from '@mui/material'
+import HeaderBlue from '../components/HeaderBlue'
+import FooterGris from '../components/FooterGris'
 
 export default function About() {
   return (
     <>
-      <Grid container style={{ display: "flex", justifyContent: "center" }}>
+      <Grid container style={{ display: 'flex', justifyContent: 'center' }}>
         <Box
           style={{
-            backgroundColor: "#cdcecf",
-            height: "10rem",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
+            backgroundColor: '#cdcecf',
+            height: '10rem',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'column',
           }}
         >
           <HeaderBlue />
         </Box>
-
         <Grid
           container
           style={{
-            justifyContent: "center",
+            justifyContent: 'center',
             mt: 5,
-            backgroundColor: "white",
-            maxWidth: "80%",
+            backgroundColor: 'white',
+            maxWidth: '80%',
           }}
         >
-          <p style={{ fontSize: "2rem" }}>Avís legal</p>
+          <p style={{ fontSize: '2rem' }}>Avís legal</p>
           <Typography
             variant="p"
             color="black"
@@ -51,7 +50,7 @@ export default function About() {
             <Typography
               component="div"
               variant="h5"
-              style={{ marginTop: "20px", marginBotton: "10px" }}
+              style={{ marginTop: '20px', marginBotton: '10px' }}
             >
               Objecte
             </Typography>
@@ -114,7 +113,7 @@ export default function About() {
             <Typography
               component="div"
               variant="h5"
-              style={{ marginTop: "20px", marginBotton: "10px" }}
+              style={{ marginTop: '20px', marginBotton: '10px' }}
             >
               Propietat Intel·lectual i Industrial
             </Typography>
@@ -152,7 +151,7 @@ export default function About() {
             <Typography
               component="div"
               variant="h5"
-              style={{ marginTop: "20px", marginBotton: "10px" }}
+              style={{ marginTop: '20px', marginBotton: '10px' }}
             >
               Veracitat de la Informació
             </Typography>
@@ -178,7 +177,7 @@ export default function About() {
             <Typography
               component="div"
               variant="h5"
-              style={{ marginTop: "20px", marginBotton: "10px" }}
+              style={{ marginTop: '20px', marginBotton: '10px' }}
             >
               Obligació de fer un ús correcte de la web
             </Typography>
@@ -209,7 +208,7 @@ export default function About() {
             <Typography
               component="div"
               variant="h5"
-              style={{ marginTop: "20px", marginBotton: "10px" }}
+              style={{ marginTop: '20px', marginBotton: '10px' }}
             >
               Llei Aplicable i Jurisdicció
             </Typography>
@@ -222,8 +221,7 @@ export default function About() {
           </Typography>
         </Grid>
       </Grid>
-
       <FooterGris />
     </>
-  );
+  )
 }
