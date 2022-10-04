@@ -67,7 +67,7 @@ export default function Register() {
             width: '27rem',
             height: 'auto',
             borderRadius: '1rem',
-            marginTop: '3rem',
+            marginTop: '1rem',
             padding: '3rem',
             border: '2px solid #EA20FF',
           }}

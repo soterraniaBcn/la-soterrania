@@ -32,15 +32,18 @@ export default function Login() {
         style={{
           backgroundColor: "#E2A0FF",
           height: "100vh",
+          width:"100vw",
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-between",
           alignItems: "center",
           flexDirection: "column",
-          marginTop: 0,
+         
         
         }}
       >
+        <Grid item style={{marginTop:0}}>
         <HeaderBlue />
+        </Grid>
         
         <Grid
           item
@@ -55,6 +58,7 @@ export default function Login() {
             maxHeight: "27rem",
             borderRadius: "1rem",
             border: "5px solid #cdcecf",
+            marginTop:"-6rem"
       
 
           }}
@@ -64,7 +68,7 @@ export default function Login() {
               style={{
                 fontSize: "2rem",
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "center"
               }}
             >
               Iniciar sessió
@@ -103,7 +107,7 @@ export default function Login() {
           </FormGroup>
         </Grid>
         <Link to="/homepage" style={{textDecoration:"none"}}>
-          <Button
+          <Button  className="btn-login"
             onClick={handleSubmit}
             style={{
               backgroundColor: "#cdcecf",
@@ -115,7 +119,7 @@ export default function Login() {
               fontSize: "1rem",
               fontWeight: "200",
               border: "2.5px solid grey",
-              margin: "1.3em",
+              marginTop: "-10rem",
         
             }}
           >

@@ -25,6 +25,10 @@ p {
   text-decoration: none;
 }
 
+
+  
+
+
 @media screen and (max-width: 624px) {
   .MuiGrid-container .menu-container {
     display: none;
