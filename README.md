@@ -13,6 +13,7 @@
     <li>Material UI</li>
     <li>Jest</li>
     <li>TypeScript</li>
+    <li>JavaScript</li>
     <li>NPM</li>
     
 </ul>
