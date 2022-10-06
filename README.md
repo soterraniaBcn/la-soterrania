@@ -3,7 +3,7 @@
 ## 🛠️ Mock up
 
 <p>Mockup: <i>https://www.figma.com/file/qf7kA9zCBbMA2Tjh7UhEwV/la-Sote%3C3?node-id=0%3A1</i></p> 
-<p>Wireframe's prorotype: <i>https://www.figma.com/proto/qf7kA9zCBbMA2Tjh7UhEwV/la-Sote%3C3?scaling=scale-down&page-id=0%3A1&node-id=31%3A2&starting-point-node-id=31%3A2&show-proto-sidebar=1</i></p>
+<p>Wireframe's prototype: <i>https://www.figma.com/proto/qf7kA9zCBbMA2Tjh7UhEwV/la-Sote%3C3?scaling=scale-down&page-id=0%3A1&node-id=31%3A2&starting-point-node-id=31%3A2&show-proto-sidebar=1</i></p>
  
 
 ## ⚙️ Tecnologías utilizadas en el proyecto
