@@ -18,9 +18,11 @@
     
 </ul>
 
-## :eyes: Demo de la app
+## :eyes: Database y demo de la app
 
+<p>Estructura de la database (versión para primera iteración): <i>[https://lasoterraniaweb.netlify.app](https://drawsql.app/teams/nurias-team/diagrams/la-soterrania)</i></p> 
 <p>Página de producción de la soterrània: <i>https://lasoterraniaweb.netlify.app</i></p> 
+
 
 ## 🔍 Instalación
 
